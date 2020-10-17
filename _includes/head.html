@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<title>{{ site.name }}{% if page.title %} - {{ page.title }} {% endif%}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<link rel="stylesheet" href="{{ site.baseurl | replace: '//', '/' }}/css/main.css">
+<link rel="stylesheet" id="switch_style" href="{{ site.baseurl | replace: '//', '/' }}/css/bootstrap.css">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl | prepend: site.url | replace: '//', '/' }}/feed.xml">
+
+ <!--highlight-->
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+ <!--Font-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<!--jQuery-->
+ <script src="{{ site.baseurl | replace: '//', '/' }}/js/global.min.js"></script>
