@@ -11,13 +11,14 @@
         </header>
  
         <section class="margin">
+             {% include Side_navigation.html %}
             <div class="content">
                 {% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
                 <div class="card-columns articles">
                     {{ content }}
                 </div>
             
-             {% include Side_navigation.html %}
+ 
             </div>
         </section>
         {% include footer.html %}
