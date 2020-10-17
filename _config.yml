@@ -1,7 +1,7 @@
 name: Janaka's Blog
 description: a powerful jekyll theme
 gems: [jekyll-paginate]
-url:  #place url
+url:  'https://nengwuzhi.github.io/' #place url
 baseurl: #place folder name if site is served in subfolder
 permalink: /:title/
 paginate: 12
