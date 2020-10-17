@@ -3124,28 +3124,6 @@ footer {
 	align-self: flex-end;
 }
 
-footer .content {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-
-footer .backtotop:hover {
-	cursor: pointer;
-}
-
 .widget {
 	background: #FDFDFD;
 	box-sizing: border-box;
