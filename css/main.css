@@ -2823,11 +2823,12 @@ body.overflow {
 }
 
 article {
-    box-sizing: border-box;
+box-sizing: border-box;
     background: #FDFDFD;
     margin-bottom: 20px;
+    margin-right: auto;
     border: 1px solid #E6DED6;
-    position: relative; 
+    position: relative;
     width: auto;
 }
 
