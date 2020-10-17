@@ -2893,10 +2893,6 @@ article ol {
 
 .wrapper {
 	width: 100%;
-	border: 1px solid #E6DED6;
-	height: auto;
-	box-sizing: border-box;
-	background: #FDFDFD;
 }
 
 .short {
