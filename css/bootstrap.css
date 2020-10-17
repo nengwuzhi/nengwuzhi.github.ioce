@@ -50,7 +50,7 @@ html {
 
 article, aside, figcaption, figure, header, hgroup, main, nav, section {
   display: inline-block;
-  width: 285px;
+  width: 400px;
 }
 
 body {
@@ -4931,7 +4931,7 @@ input[type="button"].btn-block {
 
     -webkit-column-count: 4;
     -moz-column-count: 3;
-    column-count: 3;
+    column-count: 2;
     max-width: 75%;
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
