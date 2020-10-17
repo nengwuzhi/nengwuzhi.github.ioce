@@ -4933,6 +4933,7 @@ input[type="button"].btn-block {
     -moz-column-count: 3;
     column-count: 2;
     max-width: 75%;
+    margin: auto;
     -webkit-column-gap: 1.25rem;
     -moz-column-gap: 1.25rem;
     column-gap: 1.25rem;
