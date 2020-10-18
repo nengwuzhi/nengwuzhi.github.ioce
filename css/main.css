@@ -3053,7 +3053,8 @@ article ol {
 }
 
 .sidebar {
-	width: calc(25% - 20px);
+    width: calc(25% - 20px);
+    float: right;
 }
 
 @media screen and (max-width: 1330px) {
