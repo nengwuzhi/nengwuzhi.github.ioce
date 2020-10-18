@@ -6,11 +6,13 @@
 
     <body>
         <header class="head">
-       
-            {% include top_nav.html %}
+        {% include Side_navigation.html %}
+          
         </header>
-            <section class="margin">
+         
             <div class="content">
+                   <section class="margin">
+                  {% include top_nav.html %}
                 <div class="content_container">
                     <article>
                         {% if page.featimg %}
