@@ -44,6 +44,12 @@ nav:
     - {title: link, description: 转到link, url: 'https://nengwuzhi.github.io/link'} 
     - {title: 前端发生器, description: 编辑前端, url: 'https://nengwuzhi.github.io/file_name_and_front_matter_generator.html'} 
 
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 # prose.io configurations
 prose:
