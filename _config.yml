@@ -40,8 +40,8 @@ exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_
 # Navigation buttons in the front page.s
 nav:
     - {title: 主页, description: 转到主页, url: '/'}         
-    - {title: 归档, description: 所有文章, url: '{{site.baseurl}}/archive/'}      
-    - {title: link, description: 转到link, url: '{{site.baseurl}}//link'} 
+    - {title: 归档, description: 所有文章, url: 'https://{{site.baseurl}}/archive/'}      
+    - {title: link, description: 转到link, url: 'https://{{site.baseurl}}//link'} 
 
 
 
