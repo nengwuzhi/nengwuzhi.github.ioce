@@ -6,11 +6,13 @@
 
     <body>
         <header class="head">
-            {% include top_nav.html %}
+            {% include Side_navigation.html %}
         </header>
 
-          <section class="margin">
+    
             <div class="content full">
+                {% include top_nav.html %}
+                      <section class="margin">
                 <div class="content_container">
                     <article>
                         {% if page.type == "vimeo" %}
