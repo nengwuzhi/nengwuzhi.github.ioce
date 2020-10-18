@@ -2975,6 +2975,7 @@ article ol {
 
 .content_container {
 	width: 75%;
+	float: left;
 }
 
 @media screen and (max-width: 1330px) {
