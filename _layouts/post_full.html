@@ -8,9 +8,12 @@
         <header class="head">
            {% include nav.html %}
         </header>
-        {% include search.html %}
+
         <section class="margin">
-            <div class="content full">
+           
+        </section>
+
+         <div class="content full">
                 <div class="content_container">
                     <article>
                         {% if page.type == "vimeo" %}
@@ -29,11 +32,7 @@
                             {% if page.featimg %}
                                 <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
                             {% endif %}
-                        {% elsif page.type == "audio" %}
-                            {% if page.audio-embed %}
-                                {{ page.audio-embed }}
-                            {% endif %}
-                        {% endif %}
+                       
 
                         <h1 class="post_title">
                             {{ page.title }}
@@ -81,8 +80,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-
+        
+        
         {% include footer.html %}
     </body>
 </html>
