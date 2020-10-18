@@ -6,12 +6,12 @@
 
     <body>
         <header class="head">
-           {% include nav.html %}
+            {% include header.html %}
+            {% include nav.html %}
         </header>
-
-
-
-         <div class="content full">
+        {% include search.html %}
+        <section class="margin">
+            <div class="content full">
                 <div class="content_container">
                     <article>
                         {% if page.type == "vimeo" %}
@@ -29,13 +29,12 @@
                         {% elsif page.type == "image" or page.type == "gallery" %}
                             {% if page.featimg %}
                                 <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
-                         {% elsif page.type == "audio" %}
+                            {% endif %}
+                        {% elsif page.type == "audio" %}
                             {% if page.audio-embed %}
                                 {{ page.audio-embed }}
                             {% endif %}
                         {% endif %}
-
-                       
 
                         <h1 class="post_title">
                             {{ page.title }}
@@ -81,11 +80,10 @@
                         <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">next </span><span class="long">post </span><i class="fa fa-angle-right"></i></a>
                         {% endif %}
                     </div>
-                    
                 </div>
             </div>
-        
-        
+        </section>
+
         {% include footer.html %}
     </body>
 </html>
