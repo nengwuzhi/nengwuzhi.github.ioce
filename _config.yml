@@ -7,7 +7,7 @@ permalink: /:title/
 paginate: 12
 paginate_path: /page/:num/
 category_dir: category/
-tag_dir: tags/
+tag_dir: tags
 author_dir: /author
 author_title_prefix: 'Posted by '
 media_folder: 
