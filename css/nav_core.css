@@ -26,14 +26,14 @@ background: ##fff;  /* fallback for old browsers */
 }
 
 .page-content {
-    width: calc(100% - 250px);
-    padding: 40px;
-    min-height: 100vh;
-    transition: all 0.3s;
-    position: absolute;
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
     top: 0;
-    z-index: 999;
-    right: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
 }
 
 /* for toggle behavior */
