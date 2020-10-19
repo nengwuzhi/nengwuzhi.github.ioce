@@ -1,9 +1,11 @@
 <div class="sidebar">
     <div class="card shadow-sm">
     <div class="widget">
-         <i class="fa fa-th-list"></i><h4 class="title">分类</h4>
-        <ul class="category_list">
-            {% for category in site.categories %}
+         <div>
+        <i class="fa fa-th-list"></i> 分类
+         </div>
+                <ul class="content-ul" cate>
+                    {% for category in site.categories %}
                     <li>
                         <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
                             <span class="name">
@@ -13,14 +15,18 @@
                         </a>
                     </li>
                     {% endfor %}
-        </ul>
-    </div>  
+                </ul>
+            </div>
     </div>
     
             <div class="card shadow-sm">
     <div class="widget">
-        <i class="fa fa-tags"></i><h4 class="title">标签云</h4>
-       {% assign first = site.tags.first %}
+        <div>
+                    <i class="fa fa-tags"></i>
+                    标签
+                </div>
+                <div class="tags-cloud">
+                    {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
                     {% for tag in site.tags offset:1 %}
@@ -52,10 +58,11 @@
                       {% else %}
                         {% assign color = 8 | minus: base %}
                       {% endif %}
-                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; ">{{ tag[0] }}</a>
+                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
                     {% endfor %}
-     </div>
-  </div>
+                </div>
+            </div>
+    
    <div class="card shadow-sm">
     <div class="widget">
         <h4 class="title">按作者</h4>
