@@ -69,7 +69,7 @@
                             <p class="tags">
                                 <span class="name">Tags:</span>
                                 {% for tag in page.tags %}
-                                  <a href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}">{{ tag | join: "/" }}</a>
+                                  <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}">{{ tag | join: "/" }}</a>
                                 {% endfor %}
                             </p>
                             {% endif %}
