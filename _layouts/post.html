@@ -5,7 +5,7 @@
     </head>
 
     <body>
-            <div class="wrapper">
+ <div class="wrapper">
         <header class="head">
  
             {% include Side_navigation.html %}
@@ -83,15 +83,13 @@
                         {% if page.next.url %}
                         <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">next </span><span class="long">post </span><i class="fa fa-angle-right"></i></a>
                         {% endif %}
-                    </div>    
-                    </div>
-                        {% include footer.html %}  
+                         </div>
                 </div>
             </div>
                 {% include sidebar.html %}
-             </div>
-                   
-              </section>
+            </div>
+        </section>
+</div>
        
      
   
