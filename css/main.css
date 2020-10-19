@@ -3060,7 +3060,7 @@ article ol {
 }
 
 .sidebar {
-    width: calc(25% - 20px);
+    width: calc(22% - 20px);
     float: right;
 }
 
