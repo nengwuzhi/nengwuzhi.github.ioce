@@ -1,9 +1,10 @@
-<div class="sidebar">
-    <div class="card shadow-sm">
-    <div class="widget">
-         <div>
-        <i class="fa fa-th-list"></i> 分类
-         </div>
+
+            <!-- Content -->
+            <div class="widget">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    分类
+                </div>
                 <ul class="content-ul" cate>
                     {% for category in site.categories %}
                     <li>
@@ -17,11 +18,10 @@
                     {% endfor %}
                 </ul>
             </div>
-    </div>
-    
-            <div class="card shadow-sm">
-    <div class="widget">
-        <div>
+
+            <!-- 其他div框放到这里 -->
+            <div class="widget">
+                <div>
                     <i class="fa fa-tags"></i>
                     标签
                 </div>
@@ -62,23 +62,7 @@
                     {% endfor %}
                 </div>
             </div>
-    
-   <div class="card shadow-sm">
-    <div class="widget">
-        <h4 class="title">按作者</h4>
-        <ul class="author_list">
-            {% for author in site.data.authors %}
-                <li>
-                    <a href="{{ site.author_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ author.id }}">
-                        {% if author.name %}
-                            {{ author.name }}
-                        {% else %}
-                            {{ author.id }}
-                        {% endif %}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
+
+        </div>
     </div>
 </div>
-  </div>
