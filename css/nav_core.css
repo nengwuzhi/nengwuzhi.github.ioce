@@ -15,14 +15,14 @@ background: ##fff;  /* fallback for old browsers */
 }
 
 .vertical-nav {
-  min-width: 17rem;
-  width: 17rem;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s;
+    min-width: 220px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
 }
 
 .page-content {
@@ -32,6 +32,7 @@ background: ##fff;  /* fallback for old browsers */
     transition: all 0.3s;
     position: absolute;
     top: 0;
+    z-index: 999;
     right: 0;
 }
 
