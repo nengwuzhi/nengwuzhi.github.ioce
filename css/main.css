@@ -3090,13 +3090,9 @@ footer {
 	background: #FDFDFD;
 	box-sizing: border-box;
 	padding: 10px;
-	border: 1px solid #E6DED6;
 	margin-bottom: 20px;
 }
 
-.widget:last-of-type {
-	margin-bottom: 0px;
-}
 
 .widget .title {
 	font-weight: 300;
