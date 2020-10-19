@@ -9,18 +9,15 @@
                         <i class="fas fa-align-justify"></i>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                  <nav>
+              <ul class="nav navbar-nav ml-auto">
                  <a class="toggle_link noline"><i class="fa fa-close fa-lg"></i></a>       
                  <ul class="navigation">
                 {% for item in site.nav %}
                   <li class="navigation__item"><a href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
                 {% endfor %}                         
                 </ul>
-            </ul>
-        </nav>
-                     
+           
+              </ul>                     
                     </div>
                 </div>
             </nav>
