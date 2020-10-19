@@ -1,18 +1,10 @@
 ---
 layout: page
 title: 标签云
-permalink: /tag/
+permalink: /tags/
 icon: tags
 type: page
-styles: [tagCloud.css,tags.css]
-scripts: [tagCloud.js,tags.js]
 ---
-
-<div class="tagCloud">
-    {% for tag in site.tags %}
-    <a href="#{{ tag | first }}">{{ tag | first }}</a>
-    {% endfor %}
-</div>
 
 
 <div class="page clearfix">
