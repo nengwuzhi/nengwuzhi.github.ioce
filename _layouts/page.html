@@ -14,9 +14,9 @@
             <div id="content">
     
                 {% include top_nav.html %}
-                   <section class="margin">
-                  
+                   <section class="margin">           
                 <div class="content_container">
+                    <div class="card shadow-sm">
                     <article>
                         {% if page.featimg %}
                             <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
