@@ -1,8 +1,62 @@
 <footer>
+    
+    
+                    <section class="main_menu">
+        <nav class="iconnav">
+            <ul>
+
+                {% if site.tumblr %}
+                    <li class="social">
+                        <a href="{{ site.tumblr }}" class="tumblr"><i class="fa fa-tumblr"></i></a>
+                    </li>
+                {% endif %}
+                {% if site.pinterest %}
+                    <li class="social">
+                        <a href="{{ site.pinterest }}" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                    </li>
+                {% endif %}
+
+                {% if site.instagram %}
+                    <li class="social">
+                        <a href="{{ site.instagram }}" class="instagram"><i class="fa fa-instagram"></i></a>
+                    </li>
+                {% endif %}
+
+                {% if site.twitter %}
+                    <li class="social">
+                        <a href="{{ site.twitter }}" class="twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                {% endif %}
+
+                {% if site.facebook %}
+                    <li class="social">
+                        <a href="{{ site.facebook }}" class="facebook"><i class="fa fa-facebook"></i></a>
+                    </li>
+                {% endif %}
+
+                {% if site.youtube %}
+                    <li class="social">
+                        <a href="{{ site.youtube }}" class="youtube"><i class="fa fa-youtube"></i></a>
+                    </li>
+                {% endif %}
+
+                {% if site.vimeo %}
+                    <li class="social">
+                        <a href="{{ site.vimeo }}" class="vimeo"><i class="fa fa-vimeo-square"></i></a>
+                    </li>
+                {% endif %}
+
+            </ul>
+        </nav>
+        <a href='#menu' class="toggle_link noline">
+            <i class="fa fa-navicon"></i>
+        </a>
+    </div>
+</section>
+    
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
-
 
 <!--jQuery--><!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
