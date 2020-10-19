@@ -2193,7 +2193,6 @@ html,body {
 body {
 	line-height: 1.5;
 	background-color: #FDFDFD;
-	background: #88c8ff url(background/pattern.png) repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: repeat;
