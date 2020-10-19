@@ -1,32 +1,25 @@
 
-        <!-- Sidebar  -->
-               <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-            </div>
+      <div class="vertical-nav bg-dark" id="sidebar">
+  		<div class="py-4 px-3 mb-4 bg-dark">
+      		<div class="media-body">
+        		<h4 class="font-weight-white text-muted mb-0">Verical Navbar</h4>
+        		<p class="font-weight-grey text-muted mb-0">With HTML and Bootstrap</p>
+      		</div>
+  		</div>
 
-            <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+  		<p class="text-white font-weight-bold text-uppercase px-3 small pb-4 mb-0">Main</p>
+
+  		<ul class="nav flex-column bg-dark mb-0">
+    		<li class="nav-item">
+      			<a href="#" class="nav-link text-light font-italic bg-dark">
+                	<i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                		Home
+            	</a>
+    		</li>
+
+    	<li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed nav-link text-light font-italic bg-dark"><i class="fa fa-th-large mr-3 text-primary fa-fw"></i> Pages</a>
+                    <ul class="list-unstyled collapse" id="pageSubmenu" style="">
                         <li>
                             <a href="#">Page 1</a>
                         </li>
@@ -38,13 +31,47 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
 
+    		<li class="nav-item">
+      			<a href="#" class="nav-link text-light font-italic">
+                	<i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                	Services
+            	</a>
+    		</li>
+    		<li class="nav-item">
+      			<a href="#" class="nav-link text-light font-italic">
+                	<i class="fa fa-picture-o mr-3 text-primary fa-fw"></i> Gallery
+            	</a>
+    		</li>
+  		</ul>
 
-        </nav>
+  		<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
+
+  			<ul class="nav flex-column bg-dark mb-0">
+    			<li class="nav-item">
+      				<a href="#" class="nav-link text-light font-italic">
+                	<i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                		Area charts
+            		</a>
+    			</li>
+    			<li class="nav-item">
+      				<a href="#" class="nav-link text-light font-italic">
+                	<i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                		Bar charts
+            		</a>
+    			</li>
+    			<li class="nav-item">
+      				<a href="#" class="nav-link text-light font-italic">
+                	<i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                		Pie charts
+            		</a>
+    			</li>
+    			<li class="nav-item">
+      				<a href="#" class="nav-link text-light font-italic">
+                	<i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                		Line charts
+            		</a>
+    			</li>
+  			</ul>
+	</div>
+<!-- End vertical navbar -->
