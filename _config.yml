@@ -4,7 +4,7 @@ gems: [jekyll-paginate]
 url: 'https://nengwuzhi.github.io/' #place url
 baseurl:  #place文件夹名称（如果站点位于子文件夹中）
 permalink: /:title/
-paginate: 12
+paginate: 10
 paginate_path: /page/:num/
 category_dir: category/
 tag_dir: tags/
