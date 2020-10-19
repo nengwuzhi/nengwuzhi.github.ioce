@@ -5,19 +5,13 @@
                         <i class="fas fa-align-left"></i>
                         <span>Toggle Sidebar</span>
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-              <ul class="nav navbar-nav ml-auto">
-                 <a class="toggle_link noline"><i class="fa fa-close fa-lg"></i></a>       
-                 <ul class="navigation">
-                {% for item in site.nav %}
+                  
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                           {% for item in site.nav %}
                   <li class="navigation__item"><a href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
-                {% endfor %}                         
-                </ul>
-           
-              </ul>                     
+                {% endfor %}              
+                        </ul>
                     </div>
                 </div>
             </nav>
