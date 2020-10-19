@@ -1,4 +1,5 @@
 body {
+  background: #88c8ff url(background/pattern.png) repeat;
 background: ##fff;  /* fallback for old browsers */
 }
 .separator {
