@@ -69,7 +69,7 @@
                             <p class="tags">
                                 <span class="name">Tags:</span>
                                 {% for tag in page.tags %}
-                                    <a href="{{ site.tag_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ tag }}">{{ tag }}</a>
+                                    <a href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}">{{ tag }}</a>
                                 {% endfor %}
                             </p>
                             {% endif %}
