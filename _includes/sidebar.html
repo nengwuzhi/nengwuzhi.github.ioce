@@ -1,4 +1,5 @@
 <div class="sidebar">
+    <div class="card shadow-sm">
     <div class="widget">
         <h3 class="title">分类</h3>
         <ul class="category_list">
@@ -13,7 +14,10 @@
                     </li>
                     {% endfor %}
         </ul>
+    </div>  
     </div>
+    
+            <div class="card shadow-sm">
     <div class="widget">
         <h3 class="title">标签云</h3>
        {% assign first = site.tags.first %}
@@ -51,7 +55,8 @@
                       <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; ">{{ tag[0] }}</a>
                     {% endfor %}
      </div>
-
+  </div>
+   <div class="card shadow-sm">
     <div class="widget">
         <h3 class="title">按作者</h3>
         <ul class="author_list">
@@ -69,3 +74,4 @@
         </ul>
     </div>
 </div>
+  </div>
