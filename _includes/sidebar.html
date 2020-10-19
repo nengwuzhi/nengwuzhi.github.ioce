@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="card shadow-sm">
     <div class="widget">
-        <h4 class="title">分类</h4>
+         <i class="fa fa-th-list"></i><h4 class="title">分类</h4>
         <ul class="category_list">
             {% for category in site.categories %}
                     <li>
@@ -19,7 +19,7 @@
     
             <div class="card shadow-sm">
     <div class="widget">
-        <h4 class="title">标签云</h4>
+        <i class="fa fa-tags"></i><h4 class="title">标签云</h4>
        {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
