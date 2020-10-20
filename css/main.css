@@ -2178,8 +2178,8 @@ i,em {
 	height: 100%;
 }
 
-.container {
-    background: white;
+.col-md-12.container {
+    background: #ffffff;
     padding: 50px;
 }
 
