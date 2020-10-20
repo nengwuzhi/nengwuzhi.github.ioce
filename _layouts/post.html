@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        {% include head.html %}
-    </head>
+---
+layout: default
+---
 
-    <body>
-            <div class="wrapper">
-        <header class="head">
- 
-            {% include Side_navigation.html %}
-        </header>
- 
 
-           <div id="content" class="page-content p-5"> 
-                    {% include top_nav.html %}
-                   <section class="margin">
                 <div class="content_container">
                     <div class="card shadow-sm">
                     <article>
@@ -93,5 +81,4 @@
 
         {% include footer.html %}
         <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
-    </body>
-</html>
+ 
