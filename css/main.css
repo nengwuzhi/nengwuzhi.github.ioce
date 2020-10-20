@@ -5,6 +5,11 @@
 	font-family:'FontAwesome';
 }
 
+.sidebar.side.content.sticky-top.sticky-top-offset {
+    top: 0px;
+    height: 800px;
+}
+
 .card.shadow-sm {
     margin-bottom: 20px;
 }
