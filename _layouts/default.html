@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       {% include head.html %}
-            {% seo %}
+      {% seo %}
     </head>
 
     <body class="index">
-       <header class="head">
-     
-        </header>
  
     <div class="wrapper">
              {% include Side_navigation.html %}
-
+                    <!-- Content -->
             <div id="content" class="page-content p-5">           
                 {% include top_nav.html %}
-        <section class="margin">          
+          <section class="margin">          
                 {% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
-                <div class="row">
-         
+                <div class="row">      
                     {{ content }}
                 </div>
                   {% include footer.html %}
             </div>
-     
- </section>
-         </div>
+         </section>
+    </div>
   
        
     </body>
