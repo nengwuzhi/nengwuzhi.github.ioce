@@ -31,17 +31,10 @@
                     </ul>
                 </li>
 
-    		<li class="nav-item">
-      			<a href="#" class="nav-link text-light font-italic">
-                	<i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
-                	Services
-            	</a>
-    		</li>
-    		<li class="nav-item">
-      			<a href="#" class="nav-link text-light font-italic">
-                	<i class="fa fa-picture-o mr-3 text-primary fa-fw"></i> Gallery
-            	</a>
-    		</li>
+    		    {% for item in site.nav %}
+                  <li class="nav-item"><a class="nav-link" href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
+                    {% endfor %}     
+			
   		</ul>
 
   		<p class="text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>
