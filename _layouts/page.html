@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        {% include head.html %}
-    </head>
-
-    <body>
+---
+layout: default
+---
      <div class="wrapper">
         <header class="head">
         {% include Side_navigation.html %}
           
         </header>
-         
-            <div id="content" class="page-content p-5">
-    
-                {% include top_nav.html %}
-                   <section class="margin">           
+       
                 <div class="content_container">
                     <div class="card shadow-sm">
                     <article>
@@ -26,13 +18,9 @@
                             {{ content }}
                         </div>
                     </article>
-                </div>
-                     </div>
+                
                 {% include sidebar.html %}
-               </div>
+           
                         {% include footer.html %}
-               </div>
-      </section>
-
-    </body>
-</html>
+                        </div>
+                     </div>
