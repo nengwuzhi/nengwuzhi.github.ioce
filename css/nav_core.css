@@ -42,7 +42,7 @@ ul.nav.flex-column {
     width: calc(100% - 15rem);
     margin-left: 15rem;
     transition: all 0.4s;
-    padding: 0rem!important;
+    padding: 1.5rem!important;
 }
 
 /* for toggle behavior */
