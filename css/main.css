@@ -5,8 +5,10 @@
 	font-family:'FontAwesome';
 }
 .wrap {
-    flex-wrap: wrap;
-    display: flow-root;
+    flex-wrap: wrap !important;
+    display: flow-root !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 .sidebar.side.content.sticky-top.sticky-top-offset {
     top: 0px;
