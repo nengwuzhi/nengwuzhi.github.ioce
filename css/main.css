@@ -5,6 +5,10 @@
 	font-family:'FontAwesome';
 }
 
+.card.shadow-sm {
+    margin-bottom: 20px;
+}
+
 a,
 a:hover,
 a:focus {
@@ -3071,7 +3075,6 @@ footer {
 	background: #FDFDFD;
 	box-sizing: border-box;
 	padding: 22px;
-	margin-bottom: 20px;
 }
 
 
