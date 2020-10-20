@@ -4,7 +4,10 @@
  */@font-face {
 	font-family:'FontAwesome';
 }
-
+.wrap {
+    flex-wrap: wrap;
+    display: flow-root;
+}
 .sidebar.side.content.sticky-top.sticky-top-offset {
     top: 0px;
     height: 800px;
