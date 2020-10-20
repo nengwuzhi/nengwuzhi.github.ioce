@@ -2178,6 +2178,11 @@ i,em {
 	height: 100%;
 }
 
+.col-md-12.container {
+    background: #777777;
+    padding: 20px;
+}
+
 .content,.authorbox .avatar {
 	display: block;
 	position: relative;
