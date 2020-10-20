@@ -24,7 +24,8 @@
                         All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
                     </a>
                 </li>			    
-                 {% for category in site.categories %}
+                    <ul class="content-ul" cate>
+                    {% for category in site.categories %}
                     <li>
                         <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
                             <span class="name">
@@ -34,8 +35,9 @@
                         </a>
                     </li>
                     {% endfor %}
-                    </ul>
-                </li>
+                  </ul>
+            </ul>
+            </li>
 
     		    {% for item in site.nav %}
                   <li class="nav-item"><a class="nav-link bg-dark" href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
