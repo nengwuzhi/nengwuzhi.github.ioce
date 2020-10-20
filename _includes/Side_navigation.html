@@ -24,13 +24,16 @@
                         All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
                     </a>
                 </li>			    
-                {% for category in site.categories %}
-                <li>
-                    <a href="javascript:void(0);" class="categories-item" cate="{{ category | first }}">
-                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
-                    </a>
-                </li>
-                {% endfor %}
+                 {% for category in site.categories %}
+                    <li>
+                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
+                            <span class="name">
+                                {{ category | first }}
+                            </span>
+                            <span class="badge">{{ category | last | size }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
                     </ul>
                 </li>
 
