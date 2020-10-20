@@ -19,18 +19,20 @@
     		</li>
 
     	<li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed nav-link text-light font-italic bg-dark"><i class="fa fa-th-large mr-3 text-primary fa-fw"></i> Pages</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed nav-link text-light font-italic bg-dark"><i class="fa fa-th-large mr-3 text-primary fa-fw"></i> 分类</a>
                     <ul class="list-unstyled collapse" id="pageSubmenu" style="">
-                        {% for category in site.categories %}
                     <li>
-                        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-                            <span class="badge">{{ category | last | size }}</span>
-                        </a>
-                    </li>
-                    {% endfor %}
+                    <a href="javascript:void(0);" class="categories-item" cate="All">
+                        All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
+                    </a>
+                   </li>
+                {% for category in site.categories %}
+                <li>
+                    <a href="javascript:void(0);" class="categories-item" cate="{{ category | first }}">
+                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
+                    </a>
+                </li>
+                {% endfor %}
                     </ul>
                 </li>
 
