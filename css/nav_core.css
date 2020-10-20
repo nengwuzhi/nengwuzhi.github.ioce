@@ -16,8 +16,8 @@ background: ##fff;  /* fallback for old browsers */
 }
 
 .vertical-nav {
-    min-width: 16rem;
-    width: 16rem;
+    min-width: 15rem;
+    width: 15rem;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -27,15 +27,15 @@ background: ##fff;  /* fallback for old browsers */
 }
 
 .page-content {
-    width: calc(100% - 16rem);
-    margin-left: 16rem;
+    width: calc(100% - 15rem);
+    margin-left: 15rem;
     transition: all 0.4s;
 }
 
 /* for toggle behavior */
 
 #sidebar.active {
-  margin-left: -16rem;
+  margin-left: -15rem;
 }
 
 #content.active {
@@ -45,7 +45,7 @@ background: ##fff;  /* fallback for old browsers */
 
 @media (max-width: 768px) {
   #sidebar {
-    margin-left: -16rem;
+    margin-left: -15rem;
   }
   #sidebar.active {
     margin-left: 0;
@@ -55,7 +55,7 @@ background: ##fff;  /* fallback for old browsers */
     margin: 0;
   }
   #content.active {
-    margin-left: 16rem;
-    width: calc(100% - 16rem);
+    margin-left: 15rem;
+    width: calc(100% - 15rem);
   }
 }
