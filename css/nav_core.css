@@ -30,6 +30,7 @@ background: ##fff;  /* fallback for old browsers */
     width: calc(100% - 15rem);
     margin-left: 15rem;
     transition: all 0.4s;
+    padding: 0rem!important;
 }
 
 /* for toggle behavior */
