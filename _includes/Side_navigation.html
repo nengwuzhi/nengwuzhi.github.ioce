@@ -28,7 +28,7 @@
                    </li>
                 {% for category in site.categories %}
                 <li>
-                    <a href="javascript:void(0);" class="categories-item" cate="{{ category | first }}">
+                    <a href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-item" cate="{{ category | first }}">
                         {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
                     </a>
                 </li>
