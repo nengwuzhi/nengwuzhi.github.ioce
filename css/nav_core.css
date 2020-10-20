@@ -1,9 +1,8 @@
 body {
     background: #ffffff url(background/random-grey-variations.png);
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);
-    /* background: linear-gradient(to right, #ffffff, #598be6); */
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
 }
-
 li.nav-item.active {
     /* background: #d2d2d2!important; */
 }
