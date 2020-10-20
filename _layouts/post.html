@@ -72,11 +72,10 @@ layout: default
                         <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">next </span><span class="long">post </span><i class="fa fa-angle-right"></i></a>
                         {% endif %}
                     </div>      
+            </div> 
             </div>
-                {% include sidebar.html %}
-            </div>
+       {% include sidebar.html %}
 
-    </div>
 
         <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
- 
+     </div>
