@@ -9,8 +9,9 @@ body {
   border-bottom: 1px dashed #fff;
 }
 
-
-
+ul.nav.flex-column {
+    text-align: center;
+}
 
 .text-uppercase {
   letter-spacing: 0.1em;
