@@ -2178,9 +2178,9 @@ i,em {
 	height: 100%;
 }
 
-.col-md-12.container {
-    background: #ffffff;
-    padding: 20px;
+.container {
+    background: white;
+    padding: 50px;
 }
 
 .content,.authorbox .avatar {
