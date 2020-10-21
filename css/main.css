@@ -33,6 +33,7 @@ a.sidebar-tag-link {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #495057;
+    margin-bottom: 1px;
     font-weight: 400;
     font-size: 0.75rem;
     border: 1px solid #dee2e6;
@@ -3131,7 +3132,6 @@ ul.category {
 }
 .widget ul {
 	list-style: decimal;
-	padding: 0 25px;
 }
 
 .widget ul li {
