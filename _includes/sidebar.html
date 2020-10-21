@@ -32,7 +32,7 @@
                     <i class="fa fa-th-list"></i>
                     分类
                 </div>
-                <ul class="category">
+                <div class="category">
                     {% for category in site.categories %}
                     <li>
                         <a class="sidebar-tag-link categories-list-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" cate="{{ category | first }}">
@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
              </div>              
 
