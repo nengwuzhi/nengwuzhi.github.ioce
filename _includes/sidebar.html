@@ -1,6 +1,26 @@
 
             <!-- Content -->
 <div class="sidebar side content sticky-top sticky-top-offset">
+            
+                      <div class="card shadow-sm">
+            <div class="widget">
+                <div>
+                    <i class="fa fa-list-ol"></i>
+                    目录
+                </div>
+                <ul id="content-side" class="content-ul">
+                    {% for tag in sortedtags %}
+                    <li>
+                        <a data-scroll href="#{{ tag }}">
+                            {{ tag }} ({{ site.tags[tag].size }})
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+             </div>    
+            
+            
             <div class="card shadow-sm">
             <div class="widget">
                 <div>
