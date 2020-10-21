@@ -15,13 +15,12 @@
                             {{ tag }} ({{ site.tags[tag].size }})
                         </a>
                     </li>
+                    {% endfor %}   
                             
                      {% if hasSimilar.size > 0 %}
                     <li><a href="#similar_posts">Similar Posts</a></li>
                     {% endif %}
                     <li><a href="#comments">Comments</a></li>
-                            
-                    {% endfor %}
                 </ul>
             </div>
              </div>    
