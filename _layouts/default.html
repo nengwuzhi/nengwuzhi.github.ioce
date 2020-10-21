@@ -23,15 +23,24 @@
                   </div>  
              </div> 
         {% include backToTop.html %}
-    <script src="{{ "js/smooth-scroll.min.js" | prepend: site.baseurl }}" charset="utf-8"></script>
-    <script type="text/javascript">
-                var scroll = new SmoothScroll('a[href*="#"]');
-         smoothScroll.init({
-        speed: 500, // 整数。 完成滚动的速度（以毫秒为单位）
-        easing: 'easeInOutCubic', // 使用的缓动模式
-        offset: 20, // 整数。 以像素为单位偏移滚动锚点位置的距离
-      });
-    </script>
+    <script src="js/floating-totop-button.min.js"></script>
+<script>
+  $("body").toTopButton({});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
     </body>
 </html>
 
