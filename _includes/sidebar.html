@@ -10,8 +10,8 @@
                 </div>
                 <ul id="content-side" class="content-ul">
                     {% for tag in sortedtags %}
-                    <li>
-                        <a data-scroll href="#{{ tag }}">
+             
+                    <li><a data-scroll href="#{{ tag }}">
                             {{ tag }} ({{ site.tags[tag].size }})
                         </a>
                     </li>
@@ -34,14 +34,14 @@
                 </div>
                 <div class="category">
                     {% for category in site.categories %}
-                    <li>
+       
                         <a class="sidebar-tag-link categories-list-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" cate="{{ category | first }}">
                             <span class="name">
                                 {{ category | first }}
                             </span>
                             <span class="badge">{{ category | last | size }}</span>
                         </a>
-                    </li>
+ 
                     {% endfor %}
                 </div>
             </div>
