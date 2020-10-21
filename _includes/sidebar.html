@@ -5,8 +5,7 @@
                       <div class="card shadow-sm">
             <div class="widget side content">
                 <div>
-                    <i class="fa fa-list-ol"></i>
-                    目录
+                    <i class="fa fa-list-ol"> 目录</i>       
                 </div>
                 <ul id="content-side" class="content-ul">                             
                      {% if hasSimilar.size > 0 %}
@@ -84,4 +83,13 @@
                 </div>
           </div>
         </div>
-
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
