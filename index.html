@@ -6,36 +6,10 @@ description: the good site of life
     {% include article_index.html %}
 {% endfor %}
 
-{% if paginator.total_pages > 1 %}
-    <div class="pagination">
-        <!-- link to first page -->
-        {% if paginator.total_pages > 3 %}
-            {% if paginator.page == 1 %}
-                <span class="disabled"><i class="fa fa-angle-double-left"></i></span>
-            {% else %}
-                <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-double-left"></i></a>
-            {% endif %}
-        {% endif %}
 
-        <!-- previous link -->
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
-        {% else %}
-            <span class="disabled"><i class="fa fa-angle-left"></i></span>
-        {% endif %}
+       
 
-        <!-- number links -->
-        {% capture start %}
-            {{ paginator.page | minus: 3 }}
-        {% endcapture %}
-
-        {% for i in (1..paginator.total_pages) limit: 5 offset: start %}
-            {% if i == paginator.page %}
-                <span class="disabled">{{ i }}</span>
-            {% else %}
-                <a href="/page/{{ i }}">{{ i }}</a>
-            {% endif %}
-        {% endfor %}
+ 
 
          <!-- Pagination links -->
             {% if paginator.total_pages > 1 %}
@@ -63,6 +37,5 @@ description: the good site of life
               {% endif %}
             </ul>
             {% endif %}      
-    </div>
-{% endif %}
+
    
