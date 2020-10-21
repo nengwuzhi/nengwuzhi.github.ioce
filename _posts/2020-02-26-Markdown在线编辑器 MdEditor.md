@@ -1,6 +1,6 @@
 ---
 author: person
-layout: post_full
+layout: post
 title: Markdown使用教程
 featimg: /img/2.jpg
 tags: [Markdown,教程]
