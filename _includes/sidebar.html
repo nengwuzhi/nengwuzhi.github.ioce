@@ -32,7 +32,7 @@
                     <i class="fa fa-th-list"></i>
                     分类
                 </div>
-                <div class="category">
+                <div class="content-side category">
                     {% for category in site.categories %}
        
                         <a class="sidebar-tag-link categories-list-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" cate="{{ category | first }}">
@@ -53,7 +53,7 @@
                     <i class="fa fa-tags"></i>
                     标签
                 </div>
-                <div class="tags-cloud">
+                <div class="content-side tags-cloud">
                     {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
