@@ -2,7 +2,7 @@
 author: person
 layout: post_full
 title: Markdown使用教程
-featimg: img/2.jpg
+featimg: /img/2.jpg
 tags: [Markdown，教程]
 category: [教程]
 ---
