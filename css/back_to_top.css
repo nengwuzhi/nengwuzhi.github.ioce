@@ -7,6 +7,18 @@
     text-align: center;
     font-size: 20px;
     color: #b4b4b4;
+    position: fixed;
+    left: 50%;
+    margin-left: 580px;
+    bottom: 37px;
+    visibility: hidden;
+    opacity: 0.5;
+    transition: 0.4s ease;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3), 0 0 30px rgba(10,10,0,0.1) inset;
+}
+.back-to-top-show {
+	 visibility: visible;
+	 opacity: 0.7;
 }
  .back-to-top-show:hover {
 	 opacity: 1;
