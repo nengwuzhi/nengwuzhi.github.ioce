@@ -28,7 +28,24 @@
   padding: 6% 0%;
 }
 
+a.sidebar-tag-link {
+    padding: 0.4rem 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #495057;
+    font-weight: 400;
+    font-size: 0.75rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s;
+    display: block;
+}
 
+a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
+    border-color: #040404;
+    background: #625cf7;
+    color: #fff;
+    text-decoration: none;
+}
 a,
 a:hover,
 a:focus {
