@@ -50,9 +50,8 @@
     <div class="card-body">
   
     {% if post.tags %}
-	    <a class="btn btn-light-blue btn-md" href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}" title="Tag: {{ tag }}" rel="tag">{{ tag | join: "/" }}>
-          {{ post.tags }}</a>
-     
+	    <a class="btn btn-light-blue btn-md" role="button" href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}" title="Tag: {{ tag }}" rel="tag"{{ tag | join: "/" }}>
+          {{ post.tags }}</a> 
 	   
     {% endif %}
     <a href='{{post.url}}'><h4 class='post-title'>{{post.title}}</h4></a>
