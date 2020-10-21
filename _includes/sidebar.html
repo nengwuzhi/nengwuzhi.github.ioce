@@ -8,15 +8,7 @@
                     <i class="fa fa-list-ol"></i>
                     目录
                 </div>
-                <ul id="content-side" class="content-ul">
-                    {% for tag in sortedtags %}
-             
-                    <li><a data-scroll href="#{{ tag }}">
-                            {{ tag }} ({{ site.tags[tag].size }})
-                        </a>
-                    </li>
-                    {% endfor %}   
-                            
+                <ul id="content-side" class="content-ul">                             
                      {% if hasSimilar.size > 0 %}
                     <li><a href="#similar_posts">Similar Posts</a></li>
                     {% endif %}
@@ -32,7 +24,7 @@
                     <i class="fa fa-th-list"></i>
                     分类
                 </div>
-                <div class="content-side category">
+                <div class="category">
                     {% for category in site.categories %}
        
                         <a class="sidebar-tag-link categories-list-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" cate="{{ category | first }}">
@@ -53,7 +45,7 @@
                     <i class="fa fa-tags"></i>
                     标签
                 </div>
-                <div class="content-side tags-cloud">
+                <div class="tags-cloud">
                     {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
