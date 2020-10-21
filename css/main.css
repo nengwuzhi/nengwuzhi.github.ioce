@@ -38,6 +38,7 @@ a.sidebar-tag-link {
     border: 1px solid #dee2e6;
     transition: all 0.3s;
     display: block;
+    width: 100px;
 }
 
 a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
