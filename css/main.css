@@ -3127,10 +3127,6 @@ footer {
         color: #505879;
 }
 
-ul.category {
-    list-style: none;
-    padding: 20px;
-}
 .widget ul {
 	list-style: decimal;
 }
