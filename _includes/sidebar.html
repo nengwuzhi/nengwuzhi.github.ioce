@@ -86,7 +86,7 @@
                       {% else %}
                         {% assign color = 8 | minus: base %}
                       {% endif %}
-                      <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+                      <a class="sidebar-tag-link" href="{{ root_url }}/{{ site.tag_dir }}#{{ tag[0] }}">{{ tag[0] }}</a>
                     {% endfor %}
                 </div>
             </div>
