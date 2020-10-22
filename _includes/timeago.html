@@ -7,6 +7,11 @@
   MIT License
 -->
 <span class="timeago {% if include.class %}{{ include.class }}{% endif %}"
+        {% if include.tooltip %}
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="{{ include.date | date: site.data.date_format.tooltip }}"
+  {% endif %}>
 
   {% assign this_year = site.time | date: "%Y" %}
   {% assign post_year = include.date | date: "%Y" %}
