@@ -3,7 +3,7 @@ layout: default
 ---
 
                 <div class="content_container">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm progress position-sticky progress-bar" id="myProgressBar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     <article>
                         {% if page.type == "vimeo" %}
                             {% if page.vimeo-embed %}
@@ -73,7 +73,8 @@ layout: default
                     </div>     
        {% include related-posts.html %}             
             </div> 
-            </div>
+            </div> 
+       
        {% include sidebar.html %}
 
 <!--myProgressBar-->
