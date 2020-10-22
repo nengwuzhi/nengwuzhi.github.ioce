@@ -31,6 +31,9 @@
   background: #b30000; 
 }
 
+::marker {
+    font-size: small;
+}
 .wrap {
     flex-wrap: wrap !important;
     right: 0 !important;
