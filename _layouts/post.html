@@ -43,7 +43,7 @@ layout: default
                             {% endif %}
                             {% if page.tags %}
                             <p class="tags">
-                                <span class="name">Tags:</span>
+                                <span class="sidebar-tag-link">Tags:</span>
                                 {% for tag in page.tags %}
                                   <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}">{{ tag | join: "/" }}</a>
                                 {% endfor %}
