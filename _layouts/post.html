@@ -22,7 +22,7 @@ layout: default
                         <div class="meta">
                             {% include author.html%} &bull;
                             <span class="date">
-                                Published on {{ page.date | date: '%B %d, %Y' }}
+                                作于 {{ page.date | date: '%B %d, %Y' }}
                             </span>
                         </div>
                         {% if page.type == "standard" %}
@@ -37,7 +37,7 @@ layout: default
                         <div class="catsandtags">
                             {% if page.category %}
                             <p class="category">
-                                <span class="name">Categories:</span>
+                              <span class="name">Categories:</span>
                                 {{ page.categories | category_links }}
                             </p>
                             {% endif %}
