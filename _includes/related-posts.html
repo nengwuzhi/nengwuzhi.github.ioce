@@ -94,7 +94,7 @@
         <a href="{{ post.url | relative_url }}">
           <div class="card-body">
             <div class="text-muted small">
-              <h3 class="pt-0 mt-1 mb-3" data-toc-skip>{{ post.title }}</h3>
+              <h4 class="pt-0 mt-1 mb-3" data-toc-skip>{{ post.title }}</h4>
               <p>
                 {% include no-linenos.html content=post.content %}
                 {{ content | markdownify | strip_html | truncate: 50 }}
