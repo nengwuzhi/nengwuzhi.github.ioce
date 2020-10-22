@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
                 <div class="content_container">
                     <div class="card shadow-sm">
                     <article>
@@ -76,5 +75,16 @@ layout: default
             </div> 
             </div>
        {% include sidebar.html %}
+
+<!--myProgressBar-->
+ <script>window.onscroll = function() {myFunction()};
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myProgressBar").style.width = scrolled + "%";
+  document.getElementById("myProgressBar").innerHTML= Math.round(scrolled) + "%";
+}   </script>
+
 
      </div>
