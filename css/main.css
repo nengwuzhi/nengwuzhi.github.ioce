@@ -40,6 +40,7 @@
     top: 0px;
     height: 1000px;
     overflow-y: auto;
+    z-index: auto;
 }
 
 .card.shadow-sm {
