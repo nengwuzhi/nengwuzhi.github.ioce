@@ -33,7 +33,7 @@
 
 .wrap {
     flex-wrap: wrap !important;
-    margin-right: 0 !important;
+    right: 0 !important;
     margin-left: 0 !important;
 }
 .sidebar.side.content.sticky-top.sticky-top-offset {
