@@ -75,7 +75,7 @@ a.sidebar-tag-link {
     font-size: 14px;;
     border: 1px solid #dee2e6;
     transition: all 0.3s;
-    display: block;
+    display: contents;
     width: auto;
 }
 
