@@ -74,6 +74,11 @@ a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
 a {
     color: #0056b3;
 }
+a:hover {
+    color: #008cb3;
+    text-decoration: underline;
+}
+
 a,
 a:hover,
 a:focus {
