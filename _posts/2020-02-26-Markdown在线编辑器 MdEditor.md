@@ -2,6 +2,7 @@
 author: person
 layout: post
 title: Markdown使用教程
+date: 2019-08-09
 featimg: /img/2.jpg
 tags: [Markdown,教程]
 category: [教程]
