@@ -10,6 +10,10 @@ li.nav-item.active {
 nav.navbar {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
+button#sidebarCollapse {
+    background: #f8b739 !important;
+    border-color: #f8b739 !important;
+}
 .separator {
   margin: 3rem 0;
   border-bottom: 1px dashed #fff;
