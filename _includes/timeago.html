@@ -13,7 +13,6 @@
     title="{{ include.date | date: site.data.date_format.tooltip }}"
   {% endif %}>
 
-  {% assign this_year = site.time | date: "%Y" %}
   {% assign post_year = include.date | date: "%Y" %}
 
   {% if post_year == this_year %}
