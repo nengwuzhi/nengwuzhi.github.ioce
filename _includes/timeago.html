@@ -8,7 +8,9 @@
 -->
 <span class="timeago {% if include.class %}{{ include.class }}{% endif %}"
 
-
+  {% assign this_year = site.time | date: "%Y" %}
+  {% assign post_year = include.date | date: "%Y" %}
+      
     {{ include.date | date: site.data.date}}
 
 
