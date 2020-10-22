@@ -101,7 +101,7 @@
             <div class="text-muted small">
               <p>
                 {% include no-linenos.html content=post.content %}
-                {{ content | markdownify | strip_html | truncate: 80 }}
+                {{ content | markdownify | strip_html | truncate: 50 }}
               </p>
             </div>
           </div>
