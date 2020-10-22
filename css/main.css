@@ -80,9 +80,9 @@ a.sidebar-tag-link {
 }
 
 a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
-    border-color: #040404;
-    background: #625cf7;
-    color: #fff;
+    border-color: #dd1144;
+    background: #ef9696;
+    color: #ef9696;
     text-decoration: none;
 }
 
