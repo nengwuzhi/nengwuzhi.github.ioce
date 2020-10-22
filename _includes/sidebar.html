@@ -2,7 +2,22 @@
             <!-- Content -->
 <div class="sidebar side content sticky-top sticky-top-offset">
             
-           
+            <div class="card shadow-sm">
+            <div class="widget">
+                <div>
+                    <i class="fa fa-th-list"></i>
+                    分类
+                </div>
+            <nav id="toc" data-toggle="toc">
+                <ul id="content-side" class="content-ul">
+                    {% if hasSimilar.size > 0 %}
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    {% endif %}
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+                        </nav>
+            </div>
+            </div>   
            
             
             <div class="card shadow-sm">
@@ -24,7 +39,7 @@
                     {% endfor %}
                 </div>
             </div>
-             </div>              
+            </div>              
 
             <div class="card shadow-sm">
             <div class="widget">
