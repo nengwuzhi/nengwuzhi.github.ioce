@@ -16,11 +16,9 @@
   {% assign this_year = site.time | date: "%Y" %}
   {% assign post_year = include.date | date: "%Y" %}
 
-  {% if post_year == this_year %}
-    {{ include.date | date: site.data.date_format.post.short }}
-  {% else %}
-    {{ include.date | date: site.data.date_format.post.long }}
-  {% endif %}
+
+    {{ include.date | date: site.data.date}}
+
 
   <i class="unloaded">{{ include.date | date_to_xmlschema }}</i>
 
