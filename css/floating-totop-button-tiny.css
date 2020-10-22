@@ -17,7 +17,7 @@ a.to-top-button {
 }
 
 a.to-top-button:not(.filter):hover { background-color: rgb(121, 121, 121); }
-a.to-top-button.filter:hover { filter: brightness(115%); -webkit-filter: brightness(115%); }
+a.to-top-button.filter:hover { filter: brightness(50%); -webkit-filter: brightness(50%); }
 
 a.to-top-button.hide { display:none; }
 
