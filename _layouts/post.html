@@ -71,9 +71,10 @@ layout: default
                         {% if page.next.url %}
                         <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">next </span><span class="long">post </span><i class="fa fa-angle-right"></i></a>
                         {% endif %}
-                    </div>      
+                    </div>     
+       {% include related-posts.html %}             
             </div> 
             </div>
        {% include sidebar.html %}
-   {% include related-posts.html %}
+
      </div>
