@@ -2,6 +2,7 @@ body {
     background: #ffffff url(background/random-grey-variations.png);
     background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 1px, transparent 100%);
     -webkit-background-size: 3px 3px;
+    font-family: "Tahoma", "Arial", "WenQuanYi Micro Hei", "STXihei", "华文细黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Heiti", "黑体", sans-serif;
 }
 li.nav-item.active {
     /* background: #d2d2d2!important; */
