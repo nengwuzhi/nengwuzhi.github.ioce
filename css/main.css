@@ -70,6 +70,10 @@ a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
     color: #fff;
     text-decoration: none;
 }
+
+a {
+    color: #0056b3;
+}
 a,
 a:hover,
 a:focus {
