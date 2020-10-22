@@ -2854,7 +2854,7 @@ body.overflow {
 article {
 box-sizing: border-box;
     background: #FDFDFD;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-right: auto;
     position: relative;
     width: auto;
