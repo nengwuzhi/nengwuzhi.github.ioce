@@ -3,6 +3,7 @@ description: a powerful jekyll theme
 gems: [jekyll-paginate]
 url: 'https://nengwuzhi.github.io/' #place url
 baseurl:  #place文件夹名称（如果站点位于子文件夹中）
+favicon: 'img/favicon.png'
 permalink: /:title/
 paginate: 10
 paginate_path: /page/:num/
@@ -43,6 +44,23 @@ nav:
     - {title: 归档, description: 所有文章, url: 'https://nengwuzhi.github.io/archive/'}      
     - {title: link, description: 转到link, url: 'https://nengwuzhi.github.io/link'} 
 
+authors:
+    sal:
+      name:           能无知
+      site:           https://www.wowthemes.net
+      avatar:         img/avatar1.jpg
+      bio:            "嗨，我是Sal，Mundana的作者，您当前正在预览的主题。 我希望你喜欢它！"
+      email:          wowthemesnet@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
+
+    jane:
+      name:           能无为
+      site:           https://www.wowthemes.net
+      avatar:         img/avatar2.jpg
+      bio:            "博主，时尚达人，喜欢探索新的想法并在我的早间咖啡上写字！"
+      email:          fakemail@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
+      
 # Plugins
 plugins: 
   - jekyll-feed
