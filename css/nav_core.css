@@ -21,49 +21,27 @@ button:hover, button:focus {
   border-bottom: 1px dashed #fff;
 }
 
-  .search{
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 60px;
-    background-color: #353b48;
-    border-radius: 30px;
-    padding: 10px;
-    }
+.search {
+    position: relative;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+}
 
-    .search-input{
-    color: white;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    caret-color:transparent;
-    line-height: 40px;
-    transition: width 0.4s linear;
-    }
+.search .search-icon {
+    float: none;
+    height: 100%;
+    margin: 0 10px;
+    cursor: pointer;
+    user-select: none;
+}
 
-    .search:hover > .search-input{
-    padding: 0 10px;
-    width: 450px;
-    caret-color:red;
-    transition: width 0.4s linear;
-    }
-
-    .search:hover > .search_icon{
-    background: white;
-    color: #e74c3c;
-    }
-
-    .search_icon{
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:white;
-    text-decoration:none;
-    }
+.search .search-input {
+    background: #f5f5f5 url(/assets/css/images/search-icon.png) no-repeat 9px center;
+    text-indent: 33px;
+    border: 1px solid #cccccc4a;
+}
 
 .search .search-clear {
     display: none;
