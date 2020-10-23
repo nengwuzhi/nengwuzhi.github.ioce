@@ -8,11 +8,7 @@
     {% if post.homedisplay == "iframe" %}
 
         {% if post.type == "vimeo" %}
-            {% if post.vimeo-embed %}
-                <div class="video_container">
-                    {{ post.vimeo-embed }}
-                </div>
-            {% endif %}
+           
         {% elsif post.type == "youtube" %}
             {% if post.yt-video-id %}
                 <div class="video_container">
@@ -45,6 +41,7 @@
                 </a>
             {% endif %}
         {% endif %}
+	      
     {% endif %}
 </div>
 
