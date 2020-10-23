@@ -20,8 +20,9 @@ layout: default
                             {{ page.title }}
                         </h2>
                         <div class="meta">
-                       <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
-            <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
+                       {% if author.avatar %}
+                        <img class="rounded-circle" src="{{author.avatar}}" alt="{{author.name}}" width="70"/>
+                       {% endif %}
                             <span class="date">
                                 作于 {{ page.date | date: '%B %d, %Y' }}
                             </span>
