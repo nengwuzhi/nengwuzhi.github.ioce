@@ -1,28 +1,50 @@
 <div class="col-xs-6 col-sm-6">
   <!-- Card -->
   <div class="card mb-4">
+
 	    <!--Card image-->
 	  <div class="view overlay">
       <article>
-	      
+    {% if post.homedisplay == "iframe" %}
+
+        {% if post.type == "vimeo" %}
+            {% if post.vimeo-embed %}
+                <div class="video_container">
+                    {{ post.vimeo-embed }}
+                </div>
+            {% endif %}
+        {% elsif post.type == "youtube" %}
+            {% if post.yt-video-id %}
+                <div class="video_container">
+                    <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+            {% endif %}
+
+        {% else %}
+            {% if post.featimg %}
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ post.featimg }}" alt="{{ post.featimg }}">
+                </a>
+            {% endif %}
+        {% endif %}
+    {% else %}
         {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
                     <img src="http://img.youtube.com/vi/{{ post.yt-video-id }}/0.jpg" alt="{{ post.title }} thumbnail">
                 </a>
             {% endif %}
-   {% endif %}
-	      
+        {% else %}
           {% if post.img %}
-		<a href='{{post.url}}'><img class='post-img' src="{{post.img}}" /></a>
-	  {% endif %}
+				<a href='{{post.url}}'><img class='post-img' src="{{post.img}}" /></a>
+		{% endif %}
     
-          {% if post.featimg %}
+            {% if post.featimg %}
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
                     <img src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ post.featimg }}" alt="{{ post.featimg }}">
                 </a>
             {% endif %}
-
+        {% endif %}
     {% endif %}
 </div>
 
