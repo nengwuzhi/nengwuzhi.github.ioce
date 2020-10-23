@@ -65,7 +65,7 @@ button:hover, button:focus {
 
 .search .search-results .result-item {
      background: #ffffff;
-    font-size: small;
+    font-size: smaller;
     color: #3a3a3a;
     margin: 5px;
     padding: 3px;
