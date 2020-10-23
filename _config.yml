@@ -45,21 +45,21 @@ nav:
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
 
 authors:
-    sal:
-      name:           能无知
-      site:           https://www.wowthemes.net
+    能无知:
+      name:           无所知
+      site:           https://
       avatar:         img/avatar1.jpg
-      bio:            "嗨，我是Sal，Mundana的作者，您当前正在预览的主题。 我希望你喜欢它！"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      bio:            "嗨，我是无知，主题的作者，您当前正在预览的主题。 我希望你喜欢它！"
+      email:          @gmail.com
+      twitter:        https://twitter.com/...
 
-    jane:
-      name:           能无为
-      site:           https://www.wowthemes.net
+    能无为:
+      name:           无所为
+      site:           https://
       avatar:         img/avatar2.jpg
       bio:            "博主，时尚达人，喜欢探索新的想法并在我的早间咖啡上写字！"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+      email:          @gmail.com
+      twitter:        https://twitter.com/...
       
 # Plugins
 plugins: 
