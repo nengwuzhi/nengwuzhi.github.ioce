@@ -1,146 +1,110 @@
-// 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
-var searchBtn = document.querySelector('.search-start');
-var searchClear = document.querySelector('.search-clear');
-var searchInput = document.querySelector('.search-input');
-var searchResults = document.querySelector('.search-results');
+    var search = {
+        searchKeyword: function () {
+            var nWord = $("#search-input").val();
+            //var temarray = nWord.split(""); //分割
+            var array=this.unique(nWord.split(""));
+            var dsa = $("#search").find("ul li a");//获取全部列表
+            var linumber = 0;
 
-// 申明保存文章的标题、链接、内容的数组变量
-var searchValue = '',
-    arrItems = [],
-    arrContents = [],
-    arrLinks = [],
-    arrTitles = [],
-    arrResults = [],
-    indexItem = [],
-    itemLength = 0;
-var tmpDiv = document.createElement('div');
-tmpDiv.className = 'result-item';
+            $("#search ul li").show();
+            for (var t = 0; t < dsa.length; t++) {
+                $(dsa[t]).html($(dsa[t]).text());
+                var temstr = ($(dsa[t]).text()).split("");
+                var yes = false;
+                for (var i = 0; i < array.length; i++) {
+                    var posarr = this.findAll(temstr, array[i]);
+                    if (posarr.length > 0) {
+                        yes = true;
+                        for (var j = 0; j < posarr.length; j++) {
+                            temstr[posarr[j]] = "<em style='color:red;'>" + temstr[posarr[j]] + "</em>";
+                        }
+                    }
+                }
+                if (!yes) {
+                    $(dsa[t]).closest("li").hide();
+                }
+                else {
+                    linumber++;
+                    var htmlstr = "";
+                    for (var m = 0; m < temstr.length; m++) {
+                        htmlstr += temstr[m];
+                    }
+                    $(dsa[t]).html(htmlstr);
+                }
 
-// ajax 的兼容写法
-var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        xml = xhr.responseXML;
-        arrItems = xml.getElementsByTagName('item');
-        itemLength = arrItems.length;
-        
-        // 遍历并保存所有文章对应的标题、链接、内容到对应的数组中
-        // 同时过滤掉 HTML 标签
-        for (i = 0; i < itemLength; i++) {
-            arrContents[i] = arrItems[i].getElementsByTagName('description')[0].
-                childNodes[0].nodeValue.replace(/<.*?>/g, '');
-            arrLinks[i] = arrItems[i].getElementsByTagName('link')[0].
-                childNodes[0].nodeValue.replace(/<.*?>/g, '');
-            arrTitles[i] = arrItems[i].getElementsByTagName('title')[0].
-                childNodes[0].nodeValue.replace(/<.*?>/g, '');
-        }
-    }
-}
-
-// 开始获取根目录下 feed.xml 文件内的数据
-xhr.open('get', '/feed.xml', true);
-xhr.send();
-
-searchBtn.onclick = searchConfirm;
-
-// 清空按钮点击函数
-searchClear.onclick = function(){
-    searchInput.value = '';
-    searchResults.style.display = 'none';
-    searchClear.style.display = 'none';
-}
-
-// 输入框内容变化后就开始匹配，可以不用点按钮
-// 经测试，onkeydown, onchange 等方法效果不太理想，
-// 存在输入延迟等问题，最后发现触发 input 事件最理想，
-// 并且可以处理中文输入法拼写的变化
-searchInput.oninput = function () {
-    setTimeout(searchConfirm, 0);
-}
-searchInput.onfocus = function () {
-    searchResults.style.display = 'block';
-}
-
-function searchConfirm() {
-    if (searchInput.value == '') {
-        searchResults.style.display = 'none';
-        searchClear.style.display = 'none';
-    } else if (searchInput.value.search(/^\s+$/) >= 0) {
-        // 检测输入值全是空白的情况
-        searchInit();
-        var itemDiv = tmpDiv.cloneNode(true);
-        itemDiv.innerText = '请输入有效内容...';
-        searchResults.appendChild(itemDiv);
-    } else {
-        // 合法输入值的情况
-        searchInit();
-        searchValue = searchInput.value;
-        // 在标题、内容中查找
-        searchMatching(arrTitles, arrContents, searchValue);
-    }
-}
-
-// 每次搜索完成后的初始化
-function searchInit() {
-    arrResults = [];
-    indexItem = [];
-    searchResults.innerHTML = '';
-    searchResults.style.display = 'block';
-    searchClear.style.display = 'block';
-}
-
-function searchMatching(arr1, arr2, input) {
-    // 忽略输入大小写
-    input = new RegExp(input, 'i');
-    // 在所有文章标题、内容中匹配查询值
-    for (i = 0; i < itemLength; i++) {
-        if (arr1[i].search(input) !== -1 || arr2[i].search(input) !== -1) {
-            // 优先搜索标题
-            if (arr1[i].search(input) !== -1) {
-                var arr = arr1;
-            } else {
-                var arr = arr2;
             }
-            indexItem.push(i);  // 保存匹配值的索引
-            var indexContent = arr[i].search(input);
-            // 此时 input 为 RegExp 格式 /input/i，转换为原 input 字符串长度
-            var l = input.toString().length - 3;
-            var step = 10;
-            
-            // 将匹配到内容的地方进行黄色标记，并包括周围一定数量的文本
-            arrResults.push(arr[i].slice(indexContent - step, indexContent) +
-                '<mark>' + arr[i].slice(indexContent, indexContent + l) + '</mark>' +
-                arr[i].slice(indexContent + l, indexContent + l + step));
+            if (linumber == 0) {
+                $("#search ul li").show();
+                $("#search ul").slideDown(200);
+            }
+        },
+        findAll: function (arr, str) {
+            var results = [],
+                len = arr.length,
+                pos = 0;
+            while (pos < len) {
+                pos = arr.indexOf(str, pos);
+                if (pos === -1) {
+                    break;
+                }
+                results.push(pos);
+                pos++;
+            }
+            return results;
+        },
+        unique: function (arr) {
+            var new_arr = [];
+            for (var i = 0; i < arr.length; i++) {
+                var items = arr[i];
+                //判断元素是否存在于new_arr中，如果不存在则插入到new_arr的最后
+                if ($.inArray(items, new_arr) == -1) {
+                    new_arr.push(items);
+                }
+            }
+            return new_arr;
+        },
+        changeValue: function (obj) {
+            $('.dropdown ul').slideUp(200);
+            var input = $(obj).find('.dropdown-selected');
+            var ul = $(obj).find('ul');
+            if (!ul.is(':visible')) {
+                ul.slideDown('fast');
+            } else {
+                ul.slideUp('fast');
+            }
+
+            $(obj).find('ul a').click(function () {
+                input.val($(this).text());
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active')
+                $(this).closest('ul').slideUp(200);
+                return false;
+            })
+            var e = this.getEvent();
+            window.event ? e.cancelBubble = true : e.stopPropagation();
+        },
+        _init: function () {
+            $("#search").on("click", "ul li a", function () {
+                $("#search-input").val($(this).text());
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active')
+                $(this).closest('ul').slideUp(200);
+                return false;
+            })
+        },
+        getEvent: function(){
+        if(window.event){
+            return window.event;
         }
+        var f = arguments.callee.caller;
+        do{
+            var e = f.arguments[0];
+            if(e && (e.constructor === Event || e.constructor===MouseEvent || e.constructor===KeyboardEvent)){
+                return e;
+            }
+        }while(f=f.caller);
     }
 
-    // 输出总共匹配到的数目
-    var totalDiv = tmpDiv.cloneNode(true);
-    totalDiv.innerHTML = '总匹配：<b>' + indexItem.length + '</b> 项';
-    searchResults.appendChild(totalDiv);
-
-    // 未匹配到内容的情况
-    if (indexItem.length == 0) {
-        var itemDiv = tmpDiv.cloneNode(true);
-        itemDiv.innerText = '未匹配到内容...';
-        searchResults.appendChild(itemDiv);
     }
 
-    // 将所有匹配内容进行组合
-    for (i = 0; i < arrResults.length; i++) {
-        var itemDiv = tmpDiv.cloneNode(true);
-        itemDiv.innerHTML = '<b>《' + arrTitles[indexItem[i]] +
-            '》</b><hr />' + arrResults[i];
-        itemDiv.setAttribute('onclick', 'changeHref(arrLinks[indexItem[' + i + ']])');
-        searchResults.appendChild(itemDiv);
-    }
-}
-
-function changeHref(href) {
-
-    // 在当前页面点开链接的情况
-    location.href = href;
-
-    // 在新标签页面打开链接的代码，与上面二者只能取一个，自行决定
-    // window.open(href);
-}
+    search._init();
