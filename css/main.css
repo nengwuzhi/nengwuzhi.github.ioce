@@ -87,8 +87,9 @@ a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
 }
 
 a {
-    color: #0056b3;
+    color: #2e3131!important;
 }
+
 a:hover {
     color: #008cb3;
     text-decoration: underline;
