@@ -3123,7 +3123,6 @@ article ol {
 .content_container .catsandtags {
     margin: 20px 0;
     padding: 10px 0;
-    border-top: 1px solid rgb(0 0 0 / 20%);
     border-bottom: 1px solid rgb(0 0 0 / 20%);
     line-height: 2.5;
 }
