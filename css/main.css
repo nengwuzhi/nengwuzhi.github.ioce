@@ -2285,28 +2285,19 @@ html,body {
 }
 
 body {
-	line-height: 1.5;
-	background-color: #FDFDFD;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: repeat;
-	transition: 0.3s all ease-in-out;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	opacity: 0.95;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	flex-direction: row;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-align-items: flex-start;
-	-ms-flex-align: start;
-	align-items: flex-start;
+    background-attachment: fixed;
+    transition: 0.3s all ease-in-out;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0.95;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: start;
+    align-items: flex-start;
 }
 
 h1,h2,h3,h4,h5,h6 {
