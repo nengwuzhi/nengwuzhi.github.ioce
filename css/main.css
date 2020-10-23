@@ -3044,9 +3044,10 @@ article ol {
 }
 
 .content_container {
-	width: 78%;
-	float: left;
-	text-indent: 30px;
+	width: 75%;
+        margin-left: 15px;
+        float: left;
+        text-indent: 30px;
 }
 
 @media screen and (max-width: 1330px) {
