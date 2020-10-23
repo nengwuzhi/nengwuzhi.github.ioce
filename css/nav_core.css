@@ -40,6 +40,7 @@ button:hover, button:focus {
 .search .search-input {
     background: #f5f5f5 url(/css/images/search-icon.png) no-repeat 9px center;
     text-indent: 33px;
+    font-size: smaller;
     border: 1px solid #cccccc4a;
 }
 
@@ -65,7 +66,6 @@ button:hover, button:focus {
 
 .search .search-results .result-item {
      background: #ffffff;
-    font-size: smaller;
     color: #3a3a3a;
     margin: 5px;
     padding: 3px;
