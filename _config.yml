@@ -45,7 +45,7 @@ nav:
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
 
 authors:
-    能无知:
+    avatar1:
       name:           能无知
       site:           https://
       avatar:         img/avatar1.jpg
@@ -53,7 +53,7 @@ authors:
       email:          nengwuzhi@gmail.com
       twitter:        https://twitter.com/...
 
-    能无为:
+    avatar2:
       name:           能无为
       site:           https://
       avatar:         img/avatar2.jpg
