@@ -20,7 +20,8 @@ layout: default
                             {{ page.title }}
                         </span>
                         <div class="meta">
-                            {% include author.html%} &bull;
+                       <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
+            <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
                             <span class="date">
                                 作于 {{ page.date | date: '%B %d, %Y' }}
                             </span>
