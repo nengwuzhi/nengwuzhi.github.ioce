@@ -21,6 +21,58 @@ button:hover, button:focus {
   border-bottom: 1px dashed #fff;
 }
 
+.search {
+    position: relative;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.search .search-icon {
+    float: none;
+    height: 100%;
+    margin: 0 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search .search-input {
+    background: #f5f5f5 url(/assets/css/images/search-icon.png) no-repeat 9px center;
+    text-indent: 33px;
+    border: 1px solid #cccccc4a;
+}
+
+.search .search-clear {
+    display: none;
+}
+
+.search .search-results {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+    text-align: left;
+    border-radius: 5px;
+    background: #2d2d2d !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    list-style: cjk-ideographic;
+}
+
+.search .search-results .result-item {
+     background: #ffffff;
+    font-size: small;
+    color: #3a3a3a;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 ul.nav.flex-column {
     text-align: center;
 }
