@@ -42,7 +42,7 @@ exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_
 nav:
     - {title: 标签, description: 转到主页, url: 'https://nengwuzhi.github.io/tags'}         
     - {title: 归档, description: 所有文章, url: 'https://nengwuzhi.github.io/archive/'}      
-    - {title: link, description: 转到link, url: 'https://nengwuzhi.github.io/link'} 
+    - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
 
 authors:
     sal:
