@@ -1,7 +1,7 @@
 -
-  id: someone
+  id: author1
   name: 能无知
-  avatar: img/profile-pic.jpg
+  avatar: img/author1.jpg
   bio: this is some more information about the author.
   facebook: https://www.facebook.com/someone
   twitter: https://twitter.com/someone
