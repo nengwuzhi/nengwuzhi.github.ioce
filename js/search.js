@@ -16,6 +16,21 @@ var searchValue = '',
 var tmpDiv = document.createElement('div');
 tmpDiv.className = 'result-item';
 
+// 获取焦点显示x
+		$("input").focus(function(){  
+    $(this).parent().children(".search-clear").show();  
+});  
+$("input").blur(function(){  
+    if($(this).val()=='')  
+    {  
+        $(this).parent().children(".search-clear").hide();  
+    }  
+});  
+$(".search-clear").click(function(){  
+    $(this).parent().find('input').val('');  
+    $(this).hide();  
+}); 
+
 // ajax 的兼容写法
 var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
 xhr.onreadystatechange = function () {
