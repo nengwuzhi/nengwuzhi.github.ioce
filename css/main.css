@@ -92,7 +92,7 @@ a {
 
 a:hover {
     color: #008cb3;
-    text-decoration: underline;
+    text-decoration: none!important;
 }
 
 a,
