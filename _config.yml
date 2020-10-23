@@ -45,22 +45,22 @@ nav:
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
 
 authors:
-    avatar1:
+    authors1:
       name:           能无知
-      site:           https://
-      avatar:         img/avatar1.jpg
-      bio:            "嗨，我是无知，主题的作者，您当前正在预览的主题。 我希望你喜欢它！"
-      email:          nengwuzhi@gmail.com
-      twitter:        https://twitter.com/...
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar1.jpg
+      bio:            "嗨，我是Sal，Mundana的作者，您当前正在预览的主题。 我希望你喜欢它！"
+      email:          wowthemesnet@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
       instagram:      https://www.instagram.com/
-
-    avatar2:
+      
+    authors2:
       name:           能无为
-      site:           https://
-      avatar:         img/avatar2.jpg
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar2.jpg
       bio:            "博主，时尚达人，喜欢探索新的想法并在我的早间咖啡上写字！"
-      email:          nengwuwei@gmail.com
-      twitter:        https://twitter.com/...
+      email:          fakemail@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
       instagram:      https://www.instagram.com/
       
 # Plugins
