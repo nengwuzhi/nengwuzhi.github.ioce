@@ -7,9 +7,9 @@
       <article>
     {% if post.homedisplay == "iframe" %}
 
-        {% if post.type == "vimeo" %}
+     
            
-        {% elsif post.type == "youtube" %}
+        {% if post.type == "youtube" %}
             {% if post.yt-video-id %}
                 <div class="video_container">
                     <iframe src="https://www.youtube.com/embed/{{ post.yt-video-id }}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
