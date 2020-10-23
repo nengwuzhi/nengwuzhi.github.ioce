@@ -83,6 +83,11 @@ button:hover, button:focus {
   border-radius: 0;
   padding-left: 0;
 }
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
 ul.nav.flex-column {
     text-align: center;
 }
