@@ -14,10 +14,15 @@
                   <li class="nav-item"><a class="nav-link" href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
                     {% endfor %}              
                         </ul>
-          <div class="search">
+	
+          <div class="search" style="display:inline-block;position:relative;">
+	     <div style="position:absolute;right:2px;top:-2px;cursor:pointer;display:none;" class="search-clear">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+		</button>
+	     </div>  
 	 <i class="search-start"></i>
-    <input type="text" class="search-input" placeholder="搜索..." />
-  <i class="fa fa-times search-clear"></i>
+    <input type="text" placeholder="请输入..." class="search-input input-text w200 form-control" aria-describedby="basic-addon1" name="keyword" id="keyword" style="height:35px;" />
 	<div class="search-results"></div> 
 </div>
   
