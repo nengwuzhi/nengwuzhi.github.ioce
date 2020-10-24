@@ -9,7 +9,10 @@ a.btn {
     border-color: #6f6f6f;
     padding: .175rem .55rem!important;
 }
-
+.btn-outline-success:hover {
+    background-color: #efefef;
+    border-color: #585858;
+}
 .img {
     background-size: cover;
     background-repeat: no-repeat;
