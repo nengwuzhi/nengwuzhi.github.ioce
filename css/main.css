@@ -16,6 +16,9 @@ a.btn {
     background-color: #efefef!important;
     border-color: #585858!important;
 }
+.btn {
+    border: 1px solid #2d21211c!important;
+}
 .img {
     background-size: cover;
     background-repeat: no-repeat;
