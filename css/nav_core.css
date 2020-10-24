@@ -14,6 +14,13 @@ li.nav-item.active {
     margin: 0 auto;
     margin-bottom: 10px;
 }
+.bg-wrap .user-logo .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
 nav.navbar {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
