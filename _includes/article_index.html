@@ -55,7 +55,7 @@
                     {% endfor %}
                 </div>
  
-    <div class='post-content'>{{post.summary | strip_html | strip_newlines | truncate: 20 }}</div>
+    <div class='post-content'>{{post.summary | strip_html | strip_newlines | truncate: 40 }}</div>
     <div class="date"><i class="fa fa-calendar"></i> {{ post.date | date: "%F" }}</div>
 		</div>
 	</div>  
