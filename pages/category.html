@@ -10,6 +10,7 @@ type: page
         <div class="card shadow-sm">
         <h2>{{page.title}}</h2>
         <hr>
+                  <article>
         <ul>
             {% for category in site.categories %}
             <h2 id="{{category | first}}">{{category | first}}</h2>
@@ -30,6 +31,7 @@ type: page
                 {% endfor %}
             {% endfor %}
         </ul>
-    </div>
+     </article>
+          </div>      
       </div>
   {% include sidebar.html %}
