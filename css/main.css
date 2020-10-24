@@ -13,8 +13,8 @@ a.btn {
     padding: .175rem .55rem!important;
 }
 .btn-outline-success:hover {
-    background-color: #efefef;
-    border-color: #585858;
+    background-color: #efefef!important;
+    border-color: #585858!important;
 }
 .img {
     background-size: cover;
