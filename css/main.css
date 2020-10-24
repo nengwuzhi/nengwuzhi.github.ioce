@@ -3107,7 +3107,7 @@ article ol {
 	width: 75%;
         margin-left: 15px;
         float: left;
-        text-indent: 30px;
+        text-indent: 0px;
 }
 
 @media screen and (max-width: 1330px) {
