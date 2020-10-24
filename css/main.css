@@ -4,6 +4,9 @@
  */@font-face {
 	font-family:'FontAwesome';
 }
+i.fa.fa-calendar {
+    margin-right: 3px;
+}
 a.btn {
     display: initial;
     border-color: #6f6f6f;
