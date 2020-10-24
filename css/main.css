@@ -4,7 +4,11 @@
  */@font-face {
 	font-family:'FontAwesome';
 }
-
+a.btn {
+    display: initial;
+    border-color: #6f6f6f;
+    padding: .175rem .55rem!important;
+}
 
 .img {
     background-size: cover;
