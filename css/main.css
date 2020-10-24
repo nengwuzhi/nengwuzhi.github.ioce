@@ -3120,10 +3120,10 @@ article ol {
 }
 
 .content_container .meta {
-	margin: 20px 0;
-	padding: 10px 0;
-	border-top: 1px solid #E6DED6;
-	border-bottom: 1px solid #E6DED6;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid rgb(0 0 0 / 20%);
+    border-bottom: 1px solid rgb(0 0 0 / 20%);
 }
 
 .content_container .featsection {
