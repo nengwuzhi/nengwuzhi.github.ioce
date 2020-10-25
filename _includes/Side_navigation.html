@@ -1,6 +1,6 @@
 
      <!-- Vertical navbar -->
-	<div class="vertical-nav bg-dark" id="sidebar">
+	<div class="vertical-nav" id="sidebar">
   		<div class="py-4 px-3 mb-4 bg-light img bg-wrap text-center py-4" style="background-image: url({{site.baseurl}}/img/bg.jpg);">
       		<div class="user-logo">
          <div class="img" style="background-image: url(https://colorlib.com/etc/bootstrap-sidebar/sidebar-09/images/logo.jpg);"></div>
@@ -10,18 +10,18 @@
 
   		<ul class="nav flex-column bg-Inverse mb-0 nav py-4">
     		<li class="nav-item active">
-      			<a href="/" class="nav-link text-light bg-dark">
+      			<a href="/" class="nav-link text-light">
                 	<i class="text-Inverse fa-fw"></i>主页</a>
     		</li>
 
     		 {% for item in site.nav %}
-                  <li class="nav-item"><a class="nav-link bg-dark text-light" href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="{{item.url}}"  title="{{item.description}}">{{item.title}}</a></li>
                   {% endfor %}     
   		</ul>
 		
 		<p class="text-gray font-weight-bold text-uppercase px-3 small py-0 mb-0">个人信息</p>
 
-  			<ul class="nav flex-column bg-dark mb-0">
+  			<ul class="nav flex-column mb-0">
     			<li class="nav-item">
       				<a href="#" class="nav-link text-light font-italic">
                 	<i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
