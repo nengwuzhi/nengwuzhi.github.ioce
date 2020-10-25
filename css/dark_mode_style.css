@@ -2,7 +2,7 @@
 body {
   font-family: Raleway, sans-serif;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.5;
   background-color: #eaeaea;
   color: #333;
   -webkit-transition: background-color 800ms ease;
@@ -10,7 +10,7 @@ body {
 }
 body.dark {
   background-color: #222;
-  color: #eaeaea;
+  color: #565656;
 }
 body.dark .masthead,
 body.dark .footer {
