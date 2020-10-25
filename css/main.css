@@ -2938,6 +2938,7 @@ box-sizing: border-box;
 
 article img {
 	transition: 0.3s all ease;
+	    max-width: 100%;
 }
 
 article a:hover img,article a:hover footer .backtotop:hover,footer article a:hover .backtotop:hover {
