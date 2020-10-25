@@ -23,6 +23,9 @@ body.dark img {
 article {
     background: #32383d;
 }
+.widget {
+    background: #32383d;
+}
 h2 {
   font-size: 3rem;
   line-height: 1.2;
