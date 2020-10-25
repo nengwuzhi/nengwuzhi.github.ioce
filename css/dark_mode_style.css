@@ -20,10 +20,10 @@ body.dark img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
-article {
+article.dark {
     background: #32383d;
 }
-.widget {
+.widget.dark {
     background: #32383d;
 }
 h2 {
