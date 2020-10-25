@@ -20,7 +20,9 @@ body.dark img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
-
+article {
+    background: #32383d;
+}
 h2 {
   font-size: 3rem;
   line-height: 1.2;
