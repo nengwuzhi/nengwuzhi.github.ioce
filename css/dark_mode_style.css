@@ -20,6 +20,9 @@ body.dark img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
+.vertical-nav.dark {
+    background: #4e4e4e;
+}
 article.dark {
     background-color: #ffffff;
 }
