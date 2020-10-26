@@ -8,6 +8,11 @@ body {
   -webkit-transition: background-color 800ms ease;
   transition: background-color 800ms ease;
 }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+  border-radius: 0px;
+}
 body.dark {
      background-color: #32383d;
      color: #464646;
