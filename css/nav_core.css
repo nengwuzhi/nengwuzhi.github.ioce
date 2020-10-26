@@ -56,7 +56,6 @@ button:hover, button:focus {
     background: #f5f5f5 url(/css/images/search-icon.png) no-repeat 9px center;
     text-indent: 33px;
     font-size: smaller;
-    border: 1px solid #cccccc4a;
 }
 
 .search .search-clear {
