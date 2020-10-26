@@ -15,7 +15,7 @@ body.dark {
 }
 body.dark .masthead,
 body.dark .footer {
-  background-color: #121212;
+     background-color: #12121200;
 }
 body.dark img {
   -webkit-filter: brightness(50%);
