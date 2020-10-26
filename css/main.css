@@ -85,7 +85,7 @@ hr.hr-text::before {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #713779; 
+  background: #c5c5c5; 
   border-radius: 0px;
 }
 
