@@ -46,7 +46,7 @@ $('.light-button').on('click', function() {
   $('.dark-button').show();
   $('body').removeClass('dark');
   $('article').removeClass('dark');
-  $('widget').addClass('dark');
+  $('widget').removeClass('dark');
   // set stored value to 'light'
   localStorage.setItem('dark-mode', 'light');   
 });
