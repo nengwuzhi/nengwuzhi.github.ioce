@@ -45,7 +45,6 @@ img.small {
 .masthead,
 .footer {
   padding: 0 1rem;
-  background-color: #ddd;
   -webkit-transition: background-color 800ms ease;
   transition: background-color 800ms ease;
 }
