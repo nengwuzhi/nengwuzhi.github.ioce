@@ -21,7 +21,8 @@ localStorage.setItem('dark-mode', darkMode);
 
 if (localStorage.getItem('dark-mode') == 'dark') {
   // if the above is 'dark' then apply .dark to the body
-  $('body').addClass('dark');  
+  $('body').addClass('dark'); 
+  $('article').addClass('dark');  
   // hide the 'dark' button
   $('.dark-button').hide();
   // show the 'light' button
@@ -43,6 +44,7 @@ $('.light-button').on('click', function() {
   $('.light-button').hide();
   $('.dark-button').show();
   $('body').removeClass('dark');
+  $('article').removeClass('dark');
   // set stored value to 'light'
   localStorage.setItem('dark-mode', 'light');   
 });
