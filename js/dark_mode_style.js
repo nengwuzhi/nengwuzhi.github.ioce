@@ -35,7 +35,8 @@ if (localStorage.getItem('dark-mode') == 'dark') {
 $('.dark-button').on('click', function() {  
   $('.dark-button').hide();
   $('.light-button').show();
-  $('body').addClass('dark');  
+  $('body').addClass('dark');
+  $('article').addClass('dark');
   // set stored value to 'dark'
   localStorage.setItem('dark-mode', 'dark');
 });
