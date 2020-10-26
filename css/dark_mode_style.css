@@ -20,6 +20,10 @@ body.dark img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
+article.dark {
+    background-color: #32383d;
+    color: #e6e8ef;
+}
 
 h2 {
   font-size: 3rem;
