@@ -1,4 +1,4 @@
-name: wuzhi's Blog
+name: 无知's Blog
 description: a powerful jekyll theme
 gems: [jekyll-paginate]
 url: 'https://nengwuzhi.github.io/' #place url
@@ -52,17 +52,17 @@ authors:
     avatar: img/avatar1.jpg
     bio: "嗨，我是无知，主题的作者，您当前正在预览的主题。 我希望你喜欢它！"
     email: mailto:author1thunaseer@gmail.com
-    twitter: https://twitter.com/BlueSkyLetters
-    instagram: https://www.instagram.com/bluesky/
+    twitter: https://twitter.com/nengwuzhi
+    instagram: https://www.instagram.com/nengwuzhi/
   
   author2:
     name: 能无为
-    site: https://blueskyletters.com/
+    site: https://nengwuwei.com/
     avatar: img/avatar2.jpg
     bio: "博主，时尚达人，喜欢探索新的想法并在我的早间咖啡上写字！"
     email: mailto:author2chemmengath@gmail.com
-    twitter: https://twitter.com/iauthor2cg
-    instagram: https://www.instagram.com/author2__ilahi/
+    twitter: https://twitter.com/nengwuwei
+    instagram: https://www.instagram.com/nengwuwei/
       
 # Plugins
 plugins: 
