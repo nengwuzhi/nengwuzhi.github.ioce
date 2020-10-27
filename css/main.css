@@ -11,6 +11,9 @@
 * ==========================================
 *
 */
+html {
+  scroll-behavior: smooth;
+}
 body {
     background: #080a0b;
     color: #fff;
