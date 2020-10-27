@@ -7,17 +7,16 @@
 i.fa.fa-calendar {
     margin-right: 3px;
 }
-button {
+button.submit {
     height: 40px;
-    padding: 2px;
-    line-height: 40px;
+    line-height: 10px;
     background: none;
     border: none;
     color: #555;
-    font-size: 0.9em;
+    font-size: 1.3em;
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 22px;
 }
 a.btn {
     display: initial;
