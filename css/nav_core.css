@@ -7,6 +7,10 @@ body {
 li.nav-item.active {
     /* background: #d2d2d2!important; */
 }
+a.nav-link.active {
+    color: #ffffff;
+    font-weight: bold;
+}
 .user-logo {
     width: 100px;
     height: 100px;
