@@ -7,6 +7,18 @@
 i.fa.fa-calendar {
     margin-right: 3px;
 }
+button {
+    height: 40px;
+    padding: 2px;
+    line-height: 40px;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 0.9em;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
 a.btn {
     display: initial;
     border-color: #6f6f6f;
