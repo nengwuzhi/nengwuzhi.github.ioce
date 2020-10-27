@@ -91,10 +91,10 @@
       {% assign index = entry | plus: 0 %}
       {% assign post = site.posts[index] %}
       <div class="card">
-        <a href="{{ post.url | relative_url }}">
+        <a class="link-1" href="{{ post.url | relative_url }}">
           <div class="card-body">
             <div class="text-muted small">
-              <h4 class="pt-0 mt-1 mb-3 link-1" data-toc-skip>{{ post.title }}</h4>
+              <h4 class="pt-0 mt-1 mb-3" data-toc-skip>{{ post.title }}</h4>
               <p>
                 {% include no-linenos.html content=post.content %}
                 {{ content | markdownify | strip_html | truncate: 50 }}
