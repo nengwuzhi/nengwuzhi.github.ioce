@@ -11,9 +11,9 @@ button.submit {
     height: 34px;
     width: 34px;
     line-height: 10px;
-    background: #19a2ee;
+    background: none;
     border: none;
-    color: white;
+    color: #88b3ff;
     font-size: 1.3em;
     position: absolute;
     top: 2px;
