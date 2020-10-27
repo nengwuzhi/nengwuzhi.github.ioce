@@ -48,7 +48,7 @@ layout: default
                             <p class="tags">
                                 <span class="sidebar-tag-link">Tags:</span>
                                 {% for tag in page.tags %}
-                                  <a href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}">{{ tag | join: "/" }}</a>
+                                  <a class="btn btn-outline-success btn-sm btn-round ml-1" href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}">{{ tag | join: "/" }}</a>
                                 {% endfor %}
                             </p>
                             {% endif %}
