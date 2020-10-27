@@ -15,6 +15,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@use postcss-simple-vars;
+@use postcss-nested;
+@import 'https://fonts.googleapis.com/css?family=Lora:400,700';
+
+$underlineColor: #00B388;
+$underlineHeight: 5%;
+
+* {
+  box-sizing: border-box;
+}
 p {
   padding: 24px;
   max-width: 760px;
