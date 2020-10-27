@@ -7,6 +7,7 @@ homedisplay: iframe
 title: YouTube full
 tags: [video, music, iframe]
 category: [video]
+summary: Here you see an image post with a full-width layout. 
 ---
 This youtube video uses the iframe instead of the thumbnail image on the index pages.
 
