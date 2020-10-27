@@ -71,7 +71,7 @@ button {
   color: #4c4c4c;
 }
 button:hover {
-  background: rgb(51 51 51 / 0%);
+  background: rgb(140 140 140 / 50%);
 }
 
 .dark-button i {
