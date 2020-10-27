@@ -25,6 +25,19 @@ $underlineHeight: 5%;
 * {
   box-sizing: border-box;
 }
+body {
+  border: 8px solid $underlineColor;
+}
+
+a {
+  cursor: pointer;
+}
+
+strong {
+  margin-top: 16px;
+  display: block;
+  font-weight: 700;
+}
 p {
   padding: 24px;
   max-width: 760px;
