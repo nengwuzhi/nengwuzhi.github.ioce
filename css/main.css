@@ -7,59 +7,42 @@
 /*
 *
 * ==========================================
-* CUSTOM UTIL CLASSES
+* SMOOTH SCROLL
 * ==========================================
 *
 */
-
-/* Rounded tabs */
-
-@media (min-width: 576px) {
-  .rounded-nav {
-    border-radius: 50rem !important;
-  }
+body {
+    background: #080a0b;
+    color: #fff;
+}
+section:first-of-type {
+    background: linear-gradient(to right, #5d4157, #a8caba);
 }
 
-@media (min-width: 576px) {
-  .rounded-nav .nav-link {
-    border-radius: 50rem !important;
-  }
+
+section:not(:first-of-type) {
+    min-height: 100vh;
+    border-top: none;
 }
 
-/* With arrow tabs */
-
-.with-arrow .nav-link.active {
-  position: relative;
+section:nth-of-type(2) {
+    background: #14181b;
 }
 
-.with-arrow .nav-link.active::after {
-  content: '';
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #2b90d9;
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
+section:nth-of-type(3) {
+    background: #121618;
 }
 
-/* lined tabs */
-
-.lined .nav-link {
-  border: none;
-  border-bottom: 3px solid transparent;
+section:nth-of-type(4) {
+    background: #0d1012;
 }
 
-.lined .nav-link:hover {
-  border: none;
-  border-bottom: 3px solid transparent;
+section:nth-of-type(5) {
+    background: #090c0d;
 }
 
-.lined .nav-link.active {
-  background: none;
-  color: #555;
-  border-color: #2b90d9;
+.nav-link:hover, .nav-link:focus {
+    color: #f2709c;
 }
 
 
