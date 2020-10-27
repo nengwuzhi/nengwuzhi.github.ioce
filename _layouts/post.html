@@ -40,16 +40,7 @@ layout: default
                             {{ content }}
 			<hr data-content="AND" class="hr-text">
                         </div>
-                        {% if page.category || page.tags %}
-                        <div class="catsandtags">
-                            {% if page.category %}
-                            <p class="category">
-                              <span class="name">Categories:</span>
-                                   {% for tag in page.categories %}
-                     <a href=""{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" cate="{{ category | first }}">
-                {% endfor %}
-                            </p>
-                            {% endif %}
+                        
                             {% if page.tags %}
                             <p class="tags">
                                 <span class="sidebar-tag-link">Tags:</span>
