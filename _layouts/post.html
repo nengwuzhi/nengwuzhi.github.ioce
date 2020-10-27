@@ -45,7 +45,9 @@ layout: default
                             {% if page.category %}
                             <p class="category">
                               <span class="name">Categories:</span>
-                                {{ page.categories | category_links }}
+                                 {% for category in latest_post.categories %}
+                <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
+                {% endfor %}
                             </p>
                             {% endif %}
                             {% if page.tags %}
