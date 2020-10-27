@@ -8,15 +8,16 @@ i.fa.fa-calendar {
     margin-right: 3px;
 }
 button.submit {
-    height: 40px;
+    height: 36px;
+    width: 36px;
     line-height: 10px;
-    background: none;
+    background: #19a2ee;
     border: none;
     color: #555;
     font-size: 1.3em;
     position: absolute;
     top: 0;
-    left: 22px;
+    left: 20px;
     transform: translateY(-2px);
 }
 a.btn {
