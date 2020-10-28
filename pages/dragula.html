@@ -15,47 +15,44 @@ type: page
 <article>
   
 <h1><a href="https://github.com/bevacqua/dragula"><img src="/img/resources/logo.svg" onerror="this.src=&quot;resources/logo.png&quot;" alt="dragula"></a></h1>
-<h3 class="tagline"><span class="tagline-text">Drag and drop so simple it hurts</span><a class="slack-join" href="https://dragula-slackin.herokuapp.com/" target="_blank">Join us on Slack</a></h3>
-<a href="https://github.com/bevacqua/dragula">
-  <img class="gh-fork" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canon
-       al-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
-</a>
+<h3 class="tagline"><span class="tagline-text">拖放是如此简单，很痛</span><a class="slack-join" href="https://dragula-slackin.herokuapp.com/" target="_blank">加入我们的Slack</a></h3>
+
 <div class="examples">
   <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=CKYI5KJW&amp;placement=githubcombevacqua" id="_carbonads_js"></script>
   <div class="parent">
-    <label for="hy">Move stuff between these two containers. Note how the stuff gets inserted near the mouse pointer? Great stuff.</label>
+    <label for="hy"在这两个容器之间移动东西。请注意如何将这些东西插入鼠标指针附近？好东西。</label>
     <div class="wrapper">
       <div id="left-defaults" class="container">
-        <div>You can move these elements between these two containers</div>
-        <div>Moving them anywhere else isn't quite possible</div>
-        <div>Anything can be moved around. That includes images, <a href="https://github.com/bevacqua/dragula">links</a>, or any other nested elements.
-        <div class="image-thing"><img src="/img/resources/icon.svg" onerror="this.src=&quot;resources/icon.png&quot;" alt="dragula"></div><sub>(You can still click on links, as usual!)</sub>
+        <div>您可以在这两个容器之间移动这些元素</div>
+        <div>将它们移到其他地方是不可能的</div>
+        <div>任何东西都可以移动。其中包括图片，<a href="https://github.com/bevacqua/dragula">links</a>, 或任何其他嵌套元素。
+        <div class="image-thing"><img src="/img/resources/icon.svg" onerror="this.src=&quot;resources/icon.png&quot;" alt="dragula"></div><sub>(您仍然可以照常单击链接！)</sub>
         </div>
       </div>
       <div id="right-defaults" class="container">
-        <div>There's also the possibility of moving elements around in the same container, changing their position</div>
-        <div>This is the default use case. You only need to specify the containers you want to use</div>
-        <div>More interactive use cases lie ahead</div>
-        <div>Moving <code>&lt;input/&gt;</code> elements works just fine. You can still focus them, too. <input placeholder="See?"></div>
-        <div>Make sure to check out the <a href="https://github.com/bevacqua/dragula#readme">documentation on GitHub!</a></div>
+        <div>也有可能在同一容器中移动元素，从而改变其位置</div>
+        <div>这是默认用例。您只需要指定要使用的容器</div>
+        <div>未来将出现更多交互式用例</div>
+        <div>Moving <code>&lt;input/&gt;</code> 元素工作正常。您仍然可以集中精力。 <input placeholder="See?"></div>
+        <div>确保检查出 <a href="https://github.com/bevacqua/dragula#readme">GitHub上的文档！</a></div>
       </div>
     </div>
     <pre>      <code>
 dragula([document.getElementById(left), document.getElementById(right)]);
-      </code>
+              </code>
     </pre>
   </div>
   <div class="parent">
-    <label for="hy">There are plenty of events along the lifetime of a drag event. Check out <a href="https://github.com/bevacqua/dragula#drakeon-events">all of them</a> in the docs!</label>
+    <label for="hy">在拖动事件的生命周期中，有很多事件。退房 <a href="https://github.com/bevacqua/dragula#drakeon-events">all of them</a> 在文档中！</label>
     <div class="wrapper">
       <div id="left-events" class="container">
         <div>As soon as you start dragging an element, a <code>drag</code> event is fired</div>
         <div>Whenever an element is cloned because <code>copy: true</code>, a <code>cloned</code> event fires</div>
-        <div>The <code>shadow</code> event fires whenever the placeholder showing where an element would be dropped is moved to a different container or position</div>
-        <div>A <code>drop</code> event is fired whenever an element is dropped anywhere other than its origin <em>(where it was initially dragged from)</em></div>
+        <div>The <code>shadow</code> 每当将放置元素的占位符移动到其他容器或位置时，就会触发事件</div>
+        <div>A <code>drop</code> 每当将元素放置到其起源以外的任何位置时，都会触发事件 <em>(where it was initially dragged from)</em></div>
       </div>
       <div id="right-events" class="container">
-        <div>If the element gets removed from the DOM as a result of dropping outside of any containers, a <code>remove</code> event gets fired</div>
+        <div>如果该元素由于掉落到任何容器之外而从DOM中删除，则 <code>remove</code> 事件被解雇</div>
         <div>A <code>cancel</code> event is fired when an element would be dropped onto an invalid target, but retains its original placement instead</div>
         <div>The <code>over</code> event fires when you drag something over a container, and <code>out</code> fires when you drag it away from the container</div>
         <div>Lastly, a <code>dragend</code> event is fired whenever a drag operation ends, regardless of whether it ends in a cancellation, removal, or drop</div>
