@@ -176,7 +176,7 @@ button:hover {
 .gu-mirror {
   margin: 10px;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(8 8 8 / 50%);
   transition: opacity 0.4s ease-in-out;
 }
 .container > div {
