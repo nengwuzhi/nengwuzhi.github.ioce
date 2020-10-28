@@ -5,183 +5,45 @@ permalink: /dragula/
 icon: dragula
 type: page
 ---
-<head>
-<link href="/css/dragula.css" rel="stylesheet" type="text/css">
-<link href="/css/example.css" rel="stylesheet" type="text/css">
-</head>
 
-
-<div class="card shadow-sm">        
-<article>
-  
-<h1><a href="https://github.com/bevacqua/dragula"><img src="/img/resources/logo.svg" onerror="this.src=&quot;resources/logo.png&quot;" alt="dragula"></a></h1>
-<h3 class="tagline"><span class="tagline-text">拖放是如此简单，很痛</span><a class="slack-join" href="https://dragula-slackin.herokuapp.com/" target="_blank">加入我们的Slack</a></h3>
-
-<div class="examples">
-  <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=CKYI5KJW&amp;placement=githubcombevacqua" id="_carbonads_js"></script>
-  <div class="parent">
-    <label for="hy"在这两个容器之间移动东西。请注意如何将这些东西插入鼠标指针附近？好东西。</label>
-    <div class="wrapper">
-      <div id="left-defaults" class="container">
-        <div>您可以在这两个容器之间移动这些元素</div>
-        <div>将它们移到其他地方是不可能的</div>
-        <div>任何东西都可以移动。其中包括图片，<a href="https://github.com/bevacqua/dragula">links</a>, 或任何其他嵌套元素。
-        <div class="image-thing"><img src="/img/resources/icon.svg" onerror="this.src=&quot;resources/icon.png&quot;" alt="dragula"></div><sub>(您仍然可以照常单击链接！)</sub>
+<div class="wrapper">
+    <div class="box-left">
+        <div data-tpl="header1" data-title="Header 1">
+            Header 1
         </div>
-      </div>
-      <div id="right-defaults" class="container">
-        <div>也有可能在同一容器中移动元素，从而改变其位置</div>
-        <div>这是默认用例。您只需要指定要使用的容器</div>
-        <div>未来将出现更多交互式用例</div>
-        <div>Moving <code>&lt;input/&gt;</code> 元素工作正常。您仍然可以集中精力。 <input placeholder="See?"></div>
-        <div>确保检查出 <a href="https://github.com/bevacqua/dragula#readme">GitHub上的文档！</a></div>
-      </div>
+        <div data-tpl="header2" data-title="Header 2">
+            Header 2
+        </div>
+        <div data-tpl="header3" data-title="Header 3">
+            Header 3
+        </div>
+        <div data-tpl="shortparagraph" data-title="Short paragraph">
+            Short paragraph
+        </div>
+        <div data-tpl="mediumparagraph" data-title="Medium paragraph">
+            Medium paragraph
+        </div>
+        <div data-tpl="largeparagraph" data-title="Large paragraph">
+            Large paragraph
+        </div>
+        <div data-tpl="ullist" data-title="Ordened list">
+            Ordened list
+        </div>
+        <div data-tpl="ollist" data-title="Unordened list">
+            Unordened list
+        </div>
+        <div data-tpl="image" data-title="Image">
+            Image
+        </div>
+        <div data-tpl="code" data-title="Code">
+            Code
+        </div>
     </div>
-    <pre>      <code>
-dragula([document.getElementById(left), document.getElementById(right)]);
-              </code>
-    </pre>
-  </div>
-  <div class="parent">
-    <label for="hy">在拖动事件的生命周期中，有很多事件。退房 <a href="https://github.com/bevacqua/dragula#drakeon-events">all of them</a> 在文档中！</label>
-    <div class="wrapper">
-      <div id="left-events" class="container">
-        <div>As soon as you start dragging an element, a <code>drag</code> event is fired</div>
-        <div>Whenever an element is cloned because <code>copy: true</code>, a <code>cloned</code> event fires</div>
-        <div>The <code>shadow</code> 每当将放置元素的占位符移动到其他容器或位置时，就会触发事件</div>
-        <div>A <code>drop</code> 每当将元素放置到其起源以外的任何位置时，都会触发事件 <em>(where it was initially dragged from)</em></div>
-      </div>
-      <div id="right-events" class="container">
-        <div>如果该元素由于掉落到任何容器之外而从DOM中删除，则 <code>remove</code> 事件被解雇</div>
-        <div>A <code>cancel</code> event is fired when an element would be dropped onto an invalid target, but retains its original placement instead</div>
-        <div>The <code>over</code> event fires when you drag something over a container, and <code>out</code> fires when you drag it away from the container</div>
-        <div>Lastly, a <code>dragend</code> event is fired whenever a drag operation ends, regardless of whether it ends in a cancellation, removal, or drop</div>
-      </div>
+    <div class="box-right"></div>
+    <div class="options">
+        <buttom class="reset">Reset</buttom>
+        <buttom class="save">Save File</buttom>
     </div>
-    <pre>      <code>
-dragula([document.getElementById(left), document.getElementById(right)])
-  .on('drag', function (el) {
-    el.className = el.className.replace('ex-moved', '');
-  }).on('drop', function (el) {
-    el.className += ' ex-moved';
-  }).on('over', function (el, container) {
-    container.className += ' ex-over';
-  }).on('out', function (el, container) {
-    container.className = container.className.replace('ex-over', '');
-  });
-      </code>
-    </pre>
-  </div>
-  <div class="parent">
-    <label for="hy">Need to be able to quickly delete stuff when it spills out of the chosen containers? Note how you can easily sort the items in any containers by just dragging and dropping.</label>
-    <div class="wrapper">
-      <div id="left-rm-spill" class="container">
-        <div>Anxious Cab Driver</div>
-        <div>Thriving Venture</div>
-        <div>Such <a href="http://ponyfoo.com">a good blog</a></div>
-        <div>Calm Clam</div>
-      </div>
-      <div id="right-rm-spill" class="container">
-        <div>Banana Boat</div>
-        <div>Orange Juice</div>
-        <div>Cuban Cigar</div>
-        <div>Terrible Comedian</div>
-      </div>
-    </div>
-    <pre>      <code>
-dragula([document.getElementById(single)], {
-  removeOnSpill: true
-});
-      </code>
-    </pre>
-  </div>
-  <div class="parent">
-    <label for="hy">By default, dropping an element outside of any known containers will keep the element in the last place it went over. You can make elements go back to origin if they're dropped outside of known containers, too.</label>
-    <div class="wrapper">
-      <div id="left-rollbacks" class="container">
-        <div>Moving items between containers works as usual</div>
-        <div>If you try to drop an item outside of any containers, though, it'll retain its original position</div>
-        <div>When that happens, a <code>cancel</code> event will be raised</div>
-      </div>
-      <div id="right-rollbacks" class="container">
-        <div>Note that the dragged element will go back to the place you originally dragged it from, even if you move it over other containers</div>
-        <div>This is useful if you want to ensure drop events only happen when the user intends for them to happen explicitly, avoiding surprises</div>
-      </div>
-    </div>
-    <pre>      <code>
-dragula([document.getElementById(left), document.getElementById(right)], {
-  revertOnSpill: true
-});
-      </code>
-    </pre>
-  </div>
-  <div class="parent">
-    <label for="hy">Copying stuff is common too, so we made it easy for you.</label>
-    <div class="wrapper">
-      <div id="left-copy" class="container">
-        <div>When elements are copyable, they can't be sorted in their origin container</div>
-        <div>Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
-        <div>Whenever that happens, a <code>cloned</code> event is raised</div>
-      </div>
-      <div id="right-copy" class="container">
-        <div>Note that the clones get destroyed if they're not dropped into another container</div>
-        <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
-      </div>
-    </div>
-    <pre>      <code>
-dragula([document.getElementById(left), document.getElementById(right)], {
-  copy: true
-});
-      </code>
-    </pre>
-  </div>
-  <div class="parent">
-    <label for="hy">Copying stuff from only one of the containers and sorting on the other one? No problem!</label>
-    <div class="wrapper">
-      <div id="left-copy-1tomany" class="container">
-        <div>When elements are copyable, they can't be sorted in their origin container</div>
-        <div>Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
-        <div>Whenever that happens, a <code>cloned</code> event is raised</div>
-        <div>Note that the clones get destroyed if they're not dropped into another container</div>
-        <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
-      </div>
-      <div id="right-copy-1tomany" class="container">
-      </div>
-    </div>
-    <pre>      <code>
-dragula([document.getElementById(left), document.getElementById(right)], {
-  copy: function (el, source) {
-    return source === document.getElementById(left)
-  },
-  accepts: function (el, target) {
-    return target !== document.getElementById(left)
-  }
-});
-      </code>
-    </pre>
-  </div>
-
-  <div class="parent">
-    <label><strong>单击或拖动！</strong> 在 <code> 鼠标移动 </code> 事件之前释放鼠标按钮时触发单击，否则触发拖动事件。无需额外的配置。</label>
-    <div class="wrapper">
-      <div id="sortable" class="container">
-        <div>单击这些元素会触发常规<code>点击</code>您可以听的活动</div>
-        <div>尝试拖动或单击此元素。</div>
-        <div>请注意如何正常单击？</div>
-        <div>拖动不会触发点击事件。</div>
-        <div>点击也不会拖累。</div>
-        <div>如果您具有可以单击或拖动的元素，这将很有用。</div>
-      </div>
-    </div>
-    <pre>      <code>
-        dragula([document.getElementById(container)]);
-      </code>
-    </pre>
-  </div>
 </div>
-      </article>
-       </div> 
-  
-<script src="/js/dragula.min.js"></script>
-<script src="/js/example.min.js"></script>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+<script src='/uploads/170101/FileSaver.js'></script>
