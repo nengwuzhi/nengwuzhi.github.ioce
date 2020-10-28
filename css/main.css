@@ -17,7 +17,7 @@ html {
 
 p {
   padding: 24px;
-  max-width: 760px;
+  max-width: max-content;
   font-size: 22px;
   font-weight: 300;
   line-height: 1.9;
