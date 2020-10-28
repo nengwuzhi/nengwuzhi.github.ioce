@@ -44,6 +44,8 @@ nav:
     - {title: 归档, description: 所有文章, url: 'https://nengwuzhi.github.io/archive/'}      
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
     - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/tab'}
+    - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/dragula'}
+    
 authors:
   
   author1:
