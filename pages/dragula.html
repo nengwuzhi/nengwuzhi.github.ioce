@@ -116,16 +116,16 @@ dragula([document.getElementById(left), document.getElementById(right)], {
     </pre>
   </div>
   <div class="parent">
-    <label for="hy">Copying stuff is common too, so we made it easy for you.</label>
+    <label for="hy">复制资料也很常见，因此我们为您简化了工作。</label>
     <div class="wrapper">
       <div id="left-copy" class="container">
-        <div>When elements are copyable, they can't be sorted in their origin container</div>
-        <div>Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
-        <div>Whenever that happens, a <code>cloned</code> event is raised</div>
+        <div>当元素是可复制的时，无法在其原始容器中排序</div>
+        <div>复制可防止拖动原始元素。复制副本并创建 <em>that</em> gets dragged instead</div>
+        <div>每当发生这种情况时， 一个 <code>克隆</code> 事件触发</div>
       </div>
       <div id="right-copy" class="container">
-        <div>Note that the clones get destroyed if they're not dropped into another container</div>
-        <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
+        <div>请注意，如果克隆未放入另一个容器中，则会被破坏。</div>
+        <div>您将拖动一个副本，因此当将它们放入另一个容器中时，您会看到重复项。</div>
       </div>
     </div>
     <pre>      <code>
@@ -136,15 +136,16 @@ dragula([document.getElementById(left), document.getElementById(right)], {
     </pre>
   </div>
   <div class="parent">
-    <label for="hy">Copying stuff from only one of the containers and sorting on the other one? No problem!</label>
+    <label for="hy">仅从其中一个容器复制内容，然后在另一个容器上排序？没问题！</label>
     <div class="wrapper">
       <div id="left-copy-1tomany" class="container">
-        <div>When elements are copyable, they can't be sorted in their origin container</div>
-        <div>Copying prevents original elements from being dragged. A copy gets created and <em>that</em> gets dragged instead</div>
-        <div>Whenever that happens, a <code>cloned</code> event is raised</div>
-        <div>Note that the clones get destroyed if they're not dropped into another container</div>
-        <div>You'll be dragging a copy, so when they're dropped into another container you'll see the duplication.</div>
+        <div>当元素是可复制的时，无法在其原始容器中排序</div>
+        <div>复制可防止拖动原始元素。复制副本并创建 <em>然后</em> 将其移动</div>
+        <div>每当发生这种情况， 一个 <code>克隆</code> 事件引发</div>
+        <div>请注意，如果克隆未放入另一个容器中，则会被破坏。</div>
+        <div>您将拖动一个副本，因此当将它们放入另一个容器中时，您会看到重复项。</div>
       </div>
+      
       <div id="right-copy-1tomany" class="container">
       </div>
     </div>
