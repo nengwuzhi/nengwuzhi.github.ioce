@@ -159,28 +159,7 @@ dragula([document.getElementById(left), document.getElementById(right)], {
       </code>
     </pre>
   </div>
-  <div class="parent">
-    <label for="hy">Drag handles float your cruise?</label>
-    <div class="wrapper">
-      <div id="left-lovehandles" class="container">
-        <div><span class="handle">+</span>Move me, but you can use the plus sign to drag me around.</div>
-        <div><span class="handle">+</span>Note that <code>handle</code> element in the <code>moves</code> handler is just the original event target.</div>
-      </div>
-      <div id="right-lovehandles" class="container">
-        <div><span class="handle">+</span>This might also be useful if you want multiple children of an element to be able to trigger a drag event.</div>
-        <div><span class="handle">+</span>您也可以使用 <code>moves</code> 确定是否可以从容器中拖动元素的选项，<em>是否拖动手柄</em>.</div>
-      </div>
-    </div>
-    <pre>      <code>
-dragula([document.getElementById(left), document.getElementById(right)], {
-  moves: function (el, container, handle) {
-    return handle.classList.contains('handle');
-  }
-});
-      </code>
-    </pre>
-    <div>有几种类似的机制可以确定是否可以从某个容器中拖动一个元素 <a href="https://github.com/bevacqua/dragula#optionsmoves">(<code>moves</code>)</a>, whether an element can be dropped into a certain container at a certain position <a href="https://github.com/bevacqua/dragula#optionsaccepts">(<code>accepts</code>)</a>, and whether an element is able to originate a drag event <a href="https://github.com/bevacqua/dragula#optionsinvalid">(<code>invalid</code>)</a>.</div>
-  </div>
+
   <div class="parent">
     <label><strong>单击或拖动！</strong> 在 <code> 鼠标移动 </code> 事件之前释放鼠标按钮时触发单击，否则触发拖动事件。无需额外的配置。</label>
     <div class="wrapper">
