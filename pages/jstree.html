@@ -16,19 +16,7 @@ type: page
 </div>
  
  <!-- 3 setup a container element -->
-  <div id="jstree">
-    <!-- in this example the tree is populated from inline HTML -->
-    <ul>
-      <li>Root node 1
-        <ul>
-          <li id="child_node_1">Child node 1</li>
-          <li>Child node 2</li>
-        </ul>
-      </li>
-      <li>Root node 2</li>
-    </ul>
-  </div>
-  <button>demo button</button>
+ <div id="jstree_demo_div"></div>
 
   <!-- 4 include the jQuery library -->
 
@@ -37,19 +25,9 @@ type: page
   <script>
   $(function () {
     // 6 create an instance when the DOM is ready
-    $('#jstree').jstree();
-    // 7 bind to events triggered on the tree
-    $('#jstree').on("changed.jstree", function (e, data) {
-      console.log(data.selected);
-    });
-    // 8 interact with the tree - either way is OK
-    $('button').on('click', function () {
-      $('#jstree').jstree(true).select_node('child_node_1');
-      $('#jstree').jstree('select_node', 'child_node_1');
-      $.jstree.reference('#jstree').select_node('child_node_1');
-    });
-  });
-  </script>
+Once the DOM is ready you can start creating jstree instances.
+$(function () { $('#jstree_demo_div').jstree(); });
+  
 
-
+</script>
  
