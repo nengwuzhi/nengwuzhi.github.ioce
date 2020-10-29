@@ -29,11 +29,77 @@ type: page
   <!-- 5 include the minified jstree source -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
   <script>
-  $(function () {
-    // 6 create an instance when the DOM is ready
-Once the DOM is ready you can start creating jstree instances.
-$(function () { $('#jstree_demo_div').jstree(); });
-  
+	// html demo
+	$('#html').jstree();
 
-</script>
- 
+	// inline data demo
+	$('#data').jstree({
+		'core' : {
+			'data' : [
+				{ "text" : "Root node", "children" : [
+						{ "text" : "Child node 1" },
+						{ "text" : "Child node 2" }
+				]}
+			]
+		}
+	});
+
+	// data format demo
+	$('#frmt').jstree({
+		'core' : {
+			'data' : [
+				{
+					"text" : "Root node",
+					"state" : { "opened" : true },
+					"children" : [
+						{
+							"text" : "Child node 1",
+							"state" : { "selected" : true },
+							"icon" : "jstree-file"
+						},
+						{ "text" : "Child node 2", "state" : { "disabled" : true } }
+					]
+				}
+			]
+		}
+	});
+
+
+	// data from callback
+	$('#clbk').jstree({
+		'core' : {
+			'data' : function (node, cb) {
+				if(node.id === "#") {
+					cb([{"text" : "Root", "id" : "1", "children" : true}]);
+				}
+				else {
+					cb(["Child"]);
+				}
+			}
+		}
+	});
+
+	// interaction and events
+	$('#evts_button').on("click", function () {
+		var instance = $('#evts').jstree(true);
+		instance.deselect_all();
+		instance.select_node('1');
+	});
+	$('#evts')
+		.on("changed.jstree", function (e, data) {
+			if(data.selected.length) {
+				alert('The selected node is: ' + data.instance.get_node(data.selected[0]).text);
+			}
+		})
+		.jstree({
+			'core' : {
+				'multiple' : false,
+				'data' : [
+					{ "text" : "Root node", "children" : [
+							{ "text" : "Child node 1", "id" : 1 },
+							{ "text" : "Child node 2" }
+					]}
+				]
+			}
+		});
+	</script>
