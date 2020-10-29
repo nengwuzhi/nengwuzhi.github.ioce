@@ -9,6 +9,12 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#conBox {
+    width: 448px;
+    resize: none;
+    height: 65px;
+    overflow: auto;
+}
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
