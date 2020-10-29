@@ -20,7 +20,7 @@
                     分类
                 </div>
 
-            <ul class="dropdown-menu category" id="jstree" aria-labelledby="dropdownMenu1">
+            <div class="category" id="jstree" >
                 <li>
                     <a href="javascript:void(0);" class="categories-item" cate="All">
                         All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
@@ -32,9 +32,8 @@
                         {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
                     </a>
                 </li>
-
                 {% endfor %}
-            </ul>
+            </div>
             </div>
             </div>              
 
