@@ -20,20 +20,22 @@
                     分类
                 </div>
                 <div class="category" id="jstree">
-                    {% for category in site.categories %}
-       
-                        <a class="sidebar-tag-link categories-list-item" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" cate="{{ category | first }}">
-                            <span class="name">
-                                {{ category | first }}
-                            </span>
-                            <span class="badge">{{ category | last | size }}</span>
-                        </a>
- 
-                    {% endfor %}
+                     <li>
+                    <a href="javascript:void(0);" class="categories-item" cate="All">
+                        All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
+                    </a>
+                </li>
+                {% for category in site.categories %}
+                <li>
+                    <a href="javascript:void(0);" class="categories-item" cate="{{ category | first }}">
+                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
+                    </a>
+                </li>
+                {% endfor %}
                 </div>
             </div>
             </div>              
- <button>demo button</button>
+
             
             <div class="card shadow-sm">
             <div class="widget">
