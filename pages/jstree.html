@@ -19,18 +19,15 @@ type: page
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
  <script>
-  $(function () {
-    // create an instance when the DOM is ready
-    $('#jstree').jstree();
-    // bind to events triggered on the tree
-    $('#jstree').on("changed.jstree", function (e, data) {
-      console.log(data.selected);
-    });
-    // interact with the tree - either way is OK
-    $('button').on('click', function () {
-      $('#jstree').jstree(true).select_node('child_node_1');
-      $('#jstree').jstree('select_node', 'child_node_1');
-      $.jstree.reference('#jstree').select_node('child_node_1');
-    });
-  });
+  $(function () { $('#jstree_demo_div').jstree(); });
+	  
+  $('#jstree_demo_div').on("changed.jstree", function (e, data) {
+  console.log(data.selected);
+});
+    
+  $('button').on('click', function () {
+  $('#jstree').jstree(true).select_node('child_node_1');
+  $('#jstree').jstree('select_node', 'child_node_1');
+  $.jstree.reference('#jstree').select_node('child_node_1');
+});
   </script>
