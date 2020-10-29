@@ -45,7 +45,7 @@ nav:
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
     - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/tab'}
     - {title: dragula, description: dragula, url: 'https://nengwuzhi.github.io/dragula'}
-    - {title: DragulaJS, description: DragulaJS, url: 'https://nengwuzhi.github.io/DragulaJS'}
+    - {title: DragulaJS, description: jstree, url: 'https://nengwuzhi.github.io/jstree'}
 authors:
   
   author1:
