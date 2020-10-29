@@ -24,9 +24,9 @@ type: page
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_html | truncate: 30 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">阅读全部</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-light">阅读全部</a>
             </div>
-          <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post.featimg }});">	</div>
+          <h1><a href="{{site.baseurl}}{{post.url}}" alt="dragula" class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post.featimg }});">	</a></h1>
         </div>
     </div>
 </div> 
