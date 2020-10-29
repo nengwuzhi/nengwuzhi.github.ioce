@@ -20,7 +20,7 @@
                     分类
                 </div>
 
-                <div class="category" id="jstree">
+                <div class="category">
                 <li>
                     <a href="javascript:void(0);" class="categories-item" cate="All">
                         All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
@@ -44,7 +44,7 @@
                     <i class="fa fa-tags"></i>
                     标签
                 </div>
-                <div class="tags-cloud" id="jstree">
+                <div class="tags-cloud">
                     {% assign first = site.tags.first %}
                     {% assign max = first[1].size %}
                     {% assign min = max %}
