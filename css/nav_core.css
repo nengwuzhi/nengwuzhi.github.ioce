@@ -121,6 +121,7 @@ ul.nav.flex-column {
     width: 14rem;
     height: 100vh;
     position: fixed;
+    overflow-y: auto;
     top: 0;
     left: 0;
     url(https://azouaoui-med.github.io/pro-sidebar-template/src/img/bg2.jpg);
