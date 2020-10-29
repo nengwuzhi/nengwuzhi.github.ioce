@@ -15,10 +15,16 @@ type: page
 						<button type="button" class="btn btn-danger btn-sm" onclick="demo_delete();"><i class="glyphicon glyphicon-remove"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 删除</font></font></button>
 </div>
  
- <!-- 3 setup a container element -->
- <div id="jstree_demo_div"></div>
-
-  <!-- 4 include the jQuery library -->
+<div id="html" class="demo">
+		<ul>
+			<li data-jstree='{ "opened" : true }'>Root node
+				<ul>
+					<li data-jstree='{ "selected" : true }'>Child node 1</li>
+					<li>Child node 2</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 
   <!-- 5 include the minified jstree source -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
