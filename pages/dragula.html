@@ -32,14 +32,7 @@ type: page
 </div> 
 {% endif %}
 {% endfor %}
-  
-  
-  {% for post in site.posts %} 
-{% if post.tags contains "止观main" %}
-<h1><a href="{{site.baseurl}}{{post.url}}"><img src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ post.featimg }}" alt="{{ post.featimg }}" width="516" height="214" alt="dragula"></a></h1>
-{% endif %}
-{% endfor %}
-  
+   
 <h3 class="tagline"><span class="tagline-text">拖放是如此简单，很痛</span><a class="slack-join" href="https://dragula-slackin.herokuapp.com/" target="_blank">加入我们的Slack</a></h3>
 
 <div class="examples">
