@@ -42,7 +42,7 @@
         enable: false,
         editNameSelectAll: false,
         showRemoveBtn: false,
-        showRenameBtn: false,
+        showRenameBtn: true,
         removeTitle: "remove",
         renameTitle: "rename",
         drag: {
