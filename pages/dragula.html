@@ -26,13 +26,19 @@ type: page
                 </p>
                 <a href="{{site.baseurl}}{{post.url}}" class="btn btn-light">阅读全部</a>
             </div>
-    <div href="{{site.baseurl}}{{post.url}}" alt="dragula" width="516" height="214" class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post.featimg }});"></div>
+    <div href="{{site.baseurl}}{{post.url}}" alt="dragula" class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post.featimg }});"></div>
         </div>
     </div>
 </div> 
 {% endif %}
 {% endfor %}
-   
+  
+     {% for post in site.posts %} 
+{% if post.tags contains "止观main" %}
+  <h1><a href="{{site.baseurl}}{{post.url}}"><img src='{{ post.featimg }}' width="516" height="214" onerror='this.src="resources/logo.png"' alt='dragula'/></a></h1>
+ {% endif %}
+{% endfor %} 
+  
 <h3 class="tagline"><span class="tagline-text">拖放是如此简单，很痛</span><a class="slack-join" href="https://dragula-slackin.herokuapp.com/" target="_blank">加入我们的Slack</a></h3>
 
 <div class="examples">
