@@ -26,7 +26,9 @@ p {
 .nav-link:hover, .nav-link:focus {
     color: #f2709c;
 }
-
+.row:hover {
+    opacity: 0.6;
+}
 i.fa.fa-calendar {
     margin-right: 3px;
 }
