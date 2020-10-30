@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <meta charset="UTF-8">
 <title>{{ site.name }}{% if page.title %} - {{ page.title }} {% endif%}</title>
 {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
@@ -16,16 +15,30 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl | prepend: site.url | replace: '//', '/' }}/feed.xml">
 <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">
 
+
  <!--highlight-->
 <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
-<!--nav-->
- <script src="{{site.baseurl}}/js/nav_core.js"></script>
-<link rel="stylesheet" href="{{site.baseurl}}/css/nav_core.css">
 
  <!--backToTop-->
 <link rel="stylesheet" href="{{site.baseurl}}/css/floating-totop-button-tiny.css" rel="stylesheet" />
 
-<!--dark-mode-style-->
 <link rel="stylesheet" href="{{site.baseurl}}/css/dark_mode_style.css" rel="stylesheet" />
-<script src="{{site.baseurl}}/js/dark_mode_style.js"></script>
+ <!--nav-->
+<link rel="stylesheet" href="{{site.baseurl}}/css/nav_core.css">
+
+<!-- Vertical navbar -->
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
