@@ -3,7 +3,9 @@ body {
     margin: 0 auto;
     max-width: 1200px;
 }
-
+.jumbotron.jumbotron-fluid.jumbotron-home.pt-0.pb-0.mt-3.mb-2rem.bg-lightblue.position-relative {
+    background-color: #6b6325 !important;
+}
 html, body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
