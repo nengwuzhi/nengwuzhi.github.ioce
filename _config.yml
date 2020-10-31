@@ -43,7 +43,7 @@ nav:
     - {title: 标签, description: 转到主页, url: 'https://nengwuzhi.github.io/tags'}         
     - {title: 归档, description: 所有文章, url: 'https://nengwuzhi.github.io/archive/'}      
     - {title: 作者, description: 关于作者, url: 'https://nengwuzhi.github.io/authors-list'} 
-    - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/tab'}
+    - {title: tab, description: tab, url: 'https://nengwuzhi.github.io/all'}
     - {title: dragula, description: dragula, url: 'https://nengwuzhi.github.io/dragula'}
     - {title: 目录树, description: jstree, url: 'https://nengwuzhi.github.io/zTree'}
 authors:
