@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+
+<link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  </head>
+
+ <style>
+
+ i.fa {
+    float: right;
+}
+li:hover {
+	background-color: tomato;
+	transition: 0.7s;
+	cursor: pointer;
+}
+
+.list-group-item:hover.span.fa.fa-times{
+    display: block;
+}
+
+
+span{
+	float: right;
+}
+
+textarea#main-textarea {
+    height: auto;
+    width: 448px;
+    resize: none;
+    height: 65px;
+    overflow: auto;
+}
+span.fa.fa-times: hover {
+    color: darkblue;
+}
+span.fa.fa-times {
+    color: #25252525;
+}
+
+</style>
+  <body>
+
+      <div class="col-sm-offset-3 col-sm-6">
+          <h1>留炎板</h1>
+         <ul class="list-group ">
+        </ul>
+
+        <div class="form-group">
+         <textarea id="main-textarea" class="form-control" placeholder="Write up something" style="margin: 0px; height: 95px; width: 466px;"></textarea>
+        </div>
+
+        <button type="button" class="btn btn-success" id="main-button">添加任务</button>
+      </div>
+
+      <div class="modal fade" id="editModal" role="dialog">
+        <div class="modal-dialog" role="document">
+         
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    -->
+<script>
+$(document).ready(function(){
+	var items = getFromLocal('memos');
+	var index;
+	loadList(items);
+	// if textarea is empty disable button
+	$('button').prop('disabled', true);
+	$('textarea').keyup(function(){
+		if($(this).val().length !== 0) {
+			$('button').prop('disabled', false);
+		} else {
+			$('button').prop('disabled', true);
+		}
+	});
+	// bind textarea enter with button submit
+	$('#main-textarea').keypress(function(e){
+		if(e.which === 13) {
+			if ($('#main-textarea').val().length !== 0)
+				$('#main-button').click();
+		}
+	});
+	$('#main-button').click(function(){
+		var value = $('#main-textarea').val();
+		items.push(value);
+		//console.log(items[0]);
+		$('#main-textarea').val('');
+		loadList(items);
+		storeToLocal('memos', items);
+		// set button to 
+		$('button').prop('disabled', true);
+	});
+	// delete one item
+	$('ul').delegate("span", "click", function(event){
+		event.stopPropagation();
+		index = $('span').index(this);
+		$('li').eq(index).remove();
+		items.splice(index, 1);
+		storeToLocal('memos', items);
+		
+	});
+
+
+	// loadList
+	function loadList(items){
+		$('li').remove();
+		if(items.length > 0) {
+			for(var i = 0; i < items.length; i++) {
+				$('ul').append('<li class= "list-group-item" >' + items[i] + '<span class="fa fa-times"></span</li>');
+			}
+		}
+	};
+
+	function storeToLocal(key, items){
+		localStorage[key] = JSON.stringify(items);
+	}
+
+	function getFromLocal(key){
+		if(localStorage[key])
+			return JSON.parse(localStorage[key]);
+		else 
+			return [];
+	}
+
+});
+</script>
+  </body>
+</html>
