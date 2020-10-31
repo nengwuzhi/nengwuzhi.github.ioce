@@ -1,102 +1,157 @@
-
- <style>
-
-span.fa.fa-times {
-    color: #25252525;
-}
-textarea#main-textarea {
-    height: auto;
-    resize: none;
-}
-</style>
-  <body>
-
-      <div class="col-sm-offset-3 col-sm-6">
-
-         <ul class="list-group ">
-        </ul>
-
-        <div class="form-group">
-         <textarea id="main-textarea" class="form-control" placeholder="Write up something" style="margin: 0px; height: 95px; width: 466px;"></textarea>
-        </div>
-
-        <button type="button" class="btn btn-success" id="main-button">添加任务</button>
-      </div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
- 
-
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <!--
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    -->
-<script>
-$(document).ready(function(){
-	var items = getFromLocal('memos');
-	var index;
-	loadList(items);
-	// if textarea is empty disable button
-	$('button').prop('disabled', true);
-	$('textarea').keyup(function(){
-		if($(this).val().length !== 0) {
-			$('button').prop('disabled', false);
-		} else {
-			$('button').prop('disabled', true);
-		}
-	});
-	// bind textarea enter with button submit
-	$('#main-textarea').keypress(function(e){
-		if(e.which === 13) {
-			if ($('#main-textarea').val().length !== 0)
-				$('#main-button').click();
-		}
-	});
-	$('#main-button').click(function(){
-		var value = $('#main-textarea').val();
-		items.push(value);
-		//console.log(items[0]);
-		$('#main-textarea').val('');
-		loadList(items);
-		storeToLocal('memos', items);
-		// set button to 
-		$('button').prop('disabled', true);
-	});
-	// delete one item
-	$('ul').delegate("span", "click", function(event){
-		event.stopPropagation();
-		index = $('span').index(this);
-		$('li').eq(index).remove();
-		items.splice(index, 1);
-		storeToLocal('memos', items);
+<!doctype html>
+<html>
+<head>
 		
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css" >
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	
+
+</head>
+	<body>
+
+		<div class="container">
+		<span class="panel-title text-center"><b>JQuery To-Do List Demo</b></span>
+			<div id="list" class="panel panel-default">
+				<div id="title" class="panel-heading">
+					<h1 class="panel-title text-center">&nbsp;</h1>
+				</div>
+				<div id="input" class="panel-body">
+					<div class="input-group">
+						<input name="add-to-list" type="text" class="form-control" placeholder="Add Item..." />
+						<span class="input-group-btn"><button id="add" class="btn btn-primary">Add!</button></span>
+					</div>
+					<br />
+					<div class="btn-group">
+						<button id="clear" class="btn btn-danger">Clear List</button>
+					</div>
+				</div>
+
+			</div>
+
+<script>
+var inputBox;
+
+function addItem(item) {
+	
+	$('#input').before('<div class="me-want to-do panel-body"><span class="glyphicon glyphicon-minus" aria-hidden="true" /> ' + item + '</div>');
+	
+	var it = $('.me-want');
+	it.fadeOut(0);
+	it.fadeIn(1000);
+	it.removeClass('me-want');
+	it.hover(addRemoveIcon, addRemoveIcon);
+	
+}
+
+function saveList() {
+	
+	var list = [];
+	
+	$('#list .to-do').each(function() { list.push($(this).text()) });
+	var cookie = list.join(', ');
+	cookie = cookie.substring(1, cookie.length);
+	
+	console.log('Saving cookie as "' + cookie + '"');
+	$.cookie('list', cookie, { expires: 90 });
+	console.log('Cookie: ' + $.cookie('list'));
+	
+}
+
+function loadList() {
+	
+	var items = $.cookie('list');
+	
+	console.log("Loaded cookie as " + items);
+	
+	if(items === undefined || items == '')
+		return;
+		
+	items = items.split(', ');
+	
+	for (i in items) {
+		addItem(items[i]);
+	}
+	
+}
+
+function add() {
+	
+	if (inputBox.val() == '') {
+		console.log("Nothing in form!");
+		return;
+	}
+	
+	
+	addItem(inputBox.val());
+	inputBox.val('');
+	
+	saveList();
+	
+}
+
+function remove(element) {
+	
+	var item = $(this);
+	
+	item.find('span').removeClass("glyphicon-trash");
+	item.find('span').removeClass("text-warning");
+	item.find('span').addClass("glyphicon-ok");
+	item.fadeOut(1000, function() {
+		item.remove();
+		saveList();
 	});
+	
+}
 
+function clear() {
+	
+	var items = $('.to-do');
+	var glyph = items.find('span');
+	
+	glyph.removeClass('glyphicon-minus');
+	glyph.addClass('glyphicon-ok');
+	items.fadeOut(1000, function() {
+		items.remove();
+		saveList();
+	});
+	
+}
 
-	// loadList
-	function loadList(items){
-		$('li').remove();
-		if(items.length > 0) {
-			for(var i = 0; i < items.length; i++) {
-				$('ul').append('<li class= "list-group-item" >' + items[i] + '<span class="fa fa-times"></span</li>');
-			}
-		}
-	};
+function addRemoveIcon() {
+	
+	var glyph =$(this).find('span');
+	
+	if (glyph.hasClass('glyphicon-ok'))
+		return;
+	
+	glyph.toggleClass('glyphicon-minus');
+	glyph.toggleClass('glyphicon-trash');
+	glyph.toggleClass('text-warning');
+	
+}
 
-	function storeToLocal(key, items){
-		localStorage[key] = JSON.stringify(items);
-	}
+function onKeyPress(event) {
+	
+	if (event.keyCode == 13)
+		add();
 
-	function getFromLocal(key){
-		if(localStorage[key])
-			return JSON.parse(localStorage[key]);
-		else 
-			return [];
-	}
+}
 
-});
-</script>
-  </body>
+$(document).ready(function() {
+
+	inputBox = $('input[name="add-to-list"]');
+
+	$('#add').click(add);
+	$('#clear').click(clear);
+	inputBox.keypress(onKeyPress);
+	$('#list').on('click', '.to-do', remove);
+	
+	loadList();
+	$('#script-error').remove();
+	
+});</script>
+	</body>
 </html>
