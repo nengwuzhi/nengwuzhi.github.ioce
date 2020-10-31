@@ -1,143 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+   
 
-		<div class="container">
-		<span class="panel-title text-center"><b>JQuery To-Do List Demo</b></span>
-			<div id="list" class="panel panel-default">
-				<div id="title" class="panel-heading">
-					<h1 class="panel-title text-center">&nbsp;</h1>
-				</div>
-				<div id="input" class="panel-body">
-					<div class="input-group">
-						<input name="add-to-list" type="text" class="form-control" placeholder="Add Item..." />
-						<span class="input-group-btn"><button id="add" class="btn btn-primary">Add!</button></span>
-					</div>
-					<br />
-					<div class="btn-group">
-						<button id="clear" class="btn btn-danger">Clear List</button>
-					</div>
-				</div>
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+        <script src="http://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+      
 
-			</div>
+    </head>
+    <body>
+    
+        <div class="container">
+            <h5>Minimal To-do List And Task Manager App</h5>
+            <ul id="list-items"></ul>
+            <form class="add-items">
+                <input type="text" class="form-control" id="todo-list-item" placeholder="What do you need to do today?">
+                <button class="add" type="submit">Add to List</button>
+            </form>
+        </div>
+    <script>
+$(document).ready(function () {
 
-<script>
-var inputBox;
+	$('#list-items').html(localStorage.getItem('listItems'));
+    
+	$('.add-items').submit(function(event) 
+	{
+		event.preventDefault();
 
-function addItem(item) {
-	
-	$('#input').before('<div class="me-want to-do panel-body"><span class="glyphicon glyphicon-minus" aria-hidden="true" /> ' + item + '</div>');
-	
-	var it = $('.me-want');
-	it.fadeOut(0);
-	it.fadeIn(1000);
-	it.removeClass('me-want');
-	it.hover(addRemoveIcon, addRemoveIcon);
-	
-}
+		var item = $('#todo-list-item').val();
 
-function saveList() {
-	
-	var list = [];
-	
-	$('#list .to-do').each(function() { list.push($(this).text()) });
-	var cookie = list.join(', ');
-	cookie = cookie.substring(1, cookie.length);
-	
-	console.log('Saving cookie as "' + cookie + '"');
-	$.cookie('list', cookie, { expires: 90 });
-	console.log('Cookie: ' + $.cookie('list'));
-	
-}
-
-function loadList() {
-	
-	var items = $.cookie('list');
-	
-	console.log("Loaded cookie as " + items);
-	
-	if(items === undefined || items == '')
-		return;
+		if(item) 
+		{
+			$('#list-items').append("<li><input class='checkbox' type='checkbox'/>" + item + "<a class='remove'>x</a><hr></li>");
+			
+			localStorage.setItem('listItems', $('#list-items').html());
+			
+			$('#todo-list-item').val("");
+		}
 		
-	items = items.split(', ');
-	
-	for (i in items) {
-		addItem(items[i]);
-	}
-	
-}
-
-function add() {
-	
-	if (inputBox.val() == '') {
-		console.log("Nothing in form!");
-		return;
-	}
-	
-	
-	addItem(inputBox.val());
-	inputBox.val('');
-	
-	saveList();
-	
-}
-
-function remove(element) {
-	
-	var item = $(this);
-	
-	item.find('span').removeClass("glyphicon-trash");
-	item.find('span').removeClass("text-warning");
-	item.find('span').addClass("glyphicon-ok");
-	item.fadeOut(1000, function() {
-		item.remove();
-		saveList();
 	});
-	
-}
 
-function clear() {
-	
-	var items = $('.to-do');
-	var glyph = items.find('span');
-	
-	glyph.removeClass('glyphicon-minus');
-	glyph.addClass('glyphicon-ok');
-	items.fadeOut(1000, function() {
-		items.remove();
-		saveList();
+	$(document).on('change', '.checkbox', function() 
+	{
+		if($(this).attr('checked')) 
+		{
+			$(this).removeAttr('checked');
+		} 
+		else 
+		{
+			$(this).attr('checked', 'checked');
+		}
+
+		$(this).parent().toggleClass('completed');
+		
+		localStorage.setItem('listItems', $('#list-items').html());
 	});
-	
-}
 
-function addRemoveIcon() {
-	
-	var glyph =$(this).find('span');
-	
-	if (glyph.hasClass('glyphicon-ok'))
-		return;
-	
-	glyph.toggleClass('glyphicon-minus');
-	glyph.toggleClass('glyphicon-trash');
-	glyph.toggleClass('text-warning');
-	
-}
+	$(document).on('click', '.remove', function() 
+	{
+		$(this).parent().remove();
+		
+		localStorage.setItem('listItems', $('#list-items').html());
+	});
 
-function onKeyPress(event) {
-	
-	if (event.keyCode == 13)
-		add();
-
-}
-
-$(document).ready(function() {
-
-	inputBox = $('input[name="add-to-list"]');
-
-	$('#add').click(add);
-	$('#clear').click(clear);
-	inputBox.keypress(onKeyPress);
-	$('#list').on('click', '.to-do', remove);
-	
-	loadList();
-	$('#script-error').remove();
-	
-});</script>
-
+});    </script>
+    </body>
+</html>
