@@ -41,7 +41,7 @@ type: page
           {% for post in site.posts %}
 
             {% unless post.next %}
-              <h2 id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h2>
+              <h3 id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h3>
             {% else %}
               {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
               {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
@@ -64,11 +64,11 @@ type: page
         </ul>
 </div>
 <div id="section2" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-   <h2>分类</h2>
+   <h1>分类</h1>
         <hr>
         <ul>
             {% for category in site.categories %}
-            <h2 id="{{category | first}}">{{category | first}}</h2>
+            <h3 id="{{category | first}}">{{category | first}}</h3>
                 {% for posts in category  %}
                     {% for post in posts %}
                         {% if post.url %}
@@ -88,7 +88,7 @@ type: page
         </ul>
 </div>
 <div id="section3" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px;padding-left:70px;padding-right:70px;">
-          <h2>标签</h2>
+          <h1>标签</h1>
         <hr>
         {% capture tags %}
           {% for tag in site.tags %}
