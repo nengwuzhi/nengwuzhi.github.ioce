@@ -1,4 +1,15 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  </head>
+
+ <style>
 
  i.fa {
     float: right;
@@ -8,18 +19,19 @@ li:hover {
 	transition: 0.7s;
 	cursor: pointer;
 }
-	
+
 .list-group-item:hover.span.fa.fa-times{
     display: block;
 }
+
 
 span{
 	float: right;
 }
 
 textarea#main-textarea {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 448px;
     resize: none;
     height: 65px;
     overflow: auto;
@@ -32,7 +44,7 @@ span.fa.fa-times {
 }
 
 </style>
-
+  <body>
 
       <div class="col-sm-offset-3 col-sm-6">
 
@@ -40,12 +52,22 @@ span.fa.fa-times {
         </ul>
 
         <div class="form-group">
-         <textarea id="main-textarea" class="form-control" placeholder="Write up something" style="margin: 0px;"></textarea>
+         <textarea id="main-textarea" class="form-control" placeholder="Write up something" style="margin: 0px; height: 95px; width: 466px;"></textarea>
         </div>
 
         <button type="button" class="btn btn-success" id="main-button">添加任务</button>
       </div>
 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 
+
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    -->
 <script>
 $(document).ready(function(){
 	var items = getFromLocal('memos');
@@ -111,4 +133,5 @@ $(document).ready(function(){
 
 });
 </script>
-
+  </body>
+</html>
