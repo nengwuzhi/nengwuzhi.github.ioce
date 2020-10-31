@@ -2,13 +2,28 @@
 layout: null
 ---
 
- {% include head.html %}
-    {% include Side_navigation.html %}
+<!DOCTYPE html>
+<html>
+    <head>
+      {% include head.html %}
+      {% seo %}
+    </head>
 
-           <div id="content" class="page-content p-5"> 
-                <div class="col-md-12 container"> 
-                {% include top_nav.html %}
-                    {{ content }} 
+    <body data-spy="scroll" data-target="#toc" class="wrapper">
+             {% include Side_navigation.html %}
+                    <!-- Content -->
+            <div id="content" class="page-content p-5"> 
+              <div class="col-md-12 container"> 
+
+          <section class="margin"> 
+               <div class="wrap row">       
+                    {{ content }}     
                 </div>
-          </div>
- {% include footer.html %}
+          </section>
+        
+                  </div>  
+        {% include footer.html %}   
+             </div> 
+
+    </body>
+</html>
