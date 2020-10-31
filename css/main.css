@@ -30,6 +30,11 @@ p {
 .nav-link:hover, .nav-link:focus {
     color: #f2709c;
 }
+li:hover {
+	background-color: tomato;
+	transition: 0.7s;
+	cursor: pointer;
+}
 
 i.fa.fa-calendar {
     margin-right: 3px;
