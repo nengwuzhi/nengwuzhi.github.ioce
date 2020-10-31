@@ -66,13 +66,18 @@
 	<SCRIPT type="text/javascript">
 		<!--
 		var setting = {
+			edit: {
+				enable: true
+			},
 			data: {
 				simpleData: {
 					enable: true
 				}
+			},
+			callback: {
+				beforeDrag: beforeDrag
 			}
 		};
-
 		var zNodes =[
 			{ id:1, pId:0, name:"学习资源", open:true},
 			{ id:11, pId:1, name:"anki 1-1", url:"http://ankich-res.ankichina.net/anki-apps/anki-2.1.22-windows.exe", target:"_blank"},
