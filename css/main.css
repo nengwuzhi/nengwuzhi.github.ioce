@@ -14,7 +14,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+a.title {
+    color: beige;
+}
 p {
   padding: 24px;
   max-width: max-content;
