@@ -67,7 +67,7 @@
 		<!--
 		var setting = {
 			edit: {
-				enable: true
+				enable: false
 			},
 			data: {
 				simpleData: {
@@ -96,37 +96,7 @@
 		function beforeDrag(treeId, treeNodes) {
 			return false;
 		}		
-		function setEdit() {
-			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
-			remove = $("#remove").attr("checked"),
-			rename = $("#rename").attr("checked"),
-			removeTitle = $.trim($("#removeTitle").get(0).value),
-			renameTitle = $.trim($("#renameTitle").get(0).value);
-			zTree.setting.edit.showRemoveBtn = remove;
-			zTree.setting.edit.showRenameBtn = rename;
-			zTree.setting.edit.removeTitle = removeTitle;
-			zTree.setting.edit.renameTitle = renameTitle;
-			showCode(['setting.edit.showRemoveBtn = ' + remove, 'setting.edit.showRenameBtn = ' + rename,
-				'setting.edit.removeTitle = "' + removeTitle +'"', 'setting.edit.renameTitle = "' + renameTitle + '"']);
-		}
-		function showCode(str) {
-			var code = $("#code");
-			code.empty();
-			for (var i=0, l=str.length; i<l; i++) {
-				code.append("<li>"+str[i]+"</li>");
-			}
-		}
 		
-		$(document).ready(function(){
-			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
-			setEdit();
-			$("#remove").bind("change", setEdit);
-			$("#rename").bind("change", setEdit);
-			$("#removeTitle").bind("propertychange", setEdit)
-			.bind("input", setEdit);
-			$("#renameTitle").bind("propertychange", setEdit)
-			.bind("input", setEdit);
-		});
                               //-->
 	</SCRIPT>
 
