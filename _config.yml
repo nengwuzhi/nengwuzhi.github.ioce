@@ -7,7 +7,7 @@ favicon: 'img/favicon.png'
 permalink: /:title/
 paginate: 10
 paginate_path: /page/:num/
-tab_dir: all/
+all_dir: all/
 author_dir: /author
 author_title_prefix: 'Posted by '
 media_folder: 
