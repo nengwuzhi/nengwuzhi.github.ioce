@@ -85,7 +85,7 @@
           icon: "icon"
         },
         simpleData: {
-          enable: false,
+          enable: true,
           idKey: "id",
           pIdKey: "pId",
           rootPId: null
