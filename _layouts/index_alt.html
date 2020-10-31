@@ -12,11 +12,12 @@ layout: null
     <body data-spy="scroll" data-target="#toc" class="wrapper" data-target=".navbar" data-offset="50">
              {% include Side_navigation.html %}
                     <!-- Content -->
-            <div id="content" class="page-content p-5"> 
-            
-               <div class="col-md-12 container">      
+            <div id="content" class="page-content p-5">     
+               <div class="col-md-12 container">
+                  <section class="margin">
                     {{ content }}            
-               </div>  
+               </div> 
+                   </section>
              </div> 
         {% include footer.html %}   
     </body>
