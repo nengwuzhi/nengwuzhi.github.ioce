@@ -8,8 +8,6 @@ permalink: /:title/
 paginate: 10
 paginate_path: /page/:num/
 tab_dir: all/
-category_dir: category/
-tag_dir: tags/
 author_dir: /author
 author_title_prefix: 'Posted by '
 media_folder: 
