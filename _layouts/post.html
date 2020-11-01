@@ -1,120 +1,100 @@
 ---
 layout: default
 ---
-             <section id="blog" class="content-section">
-                <div class="section-heading">
-                    <h1>Blog<br><em>Entries</em></h1>
-                    <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
-                    <br>Phasellus luctus odio eget dui imperdiet.</p>
-                </div>
-                <div class="section-content">
-                    <div class="tabs-content">
-                        <div class="wrapper">
-                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                              <li><a href="#tab1" class="active">全部</a></li>
-                              <li><a href="#tab2">博客</a></li>
-                              <li><a href="#tab3">相册</a></li>
-                              <li><a href="#tab4">April 2018</a></li>
-                            </ul>
-                            <section id="first-tab-group" class="tabgroup">
-                                <div id="tab1">
-                        <ul>
-					  {% for cat in site.categories %}
-					{% for post in cat[1] %}
-						<li class='post'>
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
-							<div class="postcontent">
-					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
-								<div class='post-content'>{{post.summary}}</div>
-							</div>
-						</li>
-					{% endfor %}
-					{% endfor %}
-				</ul>
+    {% assign author = site.authors[page.author] %}
+                <div class="content_container">
+                    <div class="card shadow-sm">
+                    <article>
+			
+                        {% if page.type == "youtube" %}
+                            {% if page.yt-video-id %}
+                                <div class="video_container">
+                                    <iframe src="https://www.youtube.com/embed/{{page.yt-video-id}}?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
                                 </div>
-                                <div id="tab2">
-     			<ul>
-		       {% for post in site.categories.blog %}
-						<li class='post'>
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
-							<div class="postcontent">
-					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
-								<div class='post-content'>{{post.summary}}</div>
-							</div>
-						</li>
-					{% endfor %}
-				</ul>	
-                                </div>
-                                <div id="tab3">
-  				<ul>
-		       {% for post in site.categories.video %}
-						<li class='post'>
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
-							<div class="postcontent">
-					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
-								<div class='post-content'>{{post.summary}}</div>
-							</div>
-						</li>
-					{% endfor %}
-				</ul>	
-                                </div>
-                                <div id="tab4">
-                                    <ul>
-                                        <li>
-                                            <div class="item">
-                                                <img src="img/blog_1.jpg" alt="">
-                                                <div class="text-content">
-                                                    <h4>Lorem ipsum dolor sit</h4>
-                                                    <span>26 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>                                
-                                        <li>
-                                            <div class="item">
-                                                <img src="img/blog_3.jpg" alt="">
-                                                <div class="text-content">
-                                                    <h4>Integer ultrices augue eu</h4>
-                                                    <span>24 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <img src="img/blog_2.jpg" alt="">
-                                                <div class="text-content">
-                                                    <h4>Cras commodo odio ut</h4>
-                                                    <span>20 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </section> 
+                            {% endif %}
+                        {% elsif page.type == "image" or page.type == "gallery" %}
+                            {% if page.featimg %}
+                                <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
+                            {% endif %}
+                            {% endif %}
+                      
+                       	  <h4 class="post_title">
+                            {{ page.title }}
+                          </h4>
+			        			
+		    
+                        <div class="meta d-flex align-items-center">
+                        {% if author.avatar %}
+                        <img class="rounded-circle" src="/{{author.avatar}}" alt="{{author.name}}" width="70"/>
+                        {% endif %}
+						<small class="ml-3">{{ author.name }} <span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
+                            <span class="text-muted d-block mt-1"><i class="fa fa-calendar"></i>{{ page.date | date: "%F" }} · 字数-{{ content | strip_html | strip_newlines | split: "" | size }} · 预计{% include meta-read-time.html %}</span>
+						</small>
                         </div>
-                    </div>
-                </div>
-            </section>
+                        {% if page.type == "standard" %}
+                            {% if page.featimg %}
+                                <img class="featimg" src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ page.featimg }}" alt="{{ page.featimg }}">
+                            {% endif %}
+                        {% endif %}
+                        <div class="post_content">
+                            {{ content }}
+			<hr data-content="AND" class="hr-text">
+                        </div>
+                        
+                      
+                        <div class="catsandtags">
+                           
+                            {% if page.tags %}
+                            <p class="tags">
+                                <span class="sidebar-tag-link">Tags:</span>
+                                {% for tag in page.tags %}
+                                  <a class="btn btn-outline-success btn-sm btn-round ml-1" href="{{ root_url }}/{{ site.tag_dir }}#{{ tag }}">{{ tag | join: "/" }}</a>
+                                {% endfor %}
+                            </p>
+                            {% endif %}
+                        </div>
+        
+                    </article>
+	     <!-- hr -->		    
+     <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="mb-4">
+     <!-- Dashed divider -->
+                <hr class="dashed">
+            </div>
+            <div class="mb-4">
+
+                <!-- Dotted divider -->
+                <hr class="dotted">
+            </div>
+            <div class="mb-4">
+   
+                <!-- Solid divider -->
+                <hr class="solid">
+            </div>
+            <div class="mb-4">
+                <!-- Gradient divider -->
+                <hr data-content="AND" class="hr-text">
+            </div>
+           
+      
+    </div>
+</div>                            
+			    
+			    
+       {% include related-posts.html %}      
+                       <div class="post_nav">
+                        {% if page.previous.url %}
+                        <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i><span class="short">上一篇</span></a>
+                        {% endif %}
+                        {% if page.next.url %}
+                        <a class="next" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"><span class="short">下一篇</span><i class="fa fa-angle-right"></i></a>
+                        {% endif %}
+                      </div>  
+            </div> 
+            </div> 
+       
+       {% include sidebar.html %}
+
+
+
