@@ -74,17 +74,15 @@ type: page
 					{% endfor %}
 				</ul>	
                                 </div></div>
-                                <div id="tab4 thumbnails">
+                                <div id="tab4">
 					<div id='posts' class="card-columns">
-               				<ul>
-		       {% for post in site.categories.photos %}
-						<li class='post'>
-				<a class="thumbnail" href="{{ photo.image }}" data-position="left center"><img src="{{ photo.thumbnail }}" alt="" /></a>
+         <section id="thumbnails">{% for photo in site.photos %}
+	<article>
+		<a class="thumbnail" href="{{ photo.image }}" data-position="left center"><img src="{{ photo.thumbnail }}" alt="" /></a>
 		<h2>{{ photo.title }}</h2>
 		<p>{{ photo.caption }}</p>
-						</li>
-					{% endfor %}
-				</ul>	
+	</article>
+{% endfor %}</section>
                                 </div></div>
                             </section> 
                         </div>
