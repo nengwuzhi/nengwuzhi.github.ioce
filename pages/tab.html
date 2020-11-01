@@ -36,18 +36,21 @@ type: page
                                 <div id="tab2">
 					<div id='posts' class="card-columns">
  				<ul>
-		       {% for post in site.categories.photos %}
-						<li class='post'>
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
-							<div class="postcontent">
-					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
-								<div class='post-content'>{{post.summary}}</div>
-							</div>
-						</li>
-					{% endfor %}
+	<!-- Gallery Section-->
+    <section class="gallery no-padding">    
+      <div class="row">
+          {% for image in site.static_files %}
+    {% if image.path contains 'photos' %}
+                <div class="mix col-lg-3 col-md-3 col-sm-6">
+                    <div class="item">
+                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
+                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
+                    </div>
+   {% endif %}
+         {% endfor %}
+            </div>
+    </section>
 				</ul>	
                                 </div></div>
                                 <div id="tab3">
