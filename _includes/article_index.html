@@ -7,9 +7,9 @@
       <article>
     {% if post.homedisplay == "iframe" %}     
 
-            {% if post.featimg %}
+            {% if post.image %}
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ post.featimg }}" alt="{{ post.featimg }}">
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '//', '/'}}/{{ post.image }}" alt="{{ post.image }}">
                 </a>
             {% endif %}
         {% endif %}
@@ -25,9 +25,9 @@
 				<a href='{{post.url}}'><img class='post-img' src="{{post.img}}" /></a>
 		{% endif %}
     
-            {% if post.featimg %}
+            {% if post.image %}
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
-                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ post.featimg }}" alt="{{ post.featimg }}">
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ post.image }}" alt="{{ post.image }}">
                 </a>
             {% endif %}
         {% endif %}
