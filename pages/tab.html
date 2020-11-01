@@ -72,50 +72,20 @@ type: page
 				</ul>	
                                 </div>
                                 <div id="tab4">
-                                    <ul>
-                                        <li>
-                                            <div class="item">
-                                                <img src="img/blog_1.jpg" alt="">
-                                                <div class="text-content">
-                                                    <h4>Lorem ipsum dolor sit</h4>
-                                                    <span>26 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>                                
-                                        <li>
-                                            <div class="item">
-                                                <img src="img/blog_3.jpg" alt="">
-                                                <div class="text-content">
-                                                    <h4>Integer ultrices augue eu</h4>
-                                                    <span>24 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="item">
-                                                <img src="img/blog_2.jpg" alt="">
-                                                <div class="text-content">
-                                                    <h4>Cras commodo odio ut</h4>
-                                                    <span>20 April 2018</span>
-                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
-                                                    
-                                                    <div class="accent-button button">
-                                                        <a href="#contact">Continue Reading</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+               				<ul>
+		       {% for post in site.categories.photos %}
+						<li class='post'>
+							{% if post.image %}
+								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
+							{% endif %}
+							<div class="postcontent">
+					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
+
+								<div class='post-content'>{{post.summary}}</div>
+							</div>
+						</li>
+					{% endfor %}
+				</ul>	
                                 </div>
                             </section> 
                         </div>
