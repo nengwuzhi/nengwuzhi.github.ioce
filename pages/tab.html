@@ -35,16 +35,19 @@ type: page
                                 </div></div>
                                 <div id="tab2">
 					<div id='posts' class="card-columns">
-   				<ul>
-					
-        <section id="thumbnails">{% for photo in site.photos %}
-		 <li class='post'>
-	<article>
-		<a data-fancybox="gallery" href="{{ photo.image }}" data-position="left center"><img src="{{ photo.thumbnail }}" alt="" /></a>
-		<h2>{{ photo.title }}</h2>
-		<p>{{ photo.caption }}</p>
-	</article></li>
-{% endfor %}</section>
+ 				<ul>
+		       {% for post in site.categories.photos %}
+						<li class='post'>
+							{% if post.image %}
+								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
+							{% endif %}
+							<div class="postcontent">
+					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
+
+								<div class='post-content'>{{post.summary}}</div>
+							</div>
+						</li>
+					{% endfor %}
 				</ul>	
                                 </div></div>
                                 <div id="tab3">
