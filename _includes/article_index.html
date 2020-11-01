@@ -15,14 +15,10 @@
                               <li><a href="#tab3">相册</a></li>
                               <li><a href="#tab4">April 2018</a></li>
                             </ul>
-<div class="col-xs-6 col-sm-6">
-  <!-- Card -->
-  <div class="card mb-4">
 
-	    <!--Card image-->
-	  <div class="view overlay">
                             <section id="first-tab-group" class="tabgroup">
                                 <div id="tab1">
+					<div id='posts' class="card-columns">
  				<ul>
 					  {% for cat in site.categories %}
 					{% for post in cat[1] %}
@@ -39,8 +35,10 @@
 					{% endfor %}
 					{% endfor %}
 				</ul>
+						</div>
                                 </div>
                                 <div id="tab2">
+					<div id='posts' class="card-columns">
   				<ul>
 		       {% for post in site.categories.blog %}
 						<li class='post'>
@@ -55,8 +53,10 @@
 						</li>
 					{% endfor %}
 				</ul>	
+					</div>	
                                 </div>
                                 <div id="tab3">
+						<div id='posts' class="card-columns">
                  				<ul>
 		       {% for post in site.categories.photos %}
 						<li class='post'>
@@ -71,6 +71,7 @@
 						</li>
 					{% endfor %}
 				</ul>	
+					</div>
                                 </div>
                                 <div id="tab4">
                                     <ul>
