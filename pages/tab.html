@@ -83,7 +83,7 @@ type: page
         <section id="thumbnails">{% for photo in site.photos %}
 		 <li class='post'>
 	<article>
-		<a class="thumbnail" href="{{ photo.image }}" data-position="left center"><img src="{{ photo.thumbnail }}" alt="" /></a>
+		<a data-fancybox="gallery" href="{{ photo.image }}" data-position="left center"><img src="{{ photo.thumbnail }}" alt="" /></a>
 		<h2>{{ photo.title }}</h2>
 		<p>{{ photo.caption }}</p>
 	</article></li>
