@@ -3,7 +3,7 @@ author: author2
 layout: post
 title: Markdown使用教程
 date: 2020-02-26 20:55:00 +0800
-featimg: /img/2.jpg
+image: /img/2.jpg
 tags: [Markdown,教程]
 summary: 欢迎使用 Markdown在线编辑器 MdEditor
 category: [教程]
