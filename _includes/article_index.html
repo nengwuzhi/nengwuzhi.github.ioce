@@ -1,11 +1,6 @@
 
       <article>
               <section id="blog" class="content-section">
-                <div class="section-heading">
-                    <h1>Blog<br><em>Entries</em></h1>
-                    <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
-                    <br>Phasellus luctus odio eget dui imperdiet.</p>
-                </div>
                 <div class="section-content">
                     <div class="tabs-content">
                         <div class="wrapper">
@@ -13,14 +8,13 @@
                               <li><a href="#tab1" class="active">全部</a></li>
                               <li><a href="#tab2">博客</a></li>
                               <li><a href="#tab3">相册</a></li>
-                              <li><a href="#tab4">April 2018</a></li>
                             </ul>
 
                             <section id="first-tab-group" class="tabgroup">
                                 <div id="tab1">
-					<div id='posts' class="card-columns">
+				<div id='posts' class="card-columns">
  				<ul>
-					  {% for cat in site.categories %}
+				        {% for cat in site.categories %}
 					{% for post in cat[1] %}
 						<li class='post'>
 							{% if post.image %}
@@ -28,35 +22,33 @@
 							{% endif %}
 							<div class="postcontent">
 					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
 								<div class='post-content'>{{post.summary}}</div>
-							</div>
-						</li>
+							</div>  
+						 </li>
 					{% endfor %}
 					{% endfor %}
 				</ul>
-						</div>
+				</div>	
                                 </div>
                                 <div id="tab2">
-					<div id='posts' class="card-columns">
+				<div id='posts' class="card-columns">
   				<ul>
-		       {% for post in site.categories.blog %}
+		                       {% for post in site.categories.blog %}
 						<li class='post'>
 							{% if post.image %}
 								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
 							{% endif %}
 							<div class="postcontent">
 					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
 								<div class='post-content'>{{post.summary}}</div>
 							</div>
 						</li>
 					{% endfor %}
 				</ul>	
-					</div>	
+				</div>	
                                 </div>
                                 <div id="tab3">
-						<div id='posts' class="card-columns">
+				<div id='posts' class="card-columns">
                  				<ul>
 		       {% for post in site.categories.photos %}
 						<li class='post'>
@@ -65,19 +57,14 @@
 							{% endif %}
 							<div class="postcontent">
 					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
 								<div class='post-content'>{{post.summary}}</div>
 							</div>
 						</li>
 					{% endfor %}
-				</ul>	
-					</div>
+				  </ul>	
+				</div>
                                 </div>
-                                <div id="tab4">
-                                    <ul>
-     
-                                    </ul>
-                                </div>
+
                             </section> 
                         </div>
                     </div>
