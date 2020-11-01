@@ -13,10 +13,12 @@
                 </a>
             {% endif %}
         {% endif %}
-          {% if post.img %}
-				<a href='{{post.url}}'><img class='post-img' src="{{post.img}}" /></a>
-	  {% endif %}
-    
+	      
+	           {% if post.image %}
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                    <img src="{{ site.media_folder | prepend: site.baseurl | replace: '', ''}}{{ post.image }}" alt="{{ post.image }}">
+                </a>
+            {% endif %}
 
 </div>
 
