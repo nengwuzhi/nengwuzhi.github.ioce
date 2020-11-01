@@ -80,7 +80,7 @@ type: page
                                 </div></div>
                                 <div id="tab4">
 					<div id='posts' class="card-columns">
-         <section id="thumbnails">{% for photo in site.photos %}
+         <section id="thumbnails"> {% for post in site.categories.photos %}
 	<article>
 		<a class="thumbnail" href="{{ photo.image }}" data-position="left center"><img src="{{ photo.thumbnail }}" alt="" /></a>
 		<h2>{{ photo.title }}</h2>
