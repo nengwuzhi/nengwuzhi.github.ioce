@@ -62,9 +62,13 @@ type: page
      				<ul>
 		       {% for post in site.categories.video %}
 						<li class='post'>
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
+							 {% if post.type == "youtube" %}
+                                                 {% if post.yt-video-id %}
+                                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}" class="noline">
+                        <img src="http://img.youtube.com/vi/{{ post.yt-video-id }}/0.jpg" alt="{{ post.title }} thumbnail">
+                                </a>
+                                                         {% endif %}
+						
 							<div class="postcontent">
 					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
 
