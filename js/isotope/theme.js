@@ -45,47 +45,7 @@
     }
     gallery_isotope();
 	
-	
-	/*----------------------------------------------------*/
-    /*  Testimonials Slider
-    /*----------------------------------------------------*/
-    function testimonials_slider(){
-        if ( $('.t_slider').length ){
-            $('.t_slider').owlCarousel({
-                loop:true,
-                margin: 0,
-                items: 1,
-                nav: true,
-                autoplay: false,
-                smartSpeed: 1500,
-				animateOut: 'slideOutUp',
-  				animateIn: 'slideInUp',
-                dots:true, 
-				navContainer: '.testimonials_area',
-                navText: ['<i class="lnr lnr-arrow-up"></i>','<i class="lnr lnr-arrow-down"></i>'],
-                responsiveClass: true,
-//                responsive: {
-//                    0: {
-//                        items: 1,
-//                    },
-//                    400: {
-//                        items: 2,
-//                    },
-//                    575: {
-//                        items: 3,
-//                    },
-//                    768: {
-//                        items: 4,
-//                    },
-//                    1199: {
-//                        items: 5,
-//                    }
-//                }
-            })
-        }
-    }
-    testimonials_slider();
-	
+
 	/*----------------------------------------------------*/
     /*  MailChimp Slider
     /*----------------------------------------------------*/
@@ -96,10 +56,6 @@
 	
 	$('select').niceSelect();
 	
-	/*----------------------------------------------------*/
-    /*  Simple LightBox js
-    /*----------------------------------------------------*/
-    $('.imageGallery1 .light').simpleLightbox();
 	
 	/*----------------------------------------------------*/
     /*  Google map js
