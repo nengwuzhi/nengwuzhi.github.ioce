@@ -73,19 +73,7 @@ type: page
         
         				</div>
         			</div>
-        			<div class="card-columns unv">
-        				<div class="h_gallery_item">
-        					{% for image in site.static_files %}
-                                                {% if image.path contains '' %}
-        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					<div class="hover">
-        						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a data-fancybox="gallery" class="light" href="/img/gallery/gallery-4.jpg"><i class="fa fa-expand"></i></a>
-        					</div>
-        					{% endif %}
-        					{% endfor %}				
-        				</div>
-        			</div>
+        	          
         		</div>
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
