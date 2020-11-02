@@ -259,7 +259,7 @@ a.sidebar {
     width: auto;
 }
 
-a.sidebar-tag-link:hover, a.sidebar-tag-link:focus {
+a.sidebar:hover, a.sidebar:focus {
     border-color: #dd1144;
     background: #ef9696;
     color: #ef9696;
