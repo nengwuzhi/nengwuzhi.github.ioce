@@ -221,7 +221,7 @@ hr.hr-text::before {
 }
 .sidebar.side.content.sticky-top.sticky-top-offset {
     top: 0px;
-    height: 1000px;
+    height: 600px;
     overflow-y: auto;
     z-index: auto;
 }
