@@ -35,12 +35,13 @@ type: page
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery' %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					{% endif %}
-        					{% endfor %}
         					<div class="hover">
         						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}"><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="/img/gallery/gallery-4.jpg"><i class="fa fa-expand"></i></a>
         					</div>
+        					{% endif %}
+        					{% endfor %}	
+        					
         				</div>
         			</div>
         			<div class="card-columns ap">
@@ -48,12 +49,13 @@ type: page
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					{% endif %}
-        					{% endfor %}
         					<div class="hover">
         						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a class="light" href="/img/gallery/gallery-2.jpg"><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="/img/gallery/gallery-4.jpg"><i class="fa fa-expand"></i></a>
         					</div>
+        					{% endif %}
+        					{% endfor %}	
+        	
         				</div>
         			</div>
         			<div class="card-columns unp">
@@ -61,13 +63,14 @@ type: page
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					{% endif %}
-        					{% endfor %}
-   
         					<div class="hover">
         						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a class="light" href="/img/gallery/gallery-3.jpg"><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="/img/gallery/gallery-4.jpg"><i class="fa fa-expand"></i></a>
         					</div>
+        					{% endif %}
+        					{% endfor %}	
+   
+        
         				</div>
         			</div>
         			<div class="card-columns unp">
@@ -75,12 +78,12 @@ type: page
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					{% endif %}
-        					{% endfor %}
         					<div class="hover">
         						<a href="#"><h4>Spreading Peace to world</h4></a>
         						<a data-fancybox="gallery" class="light" href="/img/gallery/gallery-4.jpg"><i class="fa fa-expand"></i></a>
         					</div>
+        					{% endif %}
+        					{% endfor %}				
         				</div>
         			</div>
         		</div>
