@@ -3333,7 +3333,7 @@ footer {
 }
 
 .widget ul {
-	list-style: decimal;
+	list-style: circle;
 }
 
 .widget ul li {
