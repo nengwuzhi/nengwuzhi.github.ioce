@@ -23,7 +23,7 @@
                 <ul class="content-ul" cate>
                     {% for category in site.categories %}
                     <li>
-                        <a class="a.sidebar" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
+                        <a class="sidebar" href="{{ root_url }}/{{ site.category_dir }}#{{ category | first }}" class="categories-list-item" cate="{{ category | first }}">
                             <span class="name">
                                 {{ category | first }}
                             </span>
@@ -78,7 +78,7 @@
                       {% else %}
                         {% assign color = 8 | minus: base %}
                       {% endif %}
-                      <a class="a.sidebar" href="{{ root_url }}/{{ site.tab_dir }}#{{ tag[0] }}">{{ tag[0] }}</a>
+                      <a class="sidebar" href="{{ root_url }}/{{ site.tab_dir }}#{{ tag[0] }}">{{ tag[0] }}</a>
                     {% endfor %}
                 </div>
                 </div>
