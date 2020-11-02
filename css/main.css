@@ -3333,7 +3333,7 @@ footer {
 }
 
 .widget ul {
-	list-style: circle;
+	list-style: disc;
 }
 
 .widget ul li {
