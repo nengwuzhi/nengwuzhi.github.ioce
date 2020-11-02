@@ -12,7 +12,8 @@ type: page
 
 	<!-- fancybox灯箱 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-<link rel="stylesheet" type="text/css" href="/css/main_styles.css">
+        <!-- main css -->
+<link rel="stylesheet" href="css/gallery_style.css">
 </head>
    <body>
      	<!-- New Arrivals -->
@@ -221,8 +222,47 @@ type: page
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
       <script src="/js/isotope/imagesloaded.pkgd.min.js"></script>
       <script src="/js/isotope/isotope.pkgd.min.js"></script>
-<script src="/js/custom.js"></script>
-<script src="{{site.baseurl}}/js/nav_core.js"></script>
+<script>
+;(function($){
+    "use strict"
+	
+	/*----------------------------------------------------*/
+    /*  Isotope Fillter js
+    /*----------------------------------------------------*/
+	function gallery_isotope(){
+        if ( $('.gallery_f_inner').length ){
+            // Activate isotope in container
+			$(".gallery_f_inner").imagesLoaded( function() {
+                $(".gallery_f_inner").isotope({
+                    layoutMode: 'fitRows',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear'
+                    }
+                }); 
+            });
+			
+            // Add isotope click function
+            $(".gallery_filter li").on('click',function(){
+                $(".gallery_filter li").removeClass("active");
+                $(this).addClass("active");
+
+                var selector = $(this).attr("data-filter");
+                $(".gallery_f_inner").isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 450,
+                        easing: "linear",
+                        queue: false,
+                    }
+                });
+                return false;
+            });
+        }
+    }
+    gallery_isotope();
+})(jQuery)
+</script>
 </body>
 
 </html>
