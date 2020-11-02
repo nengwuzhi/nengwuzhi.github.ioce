@@ -245,7 +245,7 @@ hr.hr-text::before {
     font-family: 'Roboto Condensed', 'Microsoft Yahei', sans-serif;
 }
 
-a.sidebar-tag-link {
+a.sidebar {
     padding: 0.4rem 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.001em;
