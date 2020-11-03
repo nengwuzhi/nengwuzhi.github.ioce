@@ -21,9 +21,9 @@ type: page
         		<div class="isotope_fillter">
         			         <ul class="gallery_filter list">
 						<li class="active" data-filter="*"><a href="#">所有</a></li>
-						<li data-filter=".ap"><a href="#">建筑</a></li>
+						<li data-filter=".Architecture"><a href="#">建筑</a></li>
 						<li data-filter=".people"><a href="#">人物</a></li>
-						<li data-filter=".unv"><a href="#">其他</a></li>
+						<li data-filter=".other"><a href="#">其他</a></li>
 					</ul>
         		</div>
         	</div>
@@ -36,7 +36,8 @@ type: page
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
         						<a href="#"><h4 class='post-title'>{{post.title}}</h4></a>
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -50,7 +51,8 @@ type: page
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
         						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -64,7 +66,8 @@ type: page
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
         						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}"><img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -72,6 +75,24 @@ type: page
         
         				</div>
         			</div>
+				 <div class="card-columns other">
+        				<div class="h_gallery_item">
+        					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/other' %}
+        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+        					<div class="hover">
+        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+        					</div>
+        					{% endif %}
+        					{% endfor %}	
+   
+        
+        				</div>
+        			</div>
+				
+				
         	          </div>
         		</div>
         		<div class="button_more">
