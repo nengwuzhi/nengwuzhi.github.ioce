@@ -56,7 +56,6 @@
   }
 }
 
-
 </style>
 </head>
 
@@ -71,12 +70,12 @@
         
         <!-- Spinner Description Text [For Demo Purpose]-->
         <h4 class="text-uppercase font-weight-bold">Loading</h4>
-        <p class="font-italic text-muted">This loading window will be removed after <strong class="countdown text-dark font-weight-bold">5 </strong> Seconds</p>
+        <p class="font-italic text-muted">This loading window will be removed after <strong class="countdown text-dark font-weight-bold">7 </strong> Seconds</p>
     </div>
 </div>
         
 
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+ <script src="/js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
@@ -84,11 +83,11 @@
 
 <script>
 $(document).ready(function(){
-    // HIDE LOADING SPINNER WHEN PAGE IS LOADED [5000msec after the page is loaded]
+    // HIDE LOADING SPINNER WHEN PAGE IS LOADED [7000msec after the page is loaded]
     $(window).on('load', function () {
         setTimeout(function () {
             $('.loader').hide(300);
-        }, 5000);
+        }, 7000);
     });
 
     // FOR DEMO PURPOSE
