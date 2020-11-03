@@ -3,13 +3,6 @@
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
 
 /* Spinner Wrapper */
 .loader {
@@ -78,7 +71,7 @@
         
         <!-- Spinner Description Text [For Demo Purpose]-->
         <h4 class="text-uppercase font-weight-bold">Loading</h4>
-        <p class="font-italic text-muted">This loading window will be removed after <strong class="countdown text-dark font-weight-bold">6 </strong> Seconds</p>
+        <p class="font-italic text-muted">This loading window will be removed after <strong class="countdown text-dark font-weight-bold">5 </strong> Seconds</p>
     </div>
 </div>
         
@@ -95,7 +88,7 @@ $(document).ready(function(){
     $(window).on('load', function () {
         setTimeout(function () {
             $('.loader').hide(300);
-        }, 6000);
+        }, 5000);
     });
 
     // FOR DEMO PURPOSE
