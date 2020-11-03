@@ -31,8 +31,8 @@ defaults:
       layout: "post"
   -
     scope:
-      path: ""
-      type: "image"
+      path: "img/gallery"
+      type: "posts"
     values:
       layout: "index_alt" # 覆盖之前的默认布局
       author: "author1"
