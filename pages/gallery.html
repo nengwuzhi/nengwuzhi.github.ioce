@@ -112,6 +112,15 @@ type: page
     gallery_isotope();
 })(jQuery)
 </script>
+	   <!-- masonry plugin -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+	$(function(){
+		$('.masonry').masonry({
+			itemSelector: '.item'
+		});
+	});
+</script>
 	      {% include loading.html %}
 </body>
 
