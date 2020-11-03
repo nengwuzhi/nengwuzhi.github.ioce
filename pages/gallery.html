@@ -24,7 +24,7 @@ type: page
 					 </ul>
         		</div>
   	
-        	     <div class="gallery_f_inner row masonry imageGallery1">
+        	     <div class="row masonry imageGallery1">
         	
         			<div class="card-columns item Ar">
         					{% for image in site.static_files %}
@@ -79,10 +79,10 @@ type: page
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
 	function gallery_isotope(){
-        if ( $('.gallery_f_inner').length ){
+        if ( $('.masonry').length ){
             // Activate isotope in container
-			$(".gallery_f_inner").imagesLoaded( function() {
-                $(".gallery_f_inner").isotope({
+			$(".masonry").imagesLoaded( function() {
+                $(".masonry").isotope({
                     layoutMode: 'fitRows',
                     animationOptions: {
                         duration: 750,
@@ -97,7 +97,7 @@ type: page
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".gallery_f_inner").isotope({
+                $(".masonry").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
@@ -118,6 +118,18 @@ type: page
 	$(function(){
 		$('.masonry').masonry({
 			itemSelector: '.item'
+		});
+	});
+</script>
+	   <!-- solve picture overlap, add imagesLoaded -->
+<script src="http://desandro.github.io/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script>
+	$(function(){
+		var $container = $('.masonry');
+		$container.imagesLoaded(function(){
+			$container.masonry({
+				itemSelector: '.item'
+			});
 		});
 	});
 </script>
