@@ -26,7 +26,7 @@ type: page
   	        <div class="container">
         	     <div class="row masonry">
         	
-			        <div class="card-columns item Ar">
+			        <div class="col-lg-4 item Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
@@ -34,7 +34,7 @@ type: page
         					{% endif %}
         					{% endfor %}	      	
         			</div>
-			         <div class="card-columns item pe">
+			         <div class="col-lg-4 item pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
@@ -42,7 +42,7 @@ type: page
         					{% endif %}
         					{% endfor %}	   
         			 </div>
-				 <div class="card-columns item ot">
+				 <div class="col-lg-4 item ot">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}			     
 					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
