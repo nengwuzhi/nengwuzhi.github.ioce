@@ -35,7 +35,7 @@ type: page
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	      	
-        			</div>
+
         			<div class="card-columns pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
@@ -43,7 +43,7 @@ type: page
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	   
-        			</div>
+
 				 <div class="card-columns ot">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
@@ -51,6 +51,8 @@ type: page
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	
+        			 </div>
+        			 </div>	
         			 </div>
                        </div>
         		<div class="button_more">
