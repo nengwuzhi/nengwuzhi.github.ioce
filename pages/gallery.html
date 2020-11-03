@@ -78,19 +78,7 @@ type: page
 	/*----------------------------------------------------*/
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
-	function gallery_isotope(){
-        if ( $('.masonry').length ){
-            // Activate isotope in container
-			$(".masonry").imagesLoaded( function() {
-                $(".masonry").isotope({
-                    layoutMode: 'fitRows',
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear'
-                    }
-                }); 
-            });
-			
+	
             // Add isotope click function
             $(".gallery_filter li").on('click',function(){
                 $(".gallery_filter li").removeClass("active");
