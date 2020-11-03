@@ -35,9 +35,6 @@ type: page
                                                 {% if image.path contains 'img/gallery/Architecture' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
         					{% endif %}
         					{% endfor %}	      	
         			</div>
@@ -46,9 +43,6 @@ type: page
                                                 {% if image.path contains 'img/gallery/people' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
         					{% endif %}
         					{% endfor %}	   
         			</div>
@@ -57,9 +51,6 @@ type: page
                                                 {% if image.path contains 'img/gallery/other' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
         					{% endif %}
         					{% endfor %}	
         			 </div>
