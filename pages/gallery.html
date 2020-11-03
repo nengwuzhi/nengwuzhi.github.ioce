@@ -40,36 +40,7 @@ type: page
         						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         					</div>
         					{% endif %}
-        					{% endfor %}	
-        	
-        				</div>
-        			</div>
-				 <div class="col-lg-3 col-md-4 col-sm-6 Ar">
-        				<div class="h_gallery_item">
-        					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/Architecture' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
-        					{% endif %}
-        					{% endfor %}	
-        	
-        				</div>
-        			</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 Ar">
-        				<div class="h_gallery_item">
-        					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/Architecture' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
-        					{% endif %}
-        					{% endfor %}	
-        	
+        					{% endfor %}	      	
         				</div>
         			</div>
         			<div class="col-lg-3 col-md-4 col-sm-6 pe">
@@ -82,22 +53,7 @@ type: page
         						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         					</div>
         					{% endif %}
-        					{% endfor %}	  
-        
-        				</div>
-        			</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 pe">
-        				<div class="h_gallery_item">
-        					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/people' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
-        					{% endif %}
-        					{% endfor %}	
-           
+        					{% endfor %}	   
         				</div>
         			</div>
 				 <div class="col-lg-3 col-md-4 col-sm-6 ot">
@@ -111,39 +67,9 @@ type: page
         					</div>
         					{% endif %}
         					{% endfor %}	
-         
         				</div>
-        			</div>
-				<div class="col-lg-3 col-md-4 col-sm-6 ot">
-        				<div class="h_gallery_item">
-        					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
-        					{% endif %}
-        					{% endfor %}	
-         
-        				</div>
-        			</div>
-				 <div class="col-lg-3 col-md-4 col-sm-6 ot">
-        				<div class="h_gallery_item">
-        					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
-        					</div>
-        					{% endif %}
-        					{% endfor %}	
-         
-        				</div>
-        			  </div>
-        	          </div>
-        		</div>
+        			 </div>
+
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
