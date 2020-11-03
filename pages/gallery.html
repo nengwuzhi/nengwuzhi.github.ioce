@@ -50,11 +50,11 @@ type: page
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
-        					 <img src="{{ site.baseurl }}{{ gallery.path }}" alt="image" />
+        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
         						<a href="#"><h4>{{ site.baseurl }}{{ gallery.title }}</h4></a>
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ gallery.path }}">
-							<img src="{{ site.baseurl }}{{ gallery.path }}" alt=""><i class="fa fa-expand"></i></a>
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
