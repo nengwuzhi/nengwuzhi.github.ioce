@@ -34,11 +34,10 @@ type: page
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
-        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ gallery.title }}</h4></a>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					<div class="hover">
+        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -49,11 +48,10 @@ type: page
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
-        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					<div class="hover">
+        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -65,11 +63,10 @@ type: page
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
-        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					<div class="hover">
-        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					<div class="hover">
+        						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
