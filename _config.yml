@@ -34,7 +34,7 @@ defaults:
       path: "img/gallery"
       type: "posts"
     values:
-      layout: "index_alt" # 覆盖之前的默认布局
+      layout: "gallery" # 覆盖之前的默认布局,并设置类别。
       author: "author1"
       
       
