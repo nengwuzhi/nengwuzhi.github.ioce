@@ -24,9 +24,9 @@ type: page
 					 </ul>
         		</div>
   	
-        	     <div class="gallery_f_inner row imageGallery1">
+        	     <div class="gallery_f_inner row imageGallery1 masonry">
         	
-        			<div class="card-columns Ar">
+        			<div class="card-columns item Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
@@ -34,7 +34,7 @@ type: page
         					{% endif %}
         					{% endfor %}	      	
         			</div>
-        			<div class="card-columns pe">
+        			<div class="card-columns item pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
@@ -42,7 +42,7 @@ type: page
         					{% endif %}
         					{% endfor %}	   
         			 </div>
-				 <div class="card-columns ot">
+				 <div class="card-columns item ot">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
