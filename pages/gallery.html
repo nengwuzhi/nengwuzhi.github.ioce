@@ -21,16 +21,16 @@ type: page
         		<div class="isotope_fillter">
         			         <ul class="gallery_filter list">
 						<li class="active" data-filter="*"><a href="#">所有</a></li>
-						<li data-filter=".Architecture"><a href="#">建筑</a></li>
-						<li data-filter=".people"><a href="#">人物</a></li>
-						<li data-filter=".other"><a href="#">其他</a></li>
+						<li data-filter=".Ar"><a href="#">建筑</a></li>
+						<li data-filter=".pe"><a href="#">人物</a></li>
+						<li data-filter=".ot"><a href="#">其他</a></li>
 					</ul>
         		</div>
         	</div>
         	<div class="container box_1620">
         		<div class="gallery_f_inner row imageGallery1">
         	
-        			<div class="card-columns Architecture">
+        			<div class="card-columns Ar">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
@@ -45,7 +45,7 @@ type: page
         	
         				</div>
         			</div>
-        			<div class="card-columns people">
+        			<div class="card-columns pe">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
@@ -61,7 +61,7 @@ type: page
         
         				</div>
         			</div>
-				 <div class="card-columns other">
+				 <div class="card-columns ot">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
@@ -85,7 +85,7 @@ type: page
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
    
-
+    	</div>
         <!--================End Home Gallery Area =================-->
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
