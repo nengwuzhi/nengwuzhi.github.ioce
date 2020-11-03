@@ -36,7 +36,8 @@ type: page
                                                 {% if post.image %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
-        						<a href="#"><h4 class='post-title'>{{post.title}}</h4></a>
+        						<a href="{{post.url}}"><h4 class='post-title'>{{post.title}}</h4></a>
+							<div class='post-content'>{{post.summary}}</div>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
         					</div>
