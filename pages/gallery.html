@@ -26,26 +26,29 @@ type: page
   	        <div class="container box_1620">
         	     <div class="row masonry imageGallery1">
         	
-        			<div class="card-columns item Ar">
+
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
+			        <div class="card-columns item Ar">
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	      	
         			</div>
-        			<div class="card-columns item pe">
+
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
+			         <div class="card-columns item pe">
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	   
         			 </div>
-				 <div class="card-columns item ot">
+
         					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+                                                {% if image.path contains 'img/gallery/other' %}			     
+				 <div class="card-columns item ot">
+					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	
