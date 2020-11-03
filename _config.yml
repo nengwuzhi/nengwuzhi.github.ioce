@@ -21,6 +21,7 @@ youtube: "#"
 vimeo: "#"
 soundcloud: "#"
 encoding: utf-8
+
 defaults:
   -
     scope:
@@ -28,8 +29,15 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      type: "standard"
-      homedisplay: "featimg"
+  -
+    scope:
+      path: ""
+      type: "image"
+    values:
+      layout: "index_alt" # 覆盖之前的默认布局
+      author: "author1"
+      
+      
 markdown: kramdown
 kramdown:
   input: GFM
