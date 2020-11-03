@@ -20,7 +20,7 @@ type: page
         	<div class="container">
         		<div class="isotope_fillter">
         			         <ul class="gallery_filter list">
-						<li class="active" data-filter=".all"><a href="#">所有</a></li>
+						<li class="active" data-filter="*"><a href="#">所有</a></li>
 						<li data-filter=".Architecture"><a href="#">建筑</a></li>
 						<li data-filter=".people"><a href="#">人物</a></li>
 						<li data-filter=".other"><a href="#">其他</a></li>
@@ -29,22 +29,7 @@ type: page
         	</div>
         	<div class="container box_1620">
         		<div class="gallery_f_inner row imageGallery1">
-        			<div class="card-columns all">
-        				<div class="h_gallery_item">
-        					{% for post in site.categories.gallery %}
-                                                 {% for post in cat[1] %}
-        					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        					<div class="hover">
-        						<a href="{{post.url}}"><h4 class='post-title'>{{post.title}}</h4></a>
-							<div class='post-content'>{{post.summary}}</div>
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					</div>
-        					{% endfor %}
-        					{% endfor %}	
-        					
-        				</div>
-        			</div>
+        	
         			<div class="card-columns Architecture">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
