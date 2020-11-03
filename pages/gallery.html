@@ -32,14 +32,13 @@ type: page
         			<div class="card-columns all">
         				<div class="h_gallery_item">
         					{% for post in site.categories.gallery %}
-						<li class='post'>
                                                  {% for post in cat[1] %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
         						<a href="{{post.url}}"><h4 class='post-title'>{{post.title}}</h4></a>
 							<div class='post-content'>{{post.summary}}</div>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					</div>
         					{% endfor %}
         					{% endfor %}	
@@ -54,7 +53,7 @@ type: page
         					<div class="hover">
         						<a href="#"><h4>{{ site.baseurl }}{{ gallery.title }}</h4></a>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -69,7 +68,7 @@ type: page
         					<div class="hover">
         						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
@@ -85,7 +84,7 @@ type: page
         					<div class="hover">
         						<a href="#"><h4>{{ site.baseurl }}{{ image.title }}</h4></a>
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""><i class="fa fa-expand"></i></a>
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					</div>
         					{% endif %}
         					{% endfor %}	
