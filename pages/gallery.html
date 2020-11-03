@@ -26,9 +26,10 @@ type: page
   	        <div class="container">
         	     <div class="row masonry">
         	
-			        <div class="col-lg-4 item Ar">
+
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
+			     	<div class="col-lg-4 item Ar">
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
