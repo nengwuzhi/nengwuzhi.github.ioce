@@ -32,7 +32,7 @@ type: page
         			<div class="card-columns *">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/Architecture, img/gallery/people, img/gallery/other' %}
+                                                {% if image.path contains 'img/gallery/' %}
         					 <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
         					<div class="hover">
         						<a href="#"><h4 class='post-title'>{{post.title}}</h4></a>
