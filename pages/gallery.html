@@ -30,7 +30,7 @@ type: page
         	<div class="container box_1620">
         		<div class="gallery_f_inner row imageGallery1">
         	
-        			<div class="col-lg-3 col-md-4 col-sm-6 Ar">
+        			<div class="card-columns Ar">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
@@ -43,7 +43,7 @@ type: page
         					{% endfor %}	      	
         				</div>
         			</div>
-        			<div class="col-lg-3 col-md-4 col-sm-6 pe">
+        			<div class="card-columns pe">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
@@ -56,7 +56,7 @@ type: page
         					{% endfor %}	   
         				</div>
         			</div>
-				 <div class="col-lg-3 col-md-4 col-sm-6 ot">
+				 <div class="card-columns ot">
         				<div class="h_gallery_item">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
@@ -130,7 +130,6 @@ type: page
     gallery_isotope();
 })(jQuery)
 </script>
-
 
 </body>
 
