@@ -23,44 +23,35 @@ type: page
 						<li data-filter=".ot"><a href="#">其他</a></li>
 					 </ul>
         		</div>
+  	        <div class="container">
         	     <div class="row masonry">
-			     	<div class="col-lg-3 col-md-4 col-sm-6 Ar">
-		
+        	
+			     	<div class="col-lg-4 item Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
-				
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}
+        					{% endfor %}	      	
         			</div>
-
-				<div class="col-lg-3 col-md-4 col-sm-6 pe">    
-	
+			         <div class="col-lg-4 item pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
-				 
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}
-
+        					{% endfor %}	   
         			 </div>
- 
-				 <div class="col-lg-3 col-md-4 col-sm-6 ot">
-
+				 <div class="col-lg-4 item ot">
         					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-				 
+                                                {% if image.path contains 'img/gallery/other' %}			     
 					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}
-			
-        			  </div>
+        					{% endfor %}	
+        			 </div>
 
                        </div>
-
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
