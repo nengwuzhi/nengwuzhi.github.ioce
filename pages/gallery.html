@@ -25,7 +25,7 @@ type: page
         		</div>
         	     <div class="row masonry">
         	            <section>
-			     	<div class="card-columns item">
+			     	<div class="col-lg-3 col-md-4 col-sm-6 item">
 					<div class="Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
@@ -38,7 +38,7 @@ type: page
         			</div>
 			     </section>
 			     <section>
-				<div class="card-columns item">    
+				<div class="col-lg-3 col-md-4 col-sm-6 item">    
 			         <div class="pe">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
@@ -51,7 +51,7 @@ type: page
         			 </div>
 			       </section>
 			       <section>    
-				 <div class="card-columns item">
+				 <div class="col-lg-3 col-md-4 col-sm-6 item">
 				 <div class="ot">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
