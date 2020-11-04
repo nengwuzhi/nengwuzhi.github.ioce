@@ -26,10 +26,10 @@ type: page
                    </div>
 			     	<!-- Gallery Section-->
 <div class="masonry row">
-    <section class="gallery no-padding">    
+    <section class="gallery no-padding Architecture">    
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
-                <div class="mix col-lg-3 col-md-3 col-sm-6 Architecture">
+                <div class="mix col-lg-12 col-md-3 col-sm-6">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
@@ -41,10 +41,10 @@ type: page
 
     </section>
 
-	    <section class="gallery no-padding"> 
+	    <section class="gallery no-padding people"> 
            {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
-                <div class="mix col-lg-3 col-md-3 col-sm-6 people">
+                <div class="mix col-lg-12 col-md-3 col-sm-6">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
@@ -55,10 +55,10 @@ type: page
          {% endfor %}
 
     </section>
-		 <section class="gallery no-padding">   
+		 <section class="gallery no-padding other">   
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/other' %}
-                <div class="mix col-lg-3 col-md-3 col-sm-6 other">
+                <div class="mix col-lg-12 col-md-3 col-sm-6">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
