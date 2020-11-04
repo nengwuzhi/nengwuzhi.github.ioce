@@ -29,7 +29,7 @@ type: page
     <section class="gallery no-padding Architecture">    
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
-                <div class="mix col-lg-6 col-md-3 col-sm-6">
+                <div class="card-columns">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
@@ -44,7 +44,7 @@ type: page
 	    <section class="gallery no-padding people"> 
            {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
-                <div class="mix col-lg-6 col-md-3 col-sm-6">
+                <div class="card-columns">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
@@ -58,7 +58,7 @@ type: page
 		 <section class="gallery no-padding other">   
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/other' %}
-                <div class="mix col-lg-6 col-md-3 col-sm-6">
+                <div class="card-columns">
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
