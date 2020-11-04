@@ -27,7 +27,7 @@ type: page
 			     	<!-- Gallery Section-->
 
     <section class="gallery no-padding">    
-      <div class="row masonry">
+      <div class="masonry row">
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 Architecture">
@@ -38,12 +38,10 @@ type: page
                     </div>
    {% endif %}
          {% endfor %}
-            </div>
     </section>
 
 	    <section class="gallery no-padding">    
-      <div class="row masonry">
-          {% for image in site.static_files %}
+           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 people">
                     <div class="item">
@@ -53,10 +51,8 @@ type: page
                     </div>
    {% endif %}
          {% endfor %}
-            </div>
     </section>
-			    <section class="gallery no-padding">    
-      <div class="row masonry">
+		 <section class="gallery no-padding">    
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/other' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 other">
@@ -67,9 +63,8 @@ type: page
                     </div>
    {% endif %}
          {% endfor %}
-            </div>
     </section>
-                  
+</div>          
 
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
