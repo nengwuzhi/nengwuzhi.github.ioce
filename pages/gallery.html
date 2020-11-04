@@ -18,68 +18,49 @@ type: page
         		<div class="isotope_fillter">
         			         <ul class="gallery_filter list">
 						<li class="active" data-filter="*"><a href="#">所有</a></li>
-						<li data-filter=".Architecture"><a href="#">建筑</a></li>
-						<li data-filter=".people"><a href="#">人物</a></li>
-						<li data-filter=".other"><a href="#">其他</a></li>
+						<li data-filter=".Ar"><a href="#">建筑</a></li>
+						<li data-filter=".pe"><a href="#">人物</a></li>
+						<li data-filter=".ot"><a href="#">其他</a></li>
 					 </ul>
         		</div>
-                   </div>
-			    	<div class="container box_1620">
-                    		<div class="gallery_f_inner row imageGallery1">
-        			<div class="col-lg-3 col-md-4 col-sm-6 Architecture">
-        		
-        								{% for image in site.static_files %}
+  	        <div class="container box_1620">
+        	     <div class="row masonry imageGallery1">
+        	
+
+        					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
-				
+			        <div class="card-columns item Ar">
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}
-        					<div class="hover">
-        						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a data-fancybox="gallery" class="light" href="img/gallery/gallery-1.jpg"><i class="fa fa-expand"></i></a>
-        					</div>
-        		
-        			</div>
-        			<div class="col-lg-3 col-md-4 col-sm-6 people">
-        		
-        								{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/people' %}
-				
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					{% endif %}
-        					{% endfor %}
-        					<div class="hover">
-        						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a data-fancybox="gallery" class="light" href="img/gallery/gallery-2.jpg"><i class="fa fa-expand"></i></a>
-        					</div>
-        		
-        			</div>
-        			<div class="col-lg-3 col-md-4 col-sm-6 other">
-     
-        							{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-				
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					{% endif %}
-        					{% endfor %}
-        					<div class="hover">
-        						<a href="#"><h4>Spreading Peace to world</h4></a>
-        						<a data-fancybox="gallery" class="light" href="img/gallery/gallery-3.jpg"><i class="fa fa-expand"></i></a>
-        					</div>
-        		
+        					{% endfor %}	      	
         			</div>
 
-        		</div>
+        					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/people' %}
+			         <div class="card-columns item pe">
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	   
+        			 </div>
+
+        					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/other' %}			     
+				 <div class="card-columns item ot">
+					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	
+        			 </div>
+
+                       </div>
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
-        	</div>
-        </section>
+	
+          </div>
         <!--================End Home Gallery Area =================-->
-
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="{{site.baseurl}}/js/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
@@ -96,30 +77,18 @@ type: page
 <script>
 ;(function($){
     "use strict"
-		
+	
 	/*----------------------------------------------------*/
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
-	function gallery_isotope(){
-        if ( $('.gallery_f_inner').length ){
-            // 激活容器中的同位素
-			$(".gallery_f_inner").imagesLoaded( function() {
-                $(".gallery_f_inner").isotope({
-                    layoutMode: 'fitRows',
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear'
-                    }
-                }); 
-            });
-			
-            // 添加同位素点击功能
+	
+            // Add isotope click function
             $(".gallery_filter li").on('click',function(){
                 $(".gallery_filter li").removeClass("active");
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".gallery_f_inner").isotope({
+                $(".masonry").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
@@ -134,7 +103,7 @@ type: page
     gallery_isotope();
 })(jQuery)
 </script>
-	   <!-- masonry plugin
+	   <!-- masonry plugin -->
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
 	$(function(){
@@ -142,8 +111,8 @@ type: page
 			itemSelector: '.item'
 		});
 	});
-</script> -->
-	   <!-- solve picture overlap, add imagesLoaded
+</script>
+	   <!-- solve picture overlap, add imagesLoaded -->
       <script src="/js/isotope/imagesloaded.pkgd.min.js"></script>
 <script>
 	$(function(){
@@ -154,7 +123,7 @@ type: page
 			});
 		});
 	});
-</script> -->
+</script>
 	      {% include loading.html %}
 </body>
 
