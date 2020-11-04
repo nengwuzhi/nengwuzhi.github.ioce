@@ -82,14 +82,26 @@ type: page
 	/*----------------------------------------------------*/
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
-	
-            // Add isotope click function
+	function gallery_isotope(){
+        if ( $('.gallery_f_inner').length ){
+            // 激活容器中的同位素
+			$(".gallery_f_inner").imagesLoaded( function() {
+                $(".gallery_f_inner").isotope({
+                    layoutMode: 'fitRows',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear'
+                    }
+                }); 
+            });
+			
+            // 添加同位素点击功能
             $(".gallery_filter li").on('click',function(){
                 $(".gallery_filter li").removeClass("active");
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".masonry").isotope({
+                $(".gallery_f_inner").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
