@@ -25,7 +25,7 @@ type: page
         		</div>
   	  
         	     <div class="gallery_f_inner row imageGallery1">
-        	
+        	    <section class="gallery no-padding">    
         			<div class="card-columns Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
@@ -34,6 +34,8 @@ type: page
         					{% endif %}
         					{% endfor %}	      	
         			</div>
+			        </section>
+		 <section class="gallery no-padding">        
         			<div class="card-columns pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
@@ -42,6 +44,8 @@ type: page
         					{% endif %}
         					{% endfor %}	   
         			 </div>
+			     </section>
+			 <section class="gallery no-padding">        
 				 <div class="card-columns ot">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
@@ -50,7 +54,7 @@ type: page
         					{% endif %}
         					{% endfor %}	
         			 </div>
-
+                         </section>
                        </div>
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
