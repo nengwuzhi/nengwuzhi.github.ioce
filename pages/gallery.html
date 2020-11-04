@@ -32,12 +32,17 @@ type: page
 
           <div class="element-item col-sm-3 col-6 Architecture p-0" data-category="Architecture">
             <div class="inner-portfolio">
-               					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/Architecture' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					{% endif %}
-        					{% endfor %}	      	
+                                        {% for post in site.categories.photos %}
+				
+							{% if post.image %}
+								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
+							{% endif %}
+							<div class="postcontent">
+					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
+
+								<div class='post-content'>{{post.summary}}</div>
+							</div>
+					{% endfor %}      	
             </div>
           </div>
           <div class="element-item col-sm-3 col-6 people p-0" data-category="people">
