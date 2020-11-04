@@ -29,7 +29,12 @@ type: page
         </div>
 
         <div class="grid row">
-          <div class="element-item col-sm-3 col-6 graphics Architecture p-0" data-category="Architecture">
+          <div class="element-item col-sm-3 col-6 graphics people p-0 data-category="people">
+            <div class="inner-portfolio">
+							<img src="/img/avatar1.jpg" alt=""></a>    	      	
+            </div>
+          </div>
+          <div class="element-item col-sm-3 col-6 Architecture p-0" data-category="Architecture">
             <div class="inner-portfolio">
                					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
