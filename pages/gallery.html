@@ -26,7 +26,7 @@ type: page
   	        <div class="container">
         	     <div class="row masonry">
         	            <section>
-			     	<div class="card-columns item Ar">	
+			     	<div class="card-columns Ar">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
 				
@@ -37,7 +37,7 @@ type: page
         			</div>
 			     </section>
 			     <section>
-			         <div class="card-columns item pe">	
+			         <div class="card-columns pe">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
 				 
@@ -48,7 +48,7 @@ type: page
         			 </div>
 			       </section>
 			       <section>    
-				 <div class="card-columns item ot">	
+				 <div class="card-columns ot">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
 				 
