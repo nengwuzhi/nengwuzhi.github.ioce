@@ -59,29 +59,54 @@ type: page
         					{% endfor %}	      	
             </div>
           </div>
-          <div class="element-item col-sm-3 col-6 seo web p-0" data-category="web">
+          <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="Ar">
             <div class="inner-portfolio">
-              <img src="images/portfolio-5.jpg" alt="" class="img-fluid">
+               					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	      	
             </div>
           </div>
-          <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="web">
+          <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="Ar">
             <div class="inner-portfolio">
-              <img src="images/portfolio-1.jpg" alt="" class="img-fluid">
+               					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	      	
             </div>
           </div>
-          <div class="element-item col-sm-3 col-6 seo web p-0" data-category="web">
+          <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="Ar">
             <div class="inner-portfolio">
-              <img src="images/portfolio-5.jpg" alt="" class="img-fluid">
+               					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	      	
             </div>
           </div>
-          <div class="element-item col-sm-3 col-6 seo web p-0" data-category="web">
+          <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="pe">
             <div class="inner-portfolio">
-              <img src="images/portfolio-6.jpg" alt="" class="img-fluid">
+               					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	      	
             </div>
           </div>
-          <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="web">
+           <div class="element-item col-sm-3 col-6 graphics web p-0" data-category="ot">
             <div class="inner-portfolio">
-              <img src="images/portfolio-5.jpg" alt="" class="img-fluid">
+               					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}	      	
             </div>
           </div>
       </div>
