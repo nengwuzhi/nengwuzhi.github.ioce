@@ -26,7 +26,7 @@ type: page
                    </div>
 			    	<div class="container box_1620">
                     		<div class="gallery_f_inner row imageGallery1">
-        			<div class="col-lg-3 col-md-4 col-sm-6 ap">
+        			<div class="col-lg-3 col-md-4 col-sm-6 Architecture">
         				<div class="h_gallery_item">
         								{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
@@ -41,10 +41,10 @@ type: page
         					</div>
         				</div>
         			</div>
-        			<div class="col-lg-3 col-md-4 col-sm-6 unv">
+        			<div class="col-lg-3 col-md-4 col-sm-6 people">
         				<div class="h_gallery_item">
         								{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/Architecture' %}
+                                                {% if image.path contains 'img/gallery/people' %}
 				
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
@@ -56,10 +56,10 @@ type: page
         					</div>
         				</div>
         			</div>
-        			<div class="col-lg-3 col-md-4 col-sm-6 ap">
+        			<div class="col-lg-3 col-md-4 col-sm-6 other">
         				<div class="h_gallery_item">
         							{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/Architecture' %}
+                                                {% if image.path contains 'img/gallery/other' %}
 				
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
