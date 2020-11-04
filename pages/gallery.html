@@ -25,9 +25,8 @@ type: page
         		</div>
                    </div>
 			     	<!-- Gallery Section-->
-<div class="row masonry">
+<div class="masonry row">
     <section class="gallery no-padding">    
-     <div class="row"> 
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 Architecture">
@@ -38,11 +37,10 @@ type: page
                     </div>
     {% endif %}
          {% endfor %}
-	     </div>
+
     </section>
 
 	    <section class="gallery no-padding"> 
-		<div class="row"> 
            {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 people">
@@ -50,13 +48,12 @@ type: page
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
                     <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
-                    </div>
+                  </div>
    {% endif %}
          {% endfor %}
-	</div>
+
     </section>
 		 <section class="gallery no-padding">   
-		  <div class="masonry row"> 
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/other' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 other">
@@ -67,10 +64,10 @@ type: page
                     </div>
    {% endif %}
          {% endfor %}
-	 </div>
+
     </section>
 </div>          
-</div>  
+
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
