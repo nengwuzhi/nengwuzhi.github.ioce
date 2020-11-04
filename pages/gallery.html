@@ -25,9 +25,9 @@ type: page
         		</div>
                    </div>
 			     	<!-- Gallery Section-->
-
+<div class="row masonry">
     <section class="gallery no-padding">    
-     <div class="masonry row"> 
+     <div class="row"> 
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 Architecture">
@@ -42,7 +42,7 @@ type: page
     </section>
 
 	    <section class="gallery no-padding"> 
-		<div class="masonry row"> 
+		<div class="row"> 
            {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 people">
@@ -70,7 +70,7 @@ type: page
 	 </div>
     </section>
 </div>          
-
+</div>  
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
