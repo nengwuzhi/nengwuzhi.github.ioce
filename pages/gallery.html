@@ -23,10 +23,10 @@ type: page
 						<li data-filter=".ot"><a href="#">其他</a></li>
 					 </ul>
         		</div>
-  	        <div class="container">
-        	     <div class="row masonry">
-        	            <section>
-			     	<div class="col-lg-4 item Ar">
+  	
+        	     <div class="gallery_f_inner row imageGallery1">
+        	
+        			<div class="card-columns Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
@@ -34,9 +34,7 @@ type: page
         					{% endif %}
         					{% endfor %}	      	
         			</div>
-			     </section>
-			     <section>
-			         <div class="col-lg-4 item pe">
+        			<div class="card-columns pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
@@ -44,17 +42,15 @@ type: page
         					{% endif %}
         					{% endfor %}	   
         			 </div>
-			       </section>
-			       <section>    
-				 <div class="col-lg-4 item ot">
+				 <div class="card-columns ot">
         					{% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}			     
-					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+                                                {% if image.path contains 'img/gallery/other' %}
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	
         			 </div>
-        	            </section>
+
                        </div>
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
@@ -73,7 +69,7 @@ type: page
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
+      <script src="/js/isotope/imagesloaded.pkgd.min.js"></script>
       <script src="/js/isotope/isotope.pkgd.min.js"></script>
 <script>
 ;(function($){
@@ -84,7 +80,7 @@ type: page
     /*----------------------------------------------------*/
 	function gallery_isotope(){
         if ( $('.gallery_f_inner').length ){
-            // 激活容器中的同位素
+            // Activate isotope in container
 			$(".gallery_f_inner").imagesLoaded( function() {
                 $(".gallery_f_inner").isotope({
                     layoutMode: 'fitRows',
@@ -95,7 +91,7 @@ type: page
                 }); 
             });
 			
-            // 添加同位素点击功能
+            // Add isotope click function
             $(".gallery_filter li").on('click',function(){
                 $(".gallery_filter li").removeClass("active");
                 $(this).addClass("active");
@@ -115,27 +111,6 @@ type: page
     }
     gallery_isotope();
 })(jQuery)
-</script>
-	   <!-- masonry plugin -->
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script>
-	$(function(){
-		$('.masonry').masonry({
-			itemSelector: '.item'
-		});
-	});
-</script>
-	   <!-- solve picture overlap, add imagesLoaded -->
-      <script src="/js/isotope/imagesloaded.pkgd.min.js"></script>
-<script>
-	$(function(){
-		var $container = $('.masonry');
-		$container.imagesLoaded(function(){
-			$container.masonry({
-				itemSelector: '.item'
-			});
-		});
-	});
 </script>
 	      {% include loading.html %}
 </body>
