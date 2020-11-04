@@ -1,3 +1,5 @@
+
+					
 ---
 layout: gallery
 title: gallery
@@ -13,108 +15,61 @@ type: page
 </head>
 
    <body>
-	     	<!-- New Arrivals -->
-
-	<div class="new_arrivals">
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="section_title new_arrivals_title">
-						<h2>New Arrivals</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row align-items-center">
-				<div class="col text-center">
-					<div class="new_arrivals_sorting">
-					<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
-						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
-						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".Architecture">风景's</li>
-						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".people">人物</li>
-						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".other">其它's</li>
-					</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
-
-						<!-- Product 1 -->
-
-						<div class="product-item other">
-							<div class="product discount product_filter">
-								<div class="product_image">
-      					        {% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					{% endif %}
-        					{% endfor %}
-								</div>
-								<div class="favorite favorite_left"></div>
-								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
-								<div class="product_info">
-									<h6 class="product_name"><a href="single.html">Fujifilm X100T 16 MP Digital Camera (Silver)</a></h6>
-									<div class="product_price">$520.00<span>$590.00</span></div>
-								</div>
-							</div>
-							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-						</div>
-
-						<!-- Product 2 -->
-
-						<div class="product-item people">
-							<div class="product product_filter">
-								<div class="product_image">
-      					         {% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/people' %}
-				 
-					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					{% endif %}
-        					{% endfor %}
-								</div>
-								<div class="favorite"></div>
-								<div class="product_bubble product_bubble_left product_bubble_green d-flex flex-column align-items-center"><span>new</span></div>
-								<div class="product_info">
-									<h6 class="product_name"><a href="single.html">Samsung CF591 Series Curved 27-Inch FHD Monitor</a></h6>
-									<div class="product_price">$610.00</div>
-								</div>
-							</div>
-							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-						</div>
-
-						<!-- Product 3 -->
-
-						<div class="product-item Architecture">
-							<div class="product product_filter">
-								<div class="product_image">
-			        				{% for image in site.static_files %}
+	           <!--================Home Gallery Area =================-->   
+                   <div class="container">
+        		<div class="isotope_fillter">
+        			         <ul class="gallery_filter list">
+						<li class="active" data-filter="*"><a href="#">所有</a></li>
+						<li data-filter=".Ar"><a href="#">建筑</a></li>
+						<li data-filter=".pe"><a href="#">人物</a></li>
+						<li data-filter=".ot"><a href="#">其他</a></li>
+					 </ul>
+        		</div>
+        	     <div class="row masonry">
+			     	<div class="col-lg-3 col-md-4 col-sm-6 item">
+					<div class="Ar">
+        					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
 				
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}
-								</div>
-								<div class="favorite"></div>
-								<div class="product_info">
-									<h6 class="product_name"><a href="single.html">Blue Yeti USB Microphone Blackout Edition</a></h6>
-									<div class="product_price">$120.00</div>
-								</div>
-							</div>
-							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-						</div>
-
-
-
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        			</div>
 
+				<div class="col-lg-3 col-md-4 col-sm-6 item">    
+			         <div class="pe">	
+        					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/people' %}
+				 
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}
+					 </div>
+        			 </div>
+ 
+				 <div class="col-lg-3 col-md-4 col-sm-6 item">
+				 <div class="ot">	
+        					{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/other' %}
+				 
+					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}
+					 </div>
+        			  </div>
+
+                       </div>
+
+        		<div class="button_more">
+        			<a class="btn theme_btn" href="#">Load More Images</a>
+        		</div>
+	
+          </div>
+        <!--================End Home Gallery Area =================-->
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="{{site.baseurl}}/js/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
@@ -129,42 +84,33 @@ type: page
 
       <script src="/js/isotope/isotope.pkgd.min.js"></script>
 <script>
-	Init Isotope Filtering
+;(function($){
+    "use strict"
+	
+	/*----------------------------------------------------*/
+    /*  Isotope Fillter js
+    /*----------------------------------------------------*/
+	
+            // Add isotope click function
+            $(".gallery_filter li").on('click',function(){
+                $(".gallery_filter li").removeClass("active");
+                $(this).addClass("active");
 
-	*/
-
-    function initIsotopeFiltering()
-    {
-    	if($('.grid_sorting_button').length)
-    	{
-    		$('.grid_sorting_button').click(function()
-	    	{
-	    		// putting border fix inside of setTimeout because of the transition duration
-	    		setTimeout(function()
-		        {
-		        	initFixProductBorder();
-		        },500);
-
-		        $('.grid_sorting_button.active').removeClass('active');
-		        $(this).addClass('active');
-		 
-		        var selector = $(this).attr('data-filter');
-		        $('.product-grid').isotope({
-		            filter: selector,
-		            animationOptions: {
-		                duration: 750,
-		                easing: 'linear',
-		                queue: false
-		            }
-		        });
-
-		        
-		         return false;
-		    });
-    	}
+                var selector = $(this).attr("data-filter");
+                $(".masonry").isotope({
+                    filter: selector,
+                    animationOptions: {
+                        duration: 450,
+                        easing: "linear",
+                        queue: false,
+                    }
+                });
+                return false;
+            });
+        }
     }
-  /* 
-
+    gallery_isotope();
+})(jQuery)
 </script>
 	   <!-- masonry plugin -->
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
