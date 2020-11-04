@@ -25,9 +25,9 @@ type: page
         		</div>
                    </div>
 			     	<!-- Gallery Section-->
-     <div class="masonry row">
+
     <section class="gallery no-padding">    
- 
+     <div class="masonry row"> 
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 Architecture">
@@ -36,11 +36,13 @@ type: page
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
                     <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
                     </div>
-   {% endif %}
+    {% endif %}
          {% endfor %}
+	     </div>
     </section>
 
-	    <section class="gallery no-padding">    
+	    <section class="gallery no-padding"> 
+		<div class="masonry row"> 
            {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 people">
@@ -51,8 +53,10 @@ type: page
                     </div>
    {% endif %}
          {% endfor %}
+	</div>
     </section>
-		 <section class="gallery no-padding">    
+		 <section class="gallery no-padding">   
+		  <div class="masonry row"> 
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/other' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 other">
@@ -63,6 +67,7 @@ type: page
                     </div>
    {% endif %}
          {% endfor %}
+	 </div>
     </section>
 </div>          
 
