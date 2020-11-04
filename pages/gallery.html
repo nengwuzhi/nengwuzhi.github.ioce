@@ -27,12 +27,12 @@ type: page
 			<div class="row align-items-center">
 				<div class="col text-center">
 					<div class="new_arrivals_sorting">
-						<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".Architecture">风景's</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".people">人物</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".ot">其它's</li>
-						</ul>
+					<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
+						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
+						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".Architecture">风景's</li>
+						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".people">人物</li>
+						<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".other">其它's</li>
+					</ul>
 					</div>
 				</div>
 			</div>
@@ -42,7 +42,7 @@ type: page
 
 						<!-- Product 1 -->
 
-						<div class="product-item ot">
+						<div class="product-item other">
 							<div class="product discount product_filter">
 								<div class="product_image">
       					        {% for image in site.static_files %}
