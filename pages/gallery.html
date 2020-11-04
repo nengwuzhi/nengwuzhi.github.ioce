@@ -25,6 +25,7 @@ type: page
         		</div>
 
 			     	<!-- Gallery Section-->
+			   <div class="gallery_f_inner row">
     <section class="gallery no-padding">    
       <div class="row masonry">
           {% for image in site.static_files %}
@@ -97,10 +98,10 @@ type: page
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
 	function gallery_isotope(){
-        if ( $('.masonry').length ){
+        if ( $('.gallery_f_inner').length ){
             // Activate isotope in container
 			$(".gallery_f_inner").imagesLoaded( function() {
-                $(".masonry").isotope({
+                $(".gallery_f_inner").isotope({
                     layoutMode: 'fitRows',
                     animationOptions: {
                         duration: 750,
@@ -115,7 +116,7 @@ type: page
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".masonry").isotope({
+                $(".gallery_f_inner").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
