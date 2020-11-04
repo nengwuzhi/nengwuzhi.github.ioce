@@ -23,31 +23,28 @@ type: page
 						<li data-filter=".ot"><a href="#">其他</a></li>
 					 </ul>
         		</div>
-  	        <div class="container box_1620">
-        	     <div class="row masonry imageGallery1">
+  	        <div class="container">
+        	     <div class="row masonry">
         	
-
+			     	<div class="col-lg-4 item Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
-			        <div class="card-columns item Ar">
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	      	
         			</div>
-
+			         <div class="col-lg-4 item pe">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
-			         <div class="card-columns item pe">
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
         					{% endfor %}	   
         			 </div>
-
+				 <div class="col-lg-4 item ot">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}			     
-				 <div class="card-columns item ot">
 					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
