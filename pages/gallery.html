@@ -33,7 +33,8 @@ type: page
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
+                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
+		    </div>
                     </div>
     {% endif %}
          {% endfor %}
@@ -47,7 +48,8 @@ type: page
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
+                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
+		    </div>
                   </div>
    {% endif %}
          {% endfor %}
@@ -60,12 +62,13 @@ type: page
                     <div class="item">
                         <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
                 <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
-                    </div>
+                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
+		   </div>
+                 </div>
    {% endif %}
          {% endfor %}
 
-    </section>
+   </section>
 </div>          
 
         		<div class="button_more">
@@ -128,7 +131,7 @@ type: page
     gallery_isotope();
 })(jQuery)
 </script>
-	   <!-- masonry plugin -->
+	   <!-- masonry plugin
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
 	$(function(){
@@ -136,8 +139,8 @@ type: page
 			itemSelector: '.item'
 		});
 	});
-</script>
-	   <!-- solve picture overlap, add imagesLoaded -->
+</script> -->
+	   <!-- solve picture overlap, add imagesLoaded
       <script src="/js/isotope/imagesloaded.pkgd.min.js"></script>
 <script>
 	$(function(){
@@ -148,7 +151,7 @@ type: page
 			});
 		});
 	});
-</script>
+</script> -->
 	      {% include loading.html %}
 </body>
 
