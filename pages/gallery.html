@@ -18,8 +18,7 @@ type: page
         	<div class="container">
         		<div class="isotope_fillter">
         			        <ul class="gallery_filter list">
-						<li class="active" data-filter="*"><a href="#">全部</a></li>
-	       
+						<li class="active" data-filter="*"><a href="#">全部</a></li>       
 						<li data-filter=".Ar"><a href="#">建筑</a></li>
 						<li data-filter=".pe"><a href="#">人</a></li>
 						<li data-filter=".ot"><a href="#">其他</a></li>
@@ -106,7 +105,7 @@ type: page
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".masonry").isotope({
+                $(".gallery_f_inner").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
