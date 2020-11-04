@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: index_alt
 title: gallery
 permalink: /gallery/
 icon: gallery
@@ -74,54 +74,42 @@ type: page
       <script src="/js/isotope/imagesloaded.pkgd.min.js"></script>
       <script src="/js/isotope/isotope.pkgd.min.js"></script>
 <script>
-;(function($){
-    "use strict"
-	
-	/*----------------------------------------------------*/
-    /*  Isotope Fillter js
-    /*----------------------------------------------------*/
-	function gallery_isotope(){
-        if ( $('.gallery_f_inner').length ){
-            // Activate isotope in container
-			$(".gallery_f_inner").imagesLoaded( function() {
-                $(".gallery_f_inner").isotope({
-                    layoutMode: 'fitRows',
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear'
-                    }
-                }); 
-            });
-			
-            // Add isotope click function
-            $(".gallery_filter li").on('click',function(){
-                $(".gallery_filter li").removeClass("active");
-                $(this).addClass("active");
+// external js: isotope.pkgd.js
 
-                var selector = $(this).attr("data-filter");
-                $(".gallery_f_inner").isotope({
-                    filter: selector,
-                    animationOptions: {
-                        duration: 450,
-                        easing: "linear",
-                        queue: false,
-                    }
-                });
-                return false;
-            });
-        }
-    }
-    gallery_isotope();
-})(jQuery)
-</script>
-	   <!-- masonry plugin -->
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script>
-	$(function(){
-		$('.gallery_f_inner').masonry({
-			itemSelector: '.card-columns'
-		});
-	});
+// init Isotope
+var $grid = $('.grid').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'fitRows'
+});
+// filter functions
+var filterFns = {
+  // show if number is greater than 50
+  numberGreaterThan50: function() {
+    var number = $(this).find('.number').text();
+    return parseInt( number, 10 ) > 50;
+  },
+  // show if name ends with -ium
+  ium: function() {
+    var name = $(this).find('.name').text();
+    return name.match( /ium$/ );
+  }
+};
+// bind filter button click
+$('.filters-button-group').on( 'click', 'button', function() {
+  var filterValue = $( this ).attr('data-filter');
+  // use filterFn if matches value
+  filterValue = filterFns[ filterValue ] || filterValue;
+  $grid.isotope({ filter: filterValue });
+});
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+
 </script>
 	      {% include loading.html %}
 </body>
