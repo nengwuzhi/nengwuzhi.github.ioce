@@ -26,37 +26,43 @@ type: page
   	        <div class="container">
         	     <div class="row masonry">
         	            <section>
-			     	<div class="card-columns Ar">	
+			     	<div class="card-columns item">
+					<div class="Ar">
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/Architecture' %}
 				
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}	      	
+        					{% endfor %}
+					</div>
         			</div>
 			     </section>
 			     <section>
-			         <div class="card-columns pe">	
+				<div class="card-columns item">    
+			         <div class="pe">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/people' %}
 				 
         						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}	   
+        					{% endfor %}
+					 </div>
         			 </div>
 			       </section>
 			       <section>    
-				 <div class="card-columns ot">	
+				 <div class="card-columns item">
+				 <div class="ot">	
         					{% for image in site.static_files %}
                                                 {% if image.path contains 'img/gallery/other' %}
 				 
 					                <a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
 							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
         					{% endif %}
-        					{% endfor %}	
-        			 </div>
+        					{% endfor %}
+					 </div>
+        			  </div>
         	            </section>
                        </div>
 		     </div>
