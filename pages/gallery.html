@@ -26,7 +26,7 @@ type: page
 
 			     	<!-- Gallery Section-->
     <section class="gallery no-padding">    
-      <div class="row">
+      <div class="row masonry">
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/Architecture' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 Architecture">
@@ -41,7 +41,7 @@ type: page
     </section>
 
 	    <section class="gallery no-padding">    
-      <div class="row">
+      <div class="row masonry">
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/people' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 people">
@@ -55,7 +55,7 @@ type: page
             </div>
     </section>
 			    <section class="gallery no-padding">    
-      <div class="row">
+      <div class="row masonry">
           {% for image in site.static_files %}
     {% if image.path contains 'img/gallery/other' %}
                 <div class="mix col-lg-3 col-md-3 col-sm-6 other">
@@ -97,10 +97,10 @@ type: page
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
 	function gallery_isotope(){
-        if ( $('.gallery_f_inner').length ){
+        if ( $('.masonry').length ){
             // Activate isotope in container
 			$(".gallery_f_inner").imagesLoaded( function() {
-                $(".gallery_f_inner").isotope({
+                $(".masonry").isotope({
                     layoutMode: 'fitRows',
                     animationOptions: {
                         duration: 750,
@@ -115,7 +115,7 @@ type: page
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".gallery_f_inner").isotope({
+                $(".masonry").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
