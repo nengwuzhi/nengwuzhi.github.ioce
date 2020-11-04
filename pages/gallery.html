@@ -24,59 +24,62 @@ type: page
 					 </ul>
         		</div>
                    </div>
-			     	<!-- Gallery Section-->
-<div class="masonry row">
-    <section class="gallery no-padding Architecture">    
-          {% for image in site.static_files %}
-    {% if image.path contains 'img/gallery/Architecture' %}
-                <div class="card-columns">
-                    <div class="item">
-                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
-                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
-		    </div>
-                    </div>
-    {% endif %}
-         {% endfor %}
+			    	<div class="container box_1620">
+                    		<div class="gallery_f_inner row imageGallery1">
+        			<div class="col-lg-3 col-md-4 col-sm-6 ap">
+        				<div class="h_gallery_item">
+        								{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+				
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}
+        					<div class="hover">
+        						<a href="#"><h4>Spreading Peace to world</h4></a>
+        						<a data-fancybox="gallery" class="light" href="img/gallery/gallery-1.jpg"><i class="fa fa-expand"></i></a>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-4 col-sm-6 unv">
+        				<div class="h_gallery_item">
+        								{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+				
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}
+        					<div class="hover">
+        						<a href="#"><h4>Spreading Peace to world</h4></a>
+        						<a data-fancybox="gallery" class="light" href="img/gallery/gallery-2.jpg"><i class="fa fa-expand"></i></a>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-4 col-sm-6 ap">
+        				<div class="h_gallery_item">
+        							{% for image in site.static_files %}
+                                                {% if image.path contains 'img/gallery/Architecture' %}
+				
+        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
+							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
+        					{% endif %}
+        					{% endfor %}
+        					<div class="hover">
+        						<a href="#"><h4>Spreading Peace to world</h4></a>
+        						<a data-fancybox="gallery" class="light" href="img/gallery/gallery-3.jpg"><i class="fa fa-expand"></i></a>
+        					</div>
+        				</div>
+        			</div>
 
-    </section>
-
-	    <section class="gallery no-padding people"> 
-           {% for image in site.static_files %}
-    {% if image.path contains 'img/gallery/people' %}
-                <div class="card-columns">
-                    <div class="item">
-                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
-                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
-		    </div>
-                  </div>
-   {% endif %}
-         {% endfor %}
-
-    </section>
-		 <section class="gallery no-padding other">   
-          {% for image in site.static_files %}
-    {% if image.path contains 'img/gallery/other' %}
-                <div class="card-columns">
-                    <div class="item">
-                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
-                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
-                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a>
-		   </div>
-                 </div>
-   {% endif %}
-         {% endfor %}
-
-   </section>
-</div>          
-
+        		</div>
         		<div class="button_more">
         			<a class="btn theme_btn" href="#">Load More Images</a>
         		</div>
-	
-  
+        	</div>
+        </section>
         <!--================End Home Gallery Area =================-->
+
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="{{site.baseurl}}/js/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
@@ -94,14 +97,15 @@ type: page
 ;(function($){
     "use strict"
 	
+	
 	/*----------------------------------------------------*/
     /*  Isotope Fillter js
     /*----------------------------------------------------*/
 	function gallery_isotope(){
-        if ( $('.masonry').length ){
-            // Activate isotope in container
-			$(".masonry").imagesLoaded( function() {
-                $(".masonry").isotope({
+        if ( $('.gallery_f_inner').length ){
+            // 激活容器中的同位素
+			$(".gallery_f_inner").imagesLoaded( function() {
+                $(".gallery_f_inner").isotope({
                     layoutMode: 'fitRows',
                     animationOptions: {
                         duration: 750,
@@ -110,13 +114,13 @@ type: page
                 }); 
             });
 			
-            // Add isotope click function
+            // 添加同位素点击功能
             $(".gallery_filter li").on('click',function(){
                 $(".gallery_filter li").removeClass("active");
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".masonry").isotope({
+                $(".gallery_f_inner").isotope({
                     filter: selector,
                     animationOptions: {
                         duration: 450,
