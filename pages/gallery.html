@@ -13,68 +13,22 @@ type: page
 </head>
 
    <body>
-	           <!--================ Gallery =================-->   
-       <section class="portfolio">
-      <div class="container">
-        
-        <!-- Isotop for portfolio -->
-        <h1>Isotope - filtering</h1>
-
-        <div class="button-group filters-button-group">
-          <button class="button is-checked" data-filter="*">All</button>
-          <button class="button" data-filter=".Architecture">建筑</button>
-          <button class="button" data-filter=".people">人</button>
-          <button class="button" data-filter=".other">Seo</button>
-          
-        </div>
-
-        <div class="grid row">
-
-          <div class="element-item col-sm-3 col-6 Architecture p-0" data-category="Architecture">
-            <div class="inner-portfolio">
-                                        {% for post in site.categories.photos %}
-				
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
-							<div class="postcontent">
-					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
-								<div class='post-content'>{{post.summary}}</div>
-							</div>
-					{% endfor %}      	
+	    <!-- Gallery Section-->
+    <section class="gallery no-padding">    
+      <div class="row">
+          {% for image in site.static_files %}
+    {% if image.path contains 'photos' %}
+                <div class="mix col-lg-3 col-md-3 col-sm-6">
+                    <div class="item">
+                        <a href="{{ site.baseurl }}{{ image.path }}" data-fancybox="gallery" class="image">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="..." class="img-fluid">
+                    <div class="overlay d-flex align-items-center justify-content-center"><i class="fa fa-search-plus"></i></div></a></div>
+                    </div>
+   {% endif %}
+         {% endfor %}
             </div>
-          </div>
-          <div class="element-item col-sm-3 col-6 people p-0" data-category="people">
-            <div class="inner-portfolio">
-                                       {% for post in site.categories.blog %}
-			
-							{% if post.image %}
-								<a href='{{post.url}}'><img class='post-image' src="{{post.image}}" /></a>
-							{% endif %}
-							<div class="postcontent">
-					<a href='{{post.url}}'><h1 class='post-title'>{{post.title}}</h1></a>
-
-								<div class='post-content'>{{post.summary}}</div>
-							</div>
-				
-					{% endfor %}	      	
-            </div>
-          </div>
-          <div class="element-item col-sm-3 col-6 other p-0" data-category="other">
-            <div class="inner-portfolio">
-     					        {% for image in site.static_files %}
-                                                {% if image.path contains 'img/gallery/other' %}
-        						<a data-fancybox="gallery" class="light" href="{{ site.baseurl }}{{ image.path }}">
-							<img src="{{ site.baseurl }}{{ image.path }}" alt=""></a>
-        					{% endif %}
-        					{% endfor %}	      	
-            </div>
-          </div>
-
-
-      </div>
     </section>
+
         <!--================End Home Gallery Area =================-->
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
